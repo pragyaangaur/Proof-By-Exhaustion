@@ -95,6 +95,7 @@ theorem «✱54.46» :
     (Ints.add Ints.one Ints.one = Ints.two ∧
       Ints.ofN N.one = Ints.one ∧
       Ints.ofN (N.add N.one N.one) = Ints.add (Ints.ofN N.one) (Ints.ofN N.one) ∧
+      (∀ a b : N, Ints.ofN (N.add a b) = Ints.add (Ints.ofN a) (Ints.ofN b)) ∧
       (∀ x y : Ints.Z, Ints.mul x (Ints.neg y) = Ints.neg (Ints.mul x y)) ∧
       (∀ x y : Ints.Z, x ≠ Ints.zero → y ≠ Ints.zero → Ints.mul x y ≠ Ints.zero)) ∧
     -- Part IV: the rationals.
@@ -143,7 +144,7 @@ theorem «✱54.46» :
    ⟨N.one_add_one, HF.one_add_one, HF.vN_two, HF.ordAdd_vN, fun _ _ h => HF.vN_inj h,
      Church.one_add_one, fun _ _ h => Church.ofN_inj h, Church.ofN_add,
      fun _ _ h1 h2 => N.le_antisymm h1 h2⟩,
-   ⟨«✱54.44».1, «✱54.44».2.1, «✱54.44».2.2, Ints.mul_neg,
+   ⟨«✱54.44».1, «✱54.44».2.1, «✱54.44».2.2, Ints.ofN_add, Ints.mul_neg,
      fun _ _ hx hy => Ints.mul_ne_zero hx hy⟩,
    ⟨«✱54.45», Rats.mul_assoc, fun _ _ h1 h2 => Rats.le_antisymm h1 h2⟩,
    ⟨«✱54.43», Cauchy.one_mul Cauchy.one, Cauchy.add_assoc, mk_nines_eq_one, mk_twos_eq_two, «✱54.43_nines»,
