@@ -112,7 +112,7 @@ The countdown, the addition table, the Z/nZ table and the axiom audit are produc
 
 ## Use of AI
 
-This project was produced with AI models. The development was led by Claude Opus (Anthropic), which orchestrated a swarm of DeepSeek-V4.1-Flash agents through [Open Math OS](https://www.openmathmodel.org/). The agents wrote the Lean code, the generators and the first drafts of these documents. Claude Opus then audited the result independently, rebuilt every commit, removed unused and repeated lemmas, and corrected the documents. The author chose the project and directed the work. Lean's kernel checked every proof.
+This project was produced with AI models. The development was led by Claude Opus 5.5 (Anthropic), which orchestrated a swarm of DeepSeek-V4.1-Flash agents through [Open Math OS](https://www.openmathmodel.org/). The agents wrote the Lean code, the generators and the first drafts of these documents. A separate Claude Opus 5.5 session then audited the result independently, rebuilt every commit, removed unused and repeated lemmas, and corrected the documents. The author chose the project and directed the work. Lean's kernel checked every proof.
 
 ## Notes
 
