@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="306" viewBox="0 0 820 306" role="img" aria-label="Lines of Lean, on a logarithmic axis">
+<rect width="100%" height="100%" rx="8" fill="#1a1a19"/>
+<text x="24" y="34" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#f0efec">Lines of Lean</text>
+<text x="24" y="56" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#c3c2b7">Logarithmic axis</text>
+<line x1="360.0" y1="66" x2="360.0" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="360.0" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">1</text>
+<line x1="412.5" y1="66" x2="412.5" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="412.5" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">10</text>
+<line x1="465.0" y1="66" x2="465.0" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="465.0" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">100</text>
+<line x1="517.5" y1="66" x2="517.5" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="517.5" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">1k</text>
+<line x1="570.0" y1="66" x2="570.0" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="570.0" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">10k</text>
+<line x1="622.5" y1="66" x2="622.5" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="622.5" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">100k</text>
+<line x1="675.0" y1="66" x2="675.0" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="675.0" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">1M</text>
+<line x1="727.5" y1="66" x2="727.5" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="727.5" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">10M</text>
+<line x1="780.0" y1="66" x2="780.0" y2="258" stroke="#34332f" stroke-width="1"/>
+<text x="780.0" y="278" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#c3c2b7">100M</text>
+<text x="344" y="101.0" text-anchor="end" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">example : 1 + 1 = 2 := rfl</text>
+<line x1="360.0" y1="97.0" x2="360.0" y2="97.0" stroke="#3987e5" stroke-width="2" stroke-linecap="round"/>
+<circle cx="360.0" cy="97.0" r="6" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="372.0" y="101.0" text-anchor="start" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#f0efec">1</text>
+<text x="344" y="147.0" text-anchor="end" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">This project, written by hand</text>
+<line x1="360.0" y1="143.0" x2="563.4" y2="143.0" stroke="#3987e5" stroke-width="2" stroke-linecap="round"/>
+<circle cx="563.4" cy="143.0" r="6" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="575.4" y="147.0" text-anchor="start" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#f0efec">7,493</text>
+<text x="344" y="193.0" text-anchor="end" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">This project, in all</text>
+<line x1="360.0" y1="189.0" x2="664.0" y2="189.0" stroke="#3987e5" stroke-width="2" stroke-linecap="round"/>
+<circle cx="664.0" cy="189.0" r="6" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="676.0" y="193.0" text-anchor="start" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#f0efec">616,873</text>
+<text x="344" y="239.0" text-anchor="end" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#f0efec">Axiom, the classification of finite simple groups</text>
+<line x1="360.0" y1="235.0" x2="760.8" y2="235.0" stroke="#3987e5" stroke-width="2" stroke-linecap="round"/>
+<circle cx="760.8" cy="235.0" r="6" fill="#3987e5" stroke="#1a1a19" stroke-width="2"/>
+<text x="748.8" y="225.0" text-anchor="end" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="600" fill="#f0efec">about 43.1 million</text>
+</svg>

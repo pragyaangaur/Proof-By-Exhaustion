@@ -1,18 +1,32 @@
 # Proof by Exhaustion
 
-## Abstract
+**A proof in Lean 4 that 1 + 1 = 2. It is 616,873 lines long.**
 
-We formalise the proposition that one plus one is two. The development is written in Lean 4 with no library dependencies. It does not use Lean's built-in natural numbers, integers or rationals, and no numeric literal occurs in any of its definitions or theorems except the statement of the headline theorem, where `1` and `2` are notation for the development's own numbers. This is checked in Lean over every declaration.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/lines-dark.svg">
+  <img alt="Lines of Lean on a logarithmic axis: example : 1 + 1 = 2 := rfl takes 1 line, this project 7,493 lines by hand and 616,873 in all, and Axiom's formalisation of the classification of finite simple groups about 43.1 million." src="figures/lines-light.svg" width="820">
+</picture>
 
-The route is deliberate. Part I is a deep embedding of a Hilbert-style calculus with the connectives, quantifiers, equality and the Peano equations for successor and addition, a Tarski semantics, a proved soundness theorem and a derivation of `1 + 1 = 2` written out step by step. Its terms are closed numerals, so the quantifiers bind only propositional variables and the calculus is much weaker than first-order arithmetic. It is exactly strong enough for the derivation. Part II gives three constructions of the natural numbers: Peano numerals, von Neumann ordinals in hereditarily finite sets, and Church numerals, with injective embeddings into the last two. The hereditarily finite sets are represented as nested lists and are not quotiented by extensionality, which does not matter for the ordinals because each is built in one canonical order. Part III builds the integers as a quotient of pairs of naturals, and Part IV builds the rationals as a quotient of pairs of an integer and a nonzero natural, with order and multiplication. Part V builds the reals as Cauchy sequences of rationals modulo null difference, with multiplication, and identifies `0.999...` with one. Part VI builds the complex numbers, quaternions and octonions by the Cayley-Dickson doubling formula and proves that commutativity fails in the quaternions and associativity fails in the octonions. Part VII contains binary numerals with a proved ripple-carry adder, the integers modulo `n` with their addition for `2 <= n <= 500`, two Roman notations, an addition table and a generated countdown. Part VIII states the theorem.
+- **101,708 theorems and 100,714 definitions.** No Mathlib, no dependencies, and none of Lean's built-in numbers outside the notation of the headline statement.
+- **Every number system is built by hand.** The naturals three ways, then the integers, rationals, reals, complex numbers, quaternions and octonions, binary numerals, the integers modulo `n` for every `n` up to 500, and Roman numerals in two notations.
+- **The proposition is proved in each of them.** Modulo two it also reads `1 + 1 = 0`. It is proved once more inside a logic embedded in Lean, by a derivation written out one rule at a time.
+- **0.999... + 0.999... = 2.** The original specification also asked for 0.999... + 1.999... = 2. Lean refused, and the refutation is now a theorem.
+- **100,000 − 99,998 = 1 + 1,** by a chain of 99,999 lemmas.
+- **No `sorry`, no `rfl`, no `simp`, no `decide`.** No axioms beyond `propext`, `Quot.sound` and `Classical.choice`, and the last of these only where the soundness of the embedded logic needs it.
 
 The proposition is occasionally useful.
 
 > "The above proposition is occasionally useful."
 >
-> A. N. Whitehead and B. Russell, *Principia Mathematica*, Volume II (1912), page 83, on ✱110.643.
+> A. N. Whitehead and B. Russell, *Principia Mathematica*, Volume II, first edition (1912), page 86, on ✱110.643.
 
 Whitehead and Russell prove cardinal `1 + 1 = 2` at ✱110.643. Their ✱54.43, in Volume I, is the lemma on unions of disjoint unit classes, from which they say `1 + 1 = 2` will follow once arithmetical addition has been defined. The theorems of this development are numbered after ✱54.43.
+
+## Abstract
+
+We formalise the proposition that one plus one is two. The development is written in Lean 4 with no library dependencies. It does not use Lean's built-in natural numbers, integers or rationals, and no numeric literal occurs in any of its definitions or theorems except the statement of the headline theorem, where `1` and `2` are notation for the development's own numbers. This is checked in Lean over every declaration.
+
+The route is deliberate. Part I is a deep embedding of a Hilbert-style calculus with the connectives, quantifiers, equality and the Peano equations for successor and addition, a Tarski semantics, a proved soundness theorem and a derivation of `1 + 1 = 2` written out step by step. Its terms are closed numerals, so the quantifiers bind only propositional variables and the calculus is much weaker than first-order arithmetic. It is exactly strong enough for the derivation. Part II gives three constructions of the natural numbers: Peano numerals, von Neumann ordinals in hereditarily finite sets, and Church numerals, with injective embeddings into the last two. The hereditarily finite sets are represented as nested lists and are not quotiented by extensionality, which does not matter for the ordinals because each is built in one canonical order. Part III builds the integers as a quotient of pairs of naturals, and Part IV builds the rationals as a quotient of pairs of an integer and a nonzero natural, with order and multiplication. Part V builds the reals as Cauchy sequences of rationals modulo null difference, with multiplication, and identifies `0.999...` with one. Part VI builds the complex numbers, quaternions and octonions by the Cayley-Dickson doubling formula and proves that commutativity fails in the quaternions and associativity fails in the octonions. Part VII contains binary numerals with a proved ripple-carry adder, the integers modulo `n` with their addition for `2 <= n <= 500`, two Roman notations, an addition table and a generated countdown. Part VIII states the theorem.
 
 ## The theorem
 
@@ -38,6 +52,11 @@ theorem «✱54.43» : (1 : MyReal) + 1 = 2
 Total: 616,873 lines of Lean, of which 7,493 are written by hand and the rest are produced by the generators in `scripts/`. The tree has 101,708 theorems and 100,714 definitions. See [STATS.md](STATS.md).
 
 ## The Grand Unification
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="figures/route-dark.svg">
+  <img alt="The number systems of the development. The naturals feed the integers, rationals, reals, complex numbers, quaternions and octonions in a chain, and also the von Neumann ordinals, Church numerals, binary numerals, integers modulo n, Roman numerals, the addition table and the countdown. Part I builds its own numerals. Every row ends in the theorem ✱54.46." src="figures/route-light.svg" width="900">
+</picture>
 
 `«✱54.46»` is one conjunction, grouped by Part. It states that the proposition holds in every system built above and that the embeddings carry it between them.
 
@@ -93,7 +112,7 @@ The countdown, the addition table, the Z/nZ table and the axiom audit are produc
 
 ## Use of AI
 
-This project was produced with AI models. The development was led by Claude Opus (Anthropic), which orchestrated a swarm of DeepSeek V4.1 Flash agents through Open Math OS. The agents wrote the Lean code, the generators and the first drafts of these documents. Claude Opus then audited the result independently, rebuilt every commit, removed unused and repeated lemmas, and corrected the documents. The author chose the project and directed the work. Lean's kernel checked every proof.
+This project was produced with AI models. The development was led by Claude Opus (Anthropic), which orchestrated a swarm of DeepSeek-V4.1-Flash agents through [Open Math OS](https://www.openmathmodel.org/). The agents wrote the Lean code, the generators and the first drafts of these documents. Claude Opus then audited the result independently, rebuilt every commit, removed unused and repeated lemmas, and corrected the documents. The author chose the project and directed the work. Lean's kernel checked every proof.
 
 ## Notes
 
@@ -102,7 +121,7 @@ This project was produced with AI models. The development was led by Claude Opus
 
 ## Acknowledgements
 
-The architecture follows Whitehead and Russell's *Principia Mathematica*. The idea of formalising it in Lean follows the [Lean Principia project](https://github.com/ndrwnaguib/principia) by ndrwnaguib. The ambition of a formalisation measured in millions of lines follows the Axiom project's formalisation of the classification of finite simple groups, at 43.1 million lines.
+The architecture follows Whitehead and Russell's *Principia Mathematica*. The idea of formalising it in Lean follows the [Lean Principia project](https://github.com/ndrwnaguib/principia) by ndrwnaguib. The ambition of a formalisation measured in millions of lines follows Axiom's formalisation of the classification of finite simple groups, which its [announcement of 26 October 2026](https://axiommath.ai/research/the-enormous-theorem-formalized/) puts at about 43.1 million lines of Lean.
 
 ## Licence
 

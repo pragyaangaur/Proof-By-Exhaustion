@@ -54,7 +54,8 @@ The history was left as it is rather than rewritten.
 
 An earlier README attributed the remark "The above proposition is occasionally
 useful" to ✱54.43. Whitehead and Russell make it after ✱110.643, in Volume II,
-where cardinal `1 + 1 = 2` is proved. ✱54.43 is the lemma on unions of
+where cardinal `1 + 1 = 2` is proved. That is page 86 of the first edition
+(1912) and page 83 of the second (1927). ✱54.43 is the lemma on unions of
 disjoint unit classes in Volume I, from which they say `1 + 1 = 2` will follow
 once arithmetical addition has been defined.
 

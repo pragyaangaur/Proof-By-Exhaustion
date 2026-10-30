@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="400" viewBox="0 0 900 400" role="img" aria-label="The number systems of the development and the theorem that cites them">
+<rect width="100%" height="100%" rx="8" fill="#fcfcfb"/>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#8a8984"/></marker></defs>
+<text x="24" y="30" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="600" fill="#0b0b0b">The route</text>
+<rect x="752" y="70" width="124" height="270" rx="6" fill="#f3f2ef" stroke="#2a78d6" stroke-width="2"/>
+<text x="814" y="201" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="14" font-weight="600" fill="#0b0b0b">«✱54.46»</text>
+<text x="814" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">cites every row</text>
+<rect x="24" y="70" width="140" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="94" y="91" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Part I</text>
+<text x="94" y="108" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">Hilbert calculus</text>
+<rect x="184" y="70" width="140" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="254" y="91" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">von Neumann</text>
+<text x="254" y="108" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">ordinals</text>
+<rect x="344" y="70" width="140" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="414" y="91" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Church</text>
+<text x="414" y="108" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">numerals</text>
+<rect x="24" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="69" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℕ</text>
+<text x="69" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">Peano</text>
+<rect x="126" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="171" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℤ</text>
+<text x="171" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">pairs of ℕ</text>
+<line x1="114" y1="205" x2="126" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="228" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="273" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℚ</text>
+<text x="273" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">fractions</text>
+<line x1="216" y1="205" x2="228" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="330" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="375" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℝ</text>
+<text x="375" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">Cauchy</text>
+<line x1="318" y1="205" x2="330" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="432" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="477" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℂ</text>
+<text x="477" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">pairs of ℝ</text>
+<line x1="420" y1="205" x2="432" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="534" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="579" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℍ</text>
+<text x="579" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">pairs of ℂ</text>
+<line x1="522" y1="205" x2="534" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="636" y="180" width="90" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="681" y="201" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">𝕆</text>
+<text x="681" y="218" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">pairs of ℍ</text>
+<line x1="624" y1="205" x2="636" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<rect x="24" y="290" width="122" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="85" y="311" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Binary</text>
+<text x="85" y="328" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">adder</text>
+<rect x="160" y="290" width="122" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="221" y="311" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">ℤ/nℤ</text>
+<text x="221" y="328" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">n ≤ 500</text>
+<rect x="296" y="290" width="122" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="357" y="311" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Roman</text>
+<text x="357" y="328" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">two notations</text>
+<rect x="432" y="290" width="122" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="493" y="311" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Table</text>
+<text x="493" y="328" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">210 entries</text>
+<rect x="568" y="290" width="122" height="50" rx="6" fill="#f3f2ef" stroke="#8a8984" stroke-width="1"/>
+<text x="629" y="311" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#0b0b0b">Countdown</text>
+<text x="629" y="328" text-anchor="middle" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" fill="#52514e">99,999 lemmas</text>
+<line x1="69" y1="180" x2="254" y2="120" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="180" x2="414" y2="120" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="230" x2="85" y2="290" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="230" x2="221" y2="290" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="230" x2="357" y2="290" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="230" x2="493" y2="290" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="69" y1="230" x2="629" y2="290" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="484" y1="95" x2="752" y2="95" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="726" y1="205" x2="752" y2="205" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<line x1="690" y1="315" x2="752" y2="315" stroke="#8a8984" stroke-width="1.5" marker-end="url(#a)"/>
+<text x="24" y="382" font-family="-apple-system, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#52514e">An arrow between boxes means the second is built from the first. Part I builds its own numerals.</text>
+</svg>
