@@ -1,7 +1,7 @@
 /-
 Part VII (a): the countdown, part 1.
 
-Numerals `n4153` to `n8302`, and the chain lemmas `count_4151` to `count_8300`.
+Numerals `n4170` to `n8336`, and the chain lemmas `count_4168` to `count_8334`.
 Every numeral is the successor of its predecessor and every lemma is one
 unfolding of the subtraction recursion applied to the preceding lemma.
 -/
@@ -12,40 +12,6 @@ namespace Countdown
 
 open Principia.N
 
-/-- The numeral 4153. -/
-def n4153 : N := succ n4152
-/-- The numeral 4154. -/
-def n4154 : N := succ n4153
-/-- The numeral 4155. -/
-def n4155 : N := succ n4154
-/-- The numeral 4156. -/
-def n4156 : N := succ n4155
-/-- The numeral 4157. -/
-def n4157 : N := succ n4156
-/-- The numeral 4158. -/
-def n4158 : N := succ n4157
-/-- The numeral 4159. -/
-def n4159 : N := succ n4158
-/-- The numeral 4160. -/
-def n4160 : N := succ n4159
-/-- The numeral 4161. -/
-def n4161 : N := succ n4160
-/-- The numeral 4162. -/
-def n4162 : N := succ n4161
-/-- The numeral 4163. -/
-def n4163 : N := succ n4162
-/-- The numeral 4164. -/
-def n4164 : N := succ n4163
-/-- The numeral 4165. -/
-def n4165 : N := succ n4164
-/-- The numeral 4166. -/
-def n4166 : N := succ n4165
-/-- The numeral 4167. -/
-def n4167 : N := succ n4166
-/-- The numeral 4168. -/
-def n4168 : N := succ n4167
-/-- The numeral 4169. -/
-def n4169 : N := succ n4168
 /-- The numeral 4170. -/
 def n4170 : N := succ n4169
 /-- The numeral 4171. -/
@@ -8312,74 +8278,74 @@ def n8300 : N := succ n8299
 def n8301 : N := succ n8300
 /-- The numeral 8302. -/
 def n8302 : N := succ n8301
-/-- The countdown step at 4151. -/
-theorem count_4151 : sub n4153 n4151 = n2 := by
-  rw [n4153, n4151, sub_succ_succ]
-  exact count_4150
-/-- The countdown step at 4152. -/
-theorem count_4152 : sub n4154 n4152 = n2 := by
-  rw [n4154, n4152, sub_succ_succ]
-  exact count_4151
-/-- The countdown step at 4153. -/
-theorem count_4153 : sub n4155 n4153 = n2 := by
-  rw [n4155, n4153, sub_succ_succ]
-  exact count_4152
-/-- The countdown step at 4154. -/
-theorem count_4154 : sub n4156 n4154 = n2 := by
-  rw [n4156, n4154, sub_succ_succ]
-  exact count_4153
-/-- The countdown step at 4155. -/
-theorem count_4155 : sub n4157 n4155 = n2 := by
-  rw [n4157, n4155, sub_succ_succ]
-  exact count_4154
-/-- The countdown step at 4156. -/
-theorem count_4156 : sub n4158 n4156 = n2 := by
-  rw [n4158, n4156, sub_succ_succ]
-  exact count_4155
-/-- The countdown step at 4157. -/
-theorem count_4157 : sub n4159 n4157 = n2 := by
-  rw [n4159, n4157, sub_succ_succ]
-  exact count_4156
-/-- The countdown step at 4158. -/
-theorem count_4158 : sub n4160 n4158 = n2 := by
-  rw [n4160, n4158, sub_succ_succ]
-  exact count_4157
-/-- The countdown step at 4159. -/
-theorem count_4159 : sub n4161 n4159 = n2 := by
-  rw [n4161, n4159, sub_succ_succ]
-  exact count_4158
-/-- The countdown step at 4160. -/
-theorem count_4160 : sub n4162 n4160 = n2 := by
-  rw [n4162, n4160, sub_succ_succ]
-  exact count_4159
-/-- The countdown step at 4161. -/
-theorem count_4161 : sub n4163 n4161 = n2 := by
-  rw [n4163, n4161, sub_succ_succ]
-  exact count_4160
-/-- The countdown step at 4162. -/
-theorem count_4162 : sub n4164 n4162 = n2 := by
-  rw [n4164, n4162, sub_succ_succ]
-  exact count_4161
-/-- The countdown step at 4163. -/
-theorem count_4163 : sub n4165 n4163 = n2 := by
-  rw [n4165, n4163, sub_succ_succ]
-  exact count_4162
-/-- The countdown step at 4164. -/
-theorem count_4164 : sub n4166 n4164 = n2 := by
-  rw [n4166, n4164, sub_succ_succ]
-  exact count_4163
-/-- The countdown step at 4165. -/
-theorem count_4165 : sub n4167 n4165 = n2 := by
-  rw [n4167, n4165, sub_succ_succ]
-  exact count_4164
-/-- The countdown step at 4166. -/
-theorem count_4166 : sub n4168 n4166 = n2 := by
-  rw [n4168, n4166, sub_succ_succ]
-  exact count_4165
-/-- The countdown step at 4167. -/
-theorem count_4167 : sub n4169 n4167 = n2 := by
-  rw [n4169, n4167, sub_succ_succ]
-  exact count_4166
+/-- The numeral 8303. -/
+def n8303 : N := succ n8302
+/-- The numeral 8304. -/
+def n8304 : N := succ n8303
+/-- The numeral 8305. -/
+def n8305 : N := succ n8304
+/-- The numeral 8306. -/
+def n8306 : N := succ n8305
+/-- The numeral 8307. -/
+def n8307 : N := succ n8306
+/-- The numeral 8308. -/
+def n8308 : N := succ n8307
+/-- The numeral 8309. -/
+def n8309 : N := succ n8308
+/-- The numeral 8310. -/
+def n8310 : N := succ n8309
+/-- The numeral 8311. -/
+def n8311 : N := succ n8310
+/-- The numeral 8312. -/
+def n8312 : N := succ n8311
+/-- The numeral 8313. -/
+def n8313 : N := succ n8312
+/-- The numeral 8314. -/
+def n8314 : N := succ n8313
+/-- The numeral 8315. -/
+def n8315 : N := succ n8314
+/-- The numeral 8316. -/
+def n8316 : N := succ n8315
+/-- The numeral 8317. -/
+def n8317 : N := succ n8316
+/-- The numeral 8318. -/
+def n8318 : N := succ n8317
+/-- The numeral 8319. -/
+def n8319 : N := succ n8318
+/-- The numeral 8320. -/
+def n8320 : N := succ n8319
+/-- The numeral 8321. -/
+def n8321 : N := succ n8320
+/-- The numeral 8322. -/
+def n8322 : N := succ n8321
+/-- The numeral 8323. -/
+def n8323 : N := succ n8322
+/-- The numeral 8324. -/
+def n8324 : N := succ n8323
+/-- The numeral 8325. -/
+def n8325 : N := succ n8324
+/-- The numeral 8326. -/
+def n8326 : N := succ n8325
+/-- The numeral 8327. -/
+def n8327 : N := succ n8326
+/-- The numeral 8328. -/
+def n8328 : N := succ n8327
+/-- The numeral 8329. -/
+def n8329 : N := succ n8328
+/-- The numeral 8330. -/
+def n8330 : N := succ n8329
+/-- The numeral 8331. -/
+def n8331 : N := succ n8330
+/-- The numeral 8332. -/
+def n8332 : N := succ n8331
+/-- The numeral 8333. -/
+def n8333 : N := succ n8332
+/-- The numeral 8334. -/
+def n8334 : N := succ n8333
+/-- The numeral 8335. -/
+def n8335 : N := succ n8334
+/-- The numeral 8336. -/
+def n8336 : N := succ n8335
 /-- The countdown step at 4168. -/
 theorem count_4168 : sub n4170 n4168 = n2 := by
   rw [n4170, n4168, sub_succ_succ]
@@ -24912,6 +24878,142 @@ theorem count_8299 : sub n8301 n8299 = n2 := by
 theorem count_8300 : sub n8302 n8300 = n2 := by
   rw [n8302, n8300, sub_succ_succ]
   exact count_8299
+/-- The countdown step at 8301. -/
+theorem count_8301 : sub n8303 n8301 = n2 := by
+  rw [n8303, n8301, sub_succ_succ]
+  exact count_8300
+/-- The countdown step at 8302. -/
+theorem count_8302 : sub n8304 n8302 = n2 := by
+  rw [n8304, n8302, sub_succ_succ]
+  exact count_8301
+/-- The countdown step at 8303. -/
+theorem count_8303 : sub n8305 n8303 = n2 := by
+  rw [n8305, n8303, sub_succ_succ]
+  exact count_8302
+/-- The countdown step at 8304. -/
+theorem count_8304 : sub n8306 n8304 = n2 := by
+  rw [n8306, n8304, sub_succ_succ]
+  exact count_8303
+/-- The countdown step at 8305. -/
+theorem count_8305 : sub n8307 n8305 = n2 := by
+  rw [n8307, n8305, sub_succ_succ]
+  exact count_8304
+/-- The countdown step at 8306. -/
+theorem count_8306 : sub n8308 n8306 = n2 := by
+  rw [n8308, n8306, sub_succ_succ]
+  exact count_8305
+/-- The countdown step at 8307. -/
+theorem count_8307 : sub n8309 n8307 = n2 := by
+  rw [n8309, n8307, sub_succ_succ]
+  exact count_8306
+/-- The countdown step at 8308. -/
+theorem count_8308 : sub n8310 n8308 = n2 := by
+  rw [n8310, n8308, sub_succ_succ]
+  exact count_8307
+/-- The countdown step at 8309. -/
+theorem count_8309 : sub n8311 n8309 = n2 := by
+  rw [n8311, n8309, sub_succ_succ]
+  exact count_8308
+/-- The countdown step at 8310. -/
+theorem count_8310 : sub n8312 n8310 = n2 := by
+  rw [n8312, n8310, sub_succ_succ]
+  exact count_8309
+/-- The countdown step at 8311. -/
+theorem count_8311 : sub n8313 n8311 = n2 := by
+  rw [n8313, n8311, sub_succ_succ]
+  exact count_8310
+/-- The countdown step at 8312. -/
+theorem count_8312 : sub n8314 n8312 = n2 := by
+  rw [n8314, n8312, sub_succ_succ]
+  exact count_8311
+/-- The countdown step at 8313. -/
+theorem count_8313 : sub n8315 n8313 = n2 := by
+  rw [n8315, n8313, sub_succ_succ]
+  exact count_8312
+/-- The countdown step at 8314. -/
+theorem count_8314 : sub n8316 n8314 = n2 := by
+  rw [n8316, n8314, sub_succ_succ]
+  exact count_8313
+/-- The countdown step at 8315. -/
+theorem count_8315 : sub n8317 n8315 = n2 := by
+  rw [n8317, n8315, sub_succ_succ]
+  exact count_8314
+/-- The countdown step at 8316. -/
+theorem count_8316 : sub n8318 n8316 = n2 := by
+  rw [n8318, n8316, sub_succ_succ]
+  exact count_8315
+/-- The countdown step at 8317. -/
+theorem count_8317 : sub n8319 n8317 = n2 := by
+  rw [n8319, n8317, sub_succ_succ]
+  exact count_8316
+/-- The countdown step at 8318. -/
+theorem count_8318 : sub n8320 n8318 = n2 := by
+  rw [n8320, n8318, sub_succ_succ]
+  exact count_8317
+/-- The countdown step at 8319. -/
+theorem count_8319 : sub n8321 n8319 = n2 := by
+  rw [n8321, n8319, sub_succ_succ]
+  exact count_8318
+/-- The countdown step at 8320. -/
+theorem count_8320 : sub n8322 n8320 = n2 := by
+  rw [n8322, n8320, sub_succ_succ]
+  exact count_8319
+/-- The countdown step at 8321. -/
+theorem count_8321 : sub n8323 n8321 = n2 := by
+  rw [n8323, n8321, sub_succ_succ]
+  exact count_8320
+/-- The countdown step at 8322. -/
+theorem count_8322 : sub n8324 n8322 = n2 := by
+  rw [n8324, n8322, sub_succ_succ]
+  exact count_8321
+/-- The countdown step at 8323. -/
+theorem count_8323 : sub n8325 n8323 = n2 := by
+  rw [n8325, n8323, sub_succ_succ]
+  exact count_8322
+/-- The countdown step at 8324. -/
+theorem count_8324 : sub n8326 n8324 = n2 := by
+  rw [n8326, n8324, sub_succ_succ]
+  exact count_8323
+/-- The countdown step at 8325. -/
+theorem count_8325 : sub n8327 n8325 = n2 := by
+  rw [n8327, n8325, sub_succ_succ]
+  exact count_8324
+/-- The countdown step at 8326. -/
+theorem count_8326 : sub n8328 n8326 = n2 := by
+  rw [n8328, n8326, sub_succ_succ]
+  exact count_8325
+/-- The countdown step at 8327. -/
+theorem count_8327 : sub n8329 n8327 = n2 := by
+  rw [n8329, n8327, sub_succ_succ]
+  exact count_8326
+/-- The countdown step at 8328. -/
+theorem count_8328 : sub n8330 n8328 = n2 := by
+  rw [n8330, n8328, sub_succ_succ]
+  exact count_8327
+/-- The countdown step at 8329. -/
+theorem count_8329 : sub n8331 n8329 = n2 := by
+  rw [n8331, n8329, sub_succ_succ]
+  exact count_8328
+/-- The countdown step at 8330. -/
+theorem count_8330 : sub n8332 n8330 = n2 := by
+  rw [n8332, n8330, sub_succ_succ]
+  exact count_8329
+/-- The countdown step at 8331. -/
+theorem count_8331 : sub n8333 n8331 = n2 := by
+  rw [n8333, n8331, sub_succ_succ]
+  exact count_8330
+/-- The countdown step at 8332. -/
+theorem count_8332 : sub n8334 n8332 = n2 := by
+  rw [n8334, n8332, sub_succ_succ]
+  exact count_8331
+/-- The countdown step at 8333. -/
+theorem count_8333 : sub n8335 n8333 = n2 := by
+  rw [n8335, n8333, sub_succ_succ]
+  exact count_8332
+/-- The countdown step at 8334. -/
+theorem count_8334 : sub n8336 n8334 = n2 := by
+  rw [n8336, n8334, sub_succ_succ]
+  exact count_8333
 
 end Countdown
 end Principia

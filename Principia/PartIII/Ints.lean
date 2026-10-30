@@ -109,11 +109,6 @@ theorem mk_shift (a b k : N) : mk (N.add a k) (N.add b k) = mk a b := by
   apply mk_eq_iff.2
   rw [N.add_assoc, N.add_comm k b]
 
-/-- The class of a pair whose coordinates are equal is the zero class. -/
-theorem mk_self (a : N) : mk a a = mk zero zero := by
-  apply mk_eq_iff.2
-  rw [N.add_zero, N.zero_add]
-
 /-! ### Addition -/
 
 /-- Addition of integers. -/
@@ -405,11 +400,6 @@ theorem le_trans {x y z : Z} (hxy : le x y) (hyz : le y z) : le x z := by
   refine ⟨N.add k l, ?_⟩
   rw [hl, hk, ofN_add, add_assoc]
 
-/-- Equal integers are comparable. -/
-theorem le_of_eq {x y : Z} (h : x = y) : le x y := by
-  rw [h]
-  exact le_refl y
-
 /-- The integer order is total. -/
 theorem le_total (x y : Z) : le x y ∨ le y x := by
   refine Quotient.inductionOn₂ (motive := fun x y => le x y ∨ le y x) x y ?_
@@ -429,13 +419,6 @@ theorem le_total (x y : Z) : le x y ∨ le y x := by
       apply mk_eq_iff.2
       show N.add p.1 (N.add q.2 N.zero) = N.add (N.add q.1 k) p.2
       rw [N.add_zero, hk, N.add_assoc, N.add_assoc, N.add_comm p.2 k]
-
-/-- Adding a constant preserves the integer order. -/
-theorem add_le_add_right {x y : Z} (h : le x y) (z : Z) : le (add x z) (add y z) := by
-  obtain ⟨k, hk⟩ := h
-  refine ⟨k, ?_⟩
-  rw [hk]
-  rw [add_assoc, add_comm (ofN k) z, ← add_assoc]
 
 /-- Multiplying a class by an embedded natural multiplies both coordinates. -/
 theorem mul_ofN_mk (k a b : N) :

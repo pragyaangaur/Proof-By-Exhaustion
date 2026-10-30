@@ -22,10 +22,6 @@ inductive HF : Type where
 def elems : HF → List HF
   | HF.mk l => l
 
-/-- Membership. -/
-def mem (x : HF) : HF → Prop
-  | HF.mk l => x ∈ l
-
 /-- The von Neumann successor `x ∪ {x}`. -/
 def succHF : HF → HF
   | HF.mk l => HF.mk (l ++ [HF.mk l])
@@ -81,23 +77,10 @@ theorem vN_inj {a b : N} (h : vN a = vN b) : a = b := by
   rw [size_vN, size_vN] at h'
   exact h'
 
-/-- The numeral of one. -/
-theorem vN_one : vN one = succHF (vN zero) := vN_succ zero
-
 /-- Ordinal addition: add an ordinal by iterating the von Neumann successor. -/
 def ordAdd (x : HF) : N → HF
   | zero => x
   | succ n => succHF (ordAdd x n)
-
-/-- Adding zero on the right leaves an ordinal unchanged. -/
-theorem ordAdd_zero (x : HF) : ordAdd x zero = x := by
-  show x = x
-  exact Eq.refl x
-
-/-- Ordinal addition satisfies the successor recursion. -/
-theorem ordAdd_succ (x : HF) (n : N) : ordAdd x (succ n) = succHF (ordAdd x n) := by
-  show succHF (ordAdd x n) = succHF (ordAdd x n)
-  exact Eq.refl (succHF (ordAdd x n))
 
 /-- The numeral embedding preserves addition. -/
 theorem ordAdd_vN (a b : N) : ordAdd (vN a) b = vN (add a b) := by

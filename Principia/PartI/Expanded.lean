@@ -1,11 +1,10 @@
 /-
   Principia, Part I: the derivation of `add one one = two`, fully expanded.
 
-  `Principia/PartI/Logic.lean` derives `oneAddOne` (`add one one = two`) in
-  four steps, the last of them an application of the derived rule `eq_trans`.
-  This file writes that same derivation out line by line, with `eq_trans`
-  itself expanded into the substitutivity schema `eqSubst` and two modus
-  ponens steps.  Every intermediate formula is a named `def` (`f1`, `f2`,
+  This file derives `oneAddOne` (`add one one = two`) in the Hilbert system of
+  `Principia/PartI/Logic.lean`, line by line.  Transitivity of equality is not
+  a schema of the system, so it is obtained from the substitutivity schema
+  `eqSubst` and two modus ponens steps.  Every intermediate formula is a named `def` (`f1`, `f2`,
   `f3'`, `f3`, `f4`, and the three implication formulas `g1`, `g2`, `g3`), and
   every use of a schema of `Principia.Logic.Derive` or of the rule `mp` is a
   separately named theorem, whose statement is the formula that the schema
@@ -13,7 +12,7 @@
   schemata `addZero`, `addSucc`, `eqCongrSucc`, `eqSubst`, or the rule `mp`,
   with all of its arguments named.
 
-  The chain is the one of `derives_one_add_one`:
+  The chain is:
 
   | step          | formula                                  | rule or schema                          |
   |---------------|------------------------------------------|-----------------------------------------|
@@ -111,7 +110,7 @@ theorem step2 : Derive [] f2 :=
 `(s = t) → (succ s = succ t)` — at `Γ = []`, `s = add one zero`, `t = one`.
 Its conclusion is `(add one zero = one) → (succ (add one zero) = succ one)`,
 i.e. `f1 → f3'`, which is the formula `g1`. -/
-theorem step_succ : Derive [] (Form.imp f1 f3') :=
+theorem step_succ : Derive [] g1 :=
   Derive.eqCongrSucc (Γ := []) (s := Term.add Term.one Term.zero) (t := Term.one)
 #print axioms step_succ
 
@@ -178,13 +177,16 @@ theorem «✱54.43_expanded_valid» (M : Structure) (v : Var → M.Car) :
     (fun γ h => by cases h)
 #print axioms «✱54.43_expanded_valid»
 
-/-- The same statement computed in the standard structure of Part I: the
-conclusion of the expanded derivation says `succ (succ zero) = succ (succ zero)`
-in the numerals. -/
+/-- The expanded derivation read in the standard structure of Part I: both
+`add one one` and `two` evaluate to the numeral `succ (succ zero)`.  The left
+component is the derivation seen through `sound`, the right one is direct
+evaluation. -/
 theorem «✱54.43_expanded_standard» (v : Var → Num) :
-    Term.eval StdStruct v (Term.add Term.one Term.one) = Num.succ (Num.succ Num.zero) :=
-  show Term.eval StdStruct v (Term.add Term.one Term.one) = Term.eval StdStruct v Term.two from
-    «✱54.43_expanded_valid» StdStruct v
+    Term.eval StdStruct v (Term.add Term.one Term.one) = Num.succ (Num.succ Num.zero) ∧
+      Term.eval StdStruct v Term.two = Num.succ (Num.succ Num.zero) :=
+  ⟨show Term.eval StdStruct v (Term.add Term.one Term.one) = Term.eval StdStruct v Term.two from
+     «✱54.43_expanded_valid» StdStruct v,
+   show Num.succ (Num.succ Num.zero) = Num.succ (Num.succ Num.zero) from Eq.refl _⟩
 #print axioms «✱54.43_expanded_standard»
 
 /-! ## Output-visible checks
@@ -236,8 +238,8 @@ set_option pp.fieldNotation false
   (Form.eq (Term.add Term.one Term.one) (Term.succ (Term.succ Term.zero))))
 
 -- ✱54.43 in the two settings in which Part I states it: syntactically, and
--- semantically; the semantic statement is the one of `add_one_one_valid`.
+-- semantically.
 #check («✱54.43_expanded_valid» :
   ∀ (M : Structure) (v : Var → M.Car), Form.Sat M v oneAddOne)
-#check (add_one_one_valid : ∀ (M : Structure) (v : Var → M.Car), Form.Sat M v oneAddOne)
-#check (derives_one_add_one : Derive [] oneAddOne)
+
+end Principia.Logic.Expanded

@@ -1,8 +1,6 @@
 /-
 Part V, continued: the "nines" sequences and the Archimedean bound.
 
-New file; nothing in `Principia/PartV/Cauchy.lean` is changed.
-
 Choice of base: `invPow n = 1 / 10^n`, i.e. `invPow n` is the class of the pair
 `(1, 10^n)` of integers.  Thus `nines n = 1 - 1/10^n` and `twos n = 2 - 1/10^n`
 are the decimal expansions "0.999…9" and "1.999…9" (with `n` nines after the
@@ -29,15 +27,13 @@ Main results: `Cau nines`, `Cau twos`, the null-difference statements
 identities `0.999…9 + 0.999…9 = 2` (`«✱54.43_nines»`) and
 `0.999…9 + 1.999…9 = 1 + 2`.
 
-Note on the task list: the requested identity `0.999…9 + 1.999…9 = 2` is
-*false* — the termwise sum is `3 - 2/10^n`, whose null difference is from the
-constant `3`, not from `2`, so no proof of it exists.  This is machine-checked
-below: `nines_twos_ne_two` proves the negation.  The true analogue of ✱54.43 is
-the sum of the "nines" sequence with itself, which is `2`
-(`«✱54.43_nines»`), and the correct value of the mixed sum is `1 + 2`
-(`nines_add_twos`).
+The identity `0.999…9 + 1.999…9 = 2` is false: the termwise sum is
+`3 - 2/10^n`, whose null difference is from the constant `3`, not from `2`.
+`nines_twos_ne_two` proves the negation, and `nines_add_twos` gives the true
+value `1 + 2`.  See `CORRECTIONS.md`.
 -/
 import Principia.PartV.Cauchy
+import Principia.PartV.CauchyMul
 import Principia.PartIV.RatsOrder
 
 namespace Principia
@@ -45,26 +41,9 @@ namespace Principia
 open Principia.N
 open Principia.Rats
 
-/-! ### Powers of two -/
+/-! ### Powers of two
 
-/-- The power `2^n`, by recursion: `pow2 0 = 1`, `pow2 (n+1) = pow2 n + pow2 n`. -/
-def pow2 : N → N
-  | N.zero => N.one
-  | N.succ b => N.add (pow2 b) (pow2 b)
-
-/-- The unfolding of `pow2` at zero. -/
-theorem pow2_zero : pow2 N.zero = N.one := by
-  show N.one = N.one
-  exact Eq.refl N.one
-
-#print axioms Principia.pow2_zero
-
-/-- The unfolding of `pow2` at a successor. -/
-theorem pow2_succ (b : N) : pow2 (N.succ b) = N.add (pow2 b) (pow2 b) := by
-  show N.add (pow2 b) (pow2 b) = N.add (pow2 b) (pow2 b)
-  exact Eq.refl (N.add (pow2 b) (pow2 b))
-
-#print axioms Principia.pow2_succ
+The powers `N.pow2` and their unfolding lemmas come from `CauchyMul.lean`. -/
 
 /-- A power of two is nonzero. -/
 theorem pow2_pos (b : N) : pow2 b ≠ N.zero := by
@@ -149,18 +128,11 @@ theorem add_le_add {a b c d : N} (hab : N.le a b) (hcd : N.le c d) :
 
 #print axioms Principia.add_le_add
 
-/-- Doubling is the sum with itself: `a * 2 = a + a`. -/
-theorem mul_two (a : N) : N.mul a N.two = N.add a a := by
-  show N.mul a (N.succ N.one) = N.add a a
-  rw [N.mul_succ, N.mul_one]
-
-#print axioms Principia.mul_two
-
 /-- Multiplication by ten in the shape needed for the successor step:
 `a * 10 = a * 8 + (a + a)`. -/
 theorem mul_ten (a : N) : N.mul a N.ten = N.add (N.mul a N.eight) (N.add a a) := by
   show N.mul a (N.add N.eight N.two) = N.add (N.mul a N.eight) (N.add a a)
-  rw [N.mul_add, mul_two]
+  rw [N.mul_add, N.mul_two]
 
 #print axioms Principia.mul_ten
 
@@ -245,14 +217,6 @@ theorem le_invPow_of_den {a : Ints.Z} {b n : N} (hb : b ≠ N.zero)
     (by rw [Ints.one_mul]; exact hmain)
 
 #print axioms Principia.le_invPow_of_den
-
-/-- The Archimedean bound at the index equal to the denominator:
-`1/10^b ≤ a/b` for `a ≥ 1`. -/
-theorem le_invPow_den {a : Ints.Z} {b : N} (hb : b ≠ N.zero) (ha : Ints.le Ints.zero a)
-    (hane : a ≠ Ints.zero) : Rats.le (invPow b) (Rats.mk a b hb) :=
-  le_invPow_of_den hb ha hane (N.le_refl b)
-
-#print axioms Principia.le_invPow_den
 
 /-- The Archimedean bound for the doubled sequence: `1/10^n + 1/10^n ≤ a/b` as
 soon as `b + b ≤ n`, obtained from the previous bound at `ε/2`, whose

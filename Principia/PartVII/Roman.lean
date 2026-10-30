@@ -60,11 +60,6 @@ theorem roman_one_add_one : cat I I = II := by
   show [Sym.I, Sym.I] = [Sym.I, Sym.I]
   exact Eq.refl [Sym.I, Sym.I]
 
-/-- The value of `I` is one. -/
-theorem val_I : val I = one := by
-  show add one zero = one
-  rw [add_zero]
-
 /-- The value of `II` is two. -/
 theorem val_II : val II = two := by
   show add one (add one zero) = two

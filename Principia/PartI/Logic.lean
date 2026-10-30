@@ -25,9 +25,9 @@
     of `sound`.
 
   * Equality.  Reflexivity, substitutivity inside an equation (`eqSubst`) and
-    congruence for the three term constructors.  Transitivity is *derived* from
-    those: `eq_trans` is two modus ponens steps away from `eqSubst`, and it is
-    what `derives_one_add_one` uses.
+    congruence for the three term constructors.  Transitivity is not an axiom.
+    It is two modus ponens steps away from `eqSubst`, and the derivation of
+    `add one one = two` in `Expanded.lean` takes those two steps explicitly.
 
   * Classical logic.  The third propositional schema, `(not ψ → not φ) → (φ → ψ)`,
     is classically but not intuitionistically valid, so its semantic validity is
@@ -325,39 +325,6 @@ theorem sound (M : Structure) (v : Var → M.Car) (Γ : List Form) (φ : Form) (
   | gen x φ d ih => intro hΓ c; exact (Form.Sat_ext M φ (update v x c) v).mpr (ih hΓ)
 #print axioms sound
 
-/-! ## Transitivity of equality, derived from the equality schemas -/
-
-/-- Transitivity of equality as a derived rule: two modus ponens steps away from
-the substitutivity schema `eqSubst`. -/
-theorem eq_trans (Γ : List Form) (s t u : Term) (h1 : Derive Γ (Form.eq s t))
-    (h2 : Derive Γ (Form.eq t u)) : Derive Γ (Form.eq s u) :=
-  Derive.mp Γ (Form.eq s t) (Form.eq s u)
-    (Derive.mp Γ (Form.eq t u) (Form.imp (Form.eq s t) (Form.eq s u))
-      (Derive.eqSubst Γ t u s) h2) h1
-#print axioms eq_trans
-
-/-! ## A derivation of `add one one = two` inside the system -/
-
-/-- `oneAddOne` is derivable from no hypotheses at all; it has no free variables,
-so it is its own universal closure (the generalisation rule `gen` would close it
-under `all` explicitly).  The steps are
-  (i)   `add one zero = one`               (recursion schema, first equation)
-  (ii)  `add one one = succ (add one zero)` (recursion schema, second equation)
-  (iii) `succ (add one zero) = succ one`    (congruence of equality under `succ`,
-                                             applied to (i))
-  (iv)  transitivity of equality, applied to (ii) and (iii). -/
-theorem derives_one_add_one : Derive [] oneAddOne := by
-  have h1 : Derive [] (Form.eq (Term.add Term.one Term.zero) Term.one) :=
-    Derive.addZero [] Term.one
-  have h2 : Derive [] (Form.eq (Term.add Term.one Term.one) (Term.succ (Term.add Term.one Term.zero))) :=
-    Derive.addSucc [] Term.one Term.zero
-  have h3 : Derive [] (Form.eq (Term.succ (Term.add Term.one Term.zero)) Term.two) :=
-    Derive.mp [] (Form.eq (Term.add Term.one Term.zero) Term.one)
-      (Form.eq (Term.succ (Term.add Term.one Term.zero)) Term.two)
-      (Derive.eqCongrSucc [] (Term.add Term.one Term.zero) Term.one) h1
-  exact eq_trans [] (Term.add Term.one Term.one) (Term.succ (Term.add Term.one Term.zero)) Term.two h2 h3
-#print axioms derives_one_add_one
-
 /-! ## The standard model, and the two routes to `add one one = two`
 
 To check the syntax against the semantics, the file also carries an internal
@@ -397,21 +364,6 @@ def StdStruct : Structure where
   add_succ := fun x y =>
     show Num.succ (Num.add x y) = Num.succ (Num.add x y) from Eq.refl (Num.succ (Num.add x y))
 
-/-- The derived formula is true in every structure under every assignment. -/
-theorem add_one_one_valid (M : Structure) (v : Var → M.Car) : Form.Sat M v oneAddOne :=
-  sound M v [] oneAddOne derives_one_add_one (fun γ h => by cases h)
-#print axioms add_one_one_valid
-
-/-- In the standard structure both `add one one` and `two` evaluate to the numeral
-`succ (succ zero)`: the left component is the derivation seen through `sound`,
-the right component is direct evaluation. -/
-theorem standard_model_check (v : Var → Num) :
-    Term.eval StdStruct v (Term.add Term.one Term.one) = Num.succ (Num.succ Num.zero) ∧
-      Term.eval StdStruct v Term.two = Num.succ (Num.succ Num.zero) :=
-  ⟨add_one_one_valid StdStruct v,
-   show Num.succ (Num.succ Num.zero) = Num.succ (Num.succ Num.zero) from Eq.refl _⟩
-#print axioms standard_model_check
-
 /-! ## Output-visible checks of the interface -/
 
 open Principia.Logic
@@ -431,14 +383,9 @@ open Principia.Logic
 #check @Term.eval
 #check @Form.Sat
 #check @sound
-#check @derives_one_add_one
 
 #print axioms Term.eval_ext
 #print axioms Term.eval_subst
 #print axioms Form.Sat_ext
 #print axioms Form.Sat_subst
 #print axioms sound
-#print axioms eq_trans
-#print axioms derives_one_add_one
-#print axioms add_one_one_valid
-#print axioms standard_model_check

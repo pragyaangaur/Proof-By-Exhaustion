@@ -20,7 +20,7 @@ applied.  The numerals `four`, `nine`, `forty`, `ninety`, `fourHundred` and
 as are `two`, `five`, `ten` and `fifteen`.
 
 The worked cases `valSub_IV`, `valSub_IX`, `valSub_XL`, `valSub_XC`,
-`valSub_CD`, `valSub_CM` and the additive cases `valSub_II`, `valSub_VI`,
+`valSub_CD`, `valSub_CM` and the additive cases `valSub_add_II`, `valSub_VI`,
 `valSub_XV` are at the end; the adder is `cat`, and `valSub_cat_additive`
 records exactly when concatenating numerals adds their values.
 
@@ -79,14 +79,6 @@ equations of Part II; the evaluations at the end of each proof use only the
 definitional unfolding of a numeral, written out as a `show`.  This is the same
 idiom as in `Principia/PartII/Peano.lean`. -/
 
-/-- `a + 1` is the successor of `a`. -/
-theorem add_one (a : N) : N.add a N.one = N.succ a := by
-  rw [N.one]
-  rw [N.add_succ]
-  rw [N.add_zero]
-
-#print axioms add_one
-
 /-- Adding two successors adds two successors. -/
 theorem add_succ_succ (a b : N) :
     N.add (N.succ a) (N.succ b) = N.succ (N.succ (N.add a b)) := by
@@ -95,18 +87,10 @@ theorem add_succ_succ (a b : N) :
 
 #print axioms add_succ_succ
 
-/-- Doubling on the right. -/
-theorem mul_two_right (a : N) : N.mul a N.two = N.add a a := by
-  rw [N.two]
-  rw [N.mul_succ]
-  rw [N.mul_one]
-
-#print axioms mul_two_right
-
 /-- Doubling on the left. -/
 theorem mul_two_left (a : N) : N.mul N.two a = N.add a a := by
   rw [N.mul_comm]
-  rw [mul_two_right]
+  rw [N.mul_two]
 
 #print axioms mul_two_left
 
@@ -150,14 +134,14 @@ theorem add_five_five : N.add N.five N.five = N.ten := by
 /-- `five` as `four + one`. -/
 theorem N_five_eq : N.five = N.add N.four N.one := by
   show N.succ N.four = N.add N.four N.one
-  exact Eq.symm (add_one N.four)
+  exact Eq.symm (N.add_one N.four)
 
 #print axioms N_five_eq
 
 /-- `ten` as `nine + one`. -/
 theorem N_ten_eq : N.ten = N.add N.nine N.one := by
   show N.succ N.nine = N.add N.nine N.one
-  exact Eq.symm (add_one N.nine)
+  exact Eq.symm (N.add_one N.nine)
 
 #print axioms N_ten_eq
 
@@ -179,7 +163,7 @@ theorem four_eq : four = N.four := by
 theorem five_eq : five = N.five := by
   show N.add four N.one = N.five
   rw [four_eq]
-  exact add_one N.four
+  exact N.add_one N.four
 
 #print axioms five_eq
 
@@ -190,7 +174,7 @@ theorem nine_eq : nine = N.nine := by
   rw [four_eq]
   rw [mul_two_left]
   rw [add_four_four]
-  exact add_one N.eight
+  exact N.add_one N.eight
 
 #print axioms nine_eq
 
@@ -319,18 +303,6 @@ theorem nlt_zero_zero : nlt N.zero N.zero = false := by
 
 #print axioms nlt_zero_zero
 
-theorem nlt_zero_succ (b : N) : nlt N.zero (N.succ b) = true := by
-  show true = true
-  exact Eq.refl true
-
-#print axioms nlt_zero_succ
-
-theorem nlt_succ_zero (a : N) : nlt (N.succ a) N.zero = false := by
-  show false = false
-  exact Eq.refl false
-
-#print axioms nlt_succ_zero
-
 /-- Nothing is below itself. -/
 theorem nlt_irrefl (a : N) : nlt a a = false := by
   induction a with
@@ -455,12 +427,6 @@ theorem minorsAux_some_cons_false (p s : Sym) (t : Roman) (h : symLt p s = false
   exact Eq.refl (minorsAux (some s) t)
 
 #print axioms minorsAux_some_cons_false
-
-theorem minors_nil : minors ([] : Roman) = [] := by
-  rw [minors]
-  exact minorsAux_nil none
-
-#print axioms minors_nil
 
 theorem minors_cons (s : Sym) (t : Roman) : minors (s :: t) = minorsAux (some s) t := by
   rw [minors]
@@ -763,7 +729,7 @@ theorem valSub_VI : valSub [V, I] = N.six := by
   rw [valSub_pair_additive V I symLt_V_I]
   rw [valSym_V_eq]
   rw [valSym_I_eq]
-  rw [add_one]
+  rw [N.add_one]
   rw [N.add_comm N.one four]
   rw [four_eq]
   rw [← N_five_eq]
@@ -784,16 +750,6 @@ theorem valSub_XV : valSub [X, V] = fifteen := by
 #print axioms valSub_XV
 
 /-! ### The adder -/
-
-/-- The adder of the notation: juxtaposing two numerals is concatenation. -/
-def addRoman (x y : Roman) : Roman := cat x y
-
-/-- Unfolding of the adder. -/
-theorem addRoman_eq_cat (x y : Roman) : addRoman x y = cat x y := by
-  show cat x y = cat x y
-  exact Eq.refl (cat x y)
-
-#print axioms addRoman_eq_cat
 
 /-- Concatenation is *not* additive in general: `IV` is four, while the sum of
 the values of `I` and `V` is six.  This is why `valSub_cat_additive` below
@@ -903,13 +859,6 @@ theorem valSub_add_II : valSub (cat [I] [I]) = two := by
 
 #print axioms valSub_add_II
 
-/-- `II` is two: one plus one in the subtractive notation. -/
-theorem valSub_II : valSub [I, I] = two := by
-  show valSub (cat [I] [I]) = two
-  exact valSub_add_II
-
-#print axioms valSub_II
-
 /-- `IV` plus `I` is `V`: four plus one is five in the subtractive notation. -/
 theorem valSub_add_IV_I : valSub (cat [I, V] [I]) = five := by
   show valSub [I, V, I] = five
@@ -926,24 +875,30 @@ theorem valSub_add_IV_I : valSub (cat [I, V] [I]) = five := by
 
 #print axioms valSub_add_IV_I
 
-/-- `I` plus `I` through the adder. -/
-theorem valSub_addRoman_II : valSub (addRoman [I] [I]) = two := by
-  rw [addRoman_eq_cat]
-  exact valSub_add_II
+/-- The worked cases of the subtractive notation, collected: the six
+subtractive pairs, two additive pairs, the failure of additivity for `IV`, the
+condition under which concatenation adds, and `IV + I = V`. -/
+def WorkedCases : Prop :=
+  valSub [I, V] = four ∧ valSub [I, X] = nine ∧ valSub [X, L] = forty ∧
+  valSub [X, C] = ninety ∧ valSub [C, D] = fourHundred ∧ valSub [C, M] = nineHundred ∧
+  valSub [V, I] = N.six ∧ valSub [X, V] = fifteen ∧
+  (valSub (cat [I] [V]) = four ∧ N.add (valSub [I]) (valSub [V]) = N.six) ∧
+  (∀ xs ys : Roman, minors (cat xs ys) = cat (minors xs) (minors ys) →
+    N.le (N.add (val (minors xs)) (val (minors xs))) (val xs) →
+    N.le (N.add (val (minors ys)) (val (minors ys))) (val ys) →
+    valSub (cat xs ys) = N.add (valSub xs) (valSub ys)) ∧
+  valSub (cat [I, V] [I]) = five
 
-#print axioms valSub_addRoman_II
+/-- The worked cases hold. -/
+theorem worked_cases : WorkedCases :=
+  ⟨valSub_IV, valSub_IX, valSub_XL, valSub_XC, valSub_CD, valSub_CM, valSub_VI, valSub_XV,
+   valSub_add_not_sum, valSub_cat_additive, valSub_add_IV_I⟩
 
-/-- `IV` plus `I` through the adder: four plus one is five. -/
-theorem valSub_addRoman_IV_I : valSub (addRoman [I, V] [I]) = five := by
-  rw [addRoman_eq_cat]
-  exact valSub_add_IV_I
-
-#print axioms valSub_addRoman_IV_I
+#print axioms worked_cases
 
 /-- One plus one is two in the subtractive notation too. -/
 theorem «✱54.43_roman_sub» : valSub (cat [I] [I]) = N.two := by
-  show valSub [I, I] = N.two
-  rw [valSub_II]
+  rw [valSub_add_II]
   exact two_eq
 
 #print axioms «✱54.43_roman_sub»

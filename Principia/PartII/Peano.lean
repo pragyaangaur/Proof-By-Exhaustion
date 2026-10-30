@@ -28,11 +28,6 @@ def mul : N → N → N
   | _, zero => zero
   | a, succ b => add (mul a b) a
 
-/-- The predecessor, with `pred zero = zero`. -/
-def pred : N → N
-  | zero => zero
-  | succ a => a
-
 /-- Truncated subtraction, by recursion on the first argument. -/
 def sub : N → N → N
   | zero, _ => zero
@@ -105,16 +100,6 @@ theorem sub_succ_zero (a : N) : sub (succ a) zero = succ a := by
 theorem sub_succ_succ (a b : N) : sub (succ a) (succ b) = sub a b := by
   show sub a b = sub a b
   exact Eq.refl (sub a b)
-
-/-- Unfolding of `pred` at a successor. -/
-theorem pred_succ (a : N) : pred (succ a) = a := by
-  show a = a
-  exact Eq.refl a
-
-/-- Unfolding of `pred` at zero. -/
-theorem pred_zero : pred zero = zero := by
-  show zero = zero
-  exact Eq.refl zero
 
 /-- Successor is injective. -/
 theorem succ_inj {a b : N} (h : succ a = succ b) : a = b := by
@@ -244,6 +229,14 @@ theorem mul_one (a : N) : mul a one = a := by
   rw [mul_zero]
   rw [zero_add]
 
+/-- Adding one is taking the successor. -/
+theorem add_one (a : N) : add a one = succ a := by
+  rw [one, add_succ, add_zero]
+
+/-- Multiplying by two is adding a number to itself. -/
+theorem mul_two (a : N) : mul a two = add a a := by
+  rw [two, mul_succ, mul_one]
+
 /-- One is a left unit for multiplication. -/
 theorem one_mul (a : N) : mul one a = a := by
   rw [one]
@@ -277,29 +270,11 @@ theorem mul_comm (a b : N) : mul a b = mul b a := by
 
 /-! ### Subtraction -/
 
-/-- Subtracting a number from itself gives zero. -/
-theorem sub_self (a : N) : sub a a = zero := by
-  induction a with
-  | zero => exact sub_zero_left zero
-  | succ a ih =>
-      rw [sub_succ_succ]
-      exact ih
-
 /-- Subtracting zero on the right. -/
 theorem sub_zero (a : N) : sub a zero = a := by
   induction a with
   | zero => exact sub_zero_left zero
   | succ a _ => exact sub_succ_zero a
-
-/-- A double successor minus the predecessor of its predecessor is two. -/
-theorem sub_succ_succ_of_succ (a : N) :
-    sub (succ (succ a)) a = succ (succ zero) := by
-  induction a with
-  | zero =>
-      rw [sub_succ_zero]
-  | succ a ih =>
-      rw [sub_succ_succ]
-      rw [ih]
 
 /-! ### The theorem of the part -/
 

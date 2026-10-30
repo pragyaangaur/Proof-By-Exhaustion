@@ -3,3 +3,4 @@ build/
 .ultramath/
 *.log
 .scratch/
+.axioms.out

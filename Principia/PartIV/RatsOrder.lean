@@ -2,17 +2,16 @@
 Part IV, continued: the order on the rationals is a linear order, and it is
 compatible with the cross-product criterion.
 
-New file; nothing in `Principia/PartIV/Rats.lean` is changed.  The main results
-are `Rats.le_antisymm`, `Rats.lt_trans` and `Rats.nonneg_of_cross`.  The key
+The main results are `Rats.le_antisymm` and `Rats.nonneg_of_cross`.  The key
 intermediate step is that nonnegativity can be read off from *any*
 representative of a rational (`Rats.le_of_nonneg_mk`): this is where
 `Ints.mul_eq_zero` and the sign lemma `Ints.le_zero_of_mul_ofN` from
 `IntsOrder.lean` enter.  Antisymmetry then follows from
 `Nonneg z → Nonneg (-z) → z = 0`.
 
-Besides the three required theorems the file contains the elementary group
+The file also contains the elementary group
 identities for differences (`sub_self_sub`, `sub_sub_self`, `sub_sub_sub`,
-`sub_add_left`, `sub_sub_sub_cancel`) and the order lemmas `le_zero_of_nonneg`,
+`sub_add_left`, `sub_sub_sub_cancel`) and the order lemmas
 `nonneg_of_le_zero`, `le_sub_self` that the decimal development uses.
 -/
 import Principia.PartIV.Rats
@@ -37,14 +36,6 @@ theorem le_of_nonneg_mk {a : Z} {b : N} {hb : b ≠ N.zero} (h : Nonneg (mk a b 
   exact Ints.le_zero_of_mul_ofN hle hb'
 
 #print axioms Principia.Rats.le_of_nonneg_mk
-
-/-- A nonnegative rational is above zero. -/
-theorem le_zero_of_nonneg {x : Q} (h : Nonneg x) : le zero x := by
-  show Nonneg (sub x zero)
-  rw [sub_zero]
-  exact h
-
-#print axioms Principia.Rats.le_zero_of_nonneg
 
 /-- A rational above zero is nonnegative. -/
 theorem nonneg_of_le_zero {x : Q} (h : le zero x) : Nonneg x := by
@@ -178,16 +169,6 @@ theorem le_antisymm {x y : Q} (h1 : le x y) (h2 : le y x) : x = y := by
   exact eq_of_sub_eq_zero hxy
 
 #print axioms Principia.Rats.le_antisymm
-
-/-- The strict order on the rationals is transitive. -/
-theorem lt_trans {x y z : Q} (h1 : lt x y) (h2 : lt y z) : lt x z := by
-  constructor
-  · exact le_trans h1.1 h2.1
-  · intro hxz
-    apply h2.2
-    exact le_antisymm h2.1 (by rw [← hxz]; exact h1.1)
-
-#print axioms Principia.Rats.lt_trans
 
 /-! ### The cross-product criterion -/
 

@@ -1,7 +1,7 @@
 /-
 Part VII (a): the countdown, part 0.
 
-Numerals `n3` to `n4152`, and the chain lemmas `count_1` to `count_4150`.
+Numerals `n3` to `n4169`, and the chain lemmas `count_1` to `count_4167`.
 Every numeral is the successor of its predecessor and every lemma is one
 unfolding of the subtraction recursion applied to the preceding lemma.
 -/
@@ -8321,6 +8321,40 @@ def n4150 : N := succ n4149
 def n4151 : N := succ n4150
 /-- The numeral 4152. -/
 def n4152 : N := succ n4151
+/-- The numeral 4153. -/
+def n4153 : N := succ n4152
+/-- The numeral 4154. -/
+def n4154 : N := succ n4153
+/-- The numeral 4155. -/
+def n4155 : N := succ n4154
+/-- The numeral 4156. -/
+def n4156 : N := succ n4155
+/-- The numeral 4157. -/
+def n4157 : N := succ n4156
+/-- The numeral 4158. -/
+def n4158 : N := succ n4157
+/-- The numeral 4159. -/
+def n4159 : N := succ n4158
+/-- The numeral 4160. -/
+def n4160 : N := succ n4159
+/-- The numeral 4161. -/
+def n4161 : N := succ n4160
+/-- The numeral 4162. -/
+def n4162 : N := succ n4161
+/-- The numeral 4163. -/
+def n4163 : N := succ n4162
+/-- The numeral 4164. -/
+def n4164 : N := succ n4163
+/-- The numeral 4165. -/
+def n4165 : N := succ n4164
+/-- The numeral 4166. -/
+def n4166 : N := succ n4165
+/-- The numeral 4167. -/
+def n4167 : N := succ n4166
+/-- The numeral 4168. -/
+def n4168 : N := succ n4167
+/-- The numeral 4169. -/
+def n4169 : N := succ n4168
 /-- The countdown step at 1. -/
 theorem count_1 : sub n3 n1 = n2 := by
   rw [n3, n1, sub_succ_succ]
@@ -24921,6 +24955,74 @@ theorem count_4149 : sub n4151 n4149 = n2 := by
 theorem count_4150 : sub n4152 n4150 = n2 := by
   rw [n4152, n4150, sub_succ_succ]
   exact count_4149
+/-- The countdown step at 4151. -/
+theorem count_4151 : sub n4153 n4151 = n2 := by
+  rw [n4153, n4151, sub_succ_succ]
+  exact count_4150
+/-- The countdown step at 4152. -/
+theorem count_4152 : sub n4154 n4152 = n2 := by
+  rw [n4154, n4152, sub_succ_succ]
+  exact count_4151
+/-- The countdown step at 4153. -/
+theorem count_4153 : sub n4155 n4153 = n2 := by
+  rw [n4155, n4153, sub_succ_succ]
+  exact count_4152
+/-- The countdown step at 4154. -/
+theorem count_4154 : sub n4156 n4154 = n2 := by
+  rw [n4156, n4154, sub_succ_succ]
+  exact count_4153
+/-- The countdown step at 4155. -/
+theorem count_4155 : sub n4157 n4155 = n2 := by
+  rw [n4157, n4155, sub_succ_succ]
+  exact count_4154
+/-- The countdown step at 4156. -/
+theorem count_4156 : sub n4158 n4156 = n2 := by
+  rw [n4158, n4156, sub_succ_succ]
+  exact count_4155
+/-- The countdown step at 4157. -/
+theorem count_4157 : sub n4159 n4157 = n2 := by
+  rw [n4159, n4157, sub_succ_succ]
+  exact count_4156
+/-- The countdown step at 4158. -/
+theorem count_4158 : sub n4160 n4158 = n2 := by
+  rw [n4160, n4158, sub_succ_succ]
+  exact count_4157
+/-- The countdown step at 4159. -/
+theorem count_4159 : sub n4161 n4159 = n2 := by
+  rw [n4161, n4159, sub_succ_succ]
+  exact count_4158
+/-- The countdown step at 4160. -/
+theorem count_4160 : sub n4162 n4160 = n2 := by
+  rw [n4162, n4160, sub_succ_succ]
+  exact count_4159
+/-- The countdown step at 4161. -/
+theorem count_4161 : sub n4163 n4161 = n2 := by
+  rw [n4163, n4161, sub_succ_succ]
+  exact count_4160
+/-- The countdown step at 4162. -/
+theorem count_4162 : sub n4164 n4162 = n2 := by
+  rw [n4164, n4162, sub_succ_succ]
+  exact count_4161
+/-- The countdown step at 4163. -/
+theorem count_4163 : sub n4165 n4163 = n2 := by
+  rw [n4165, n4163, sub_succ_succ]
+  exact count_4162
+/-- The countdown step at 4164. -/
+theorem count_4164 : sub n4166 n4164 = n2 := by
+  rw [n4166, n4164, sub_succ_succ]
+  exact count_4163
+/-- The countdown step at 4165. -/
+theorem count_4165 : sub n4167 n4165 = n2 := by
+  rw [n4167, n4165, sub_succ_succ]
+  exact count_4164
+/-- The countdown step at 4166. -/
+theorem count_4166 : sub n4168 n4166 = n2 := by
+  rw [n4168, n4166, sub_succ_succ]
+  exact count_4165
+/-- The countdown step at 4167. -/
+theorem count_4167 : sub n4169 n4167 = n2 := by
+  rw [n4169, n4167, sub_succ_succ]
+  exact count_4166
 
 end Countdown
 end Principia

@@ -1,14 +1,11 @@
 /-
 Part VI (b): Cayley–Dickson multiplication over the Cauchy reals.
 
-New file; nothing in `Principia/PartVI/CayleyDickson.lean`,
-`Principia/PartV/Cauchy.lean` or `Principia/PartV/CauchyMul.lean` is changed.
-
 Conventions.  The doubling formula is used in the form
 
   `(a, b) (c, d) = (a c - conj d * b, d a + b * conj c)`
 
-(that is the problem's `(ac − d̄ b, d a + b c̄)`, with `-` read as
+(that is `(ac − d̄ b, d a + b c̄)`, with `-` read as
 `Cauchy.add x (neg y)` and `conj` the conjugation one level down; at the base
 level, the reals, the conjugation is the identity).  With this convention, and
 the standard units `i = (i, 0)`, `j = (0, 1)`, `k = (0, i)` in `ℍ = ℂ ⊕ ℂ`,
@@ -176,11 +173,6 @@ theorem mul_one (x : Real) : mul x one = x := by
     exact hε.1
 #print axioms Principia.CD.mul_one
 
-/-- One plus one is two, for the Cauchy reals. -/
-theorem add_one_one : add (one : Real) one = two :=
-  Quotient.sound one_add_one_null
-#print axioms Principia.CD.add_one_one
-
 /-! ### The reals are nontrivial
 
 The failure theorems below need one inequality of real numbers.  The order is
@@ -229,20 +221,6 @@ theorem rats_not_le_one_half : ¬ Rats.le Rats.one (Rats.half Rats.one) := by
   exact rats_not_le_two_one h2
 #print axioms Principia.CD.rats_not_le_one_half
 
-/-- One is not zero in the reals. -/
-theorem one_ne_zero : (one : Real) ≠ zero := by
-  intro h
-  have hrel : SeqRel ⟨Cauchy.constSeq Rats.one, cau_const Rats.one⟩
-      ⟨Cauchy.constSeq Rats.zero, cau_const Rats.zero⟩ := Quotient.exact h
-  obtain ⟨M, hM⟩ := hrel (Rats.half Rats.one) rats_half_pos
-  have h0 := (hM M (N.le_refl M)).1
-  have hle : Rats.le Rats.one (Rats.half Rats.one) := by
-    have h' : Rats.le (Rats.sub Rats.one Rats.zero) (Rats.half Rats.one) := h0
-    rw [Rats.sub_zero] at h'
-    exact h'
-  exact rats_not_le_one_half hle
-#print axioms Principia.CD.one_ne_zero
-
 /-- `-1` is not one in the reals. -/
 theorem neg_one_ne_one : neg (one : Real) ≠ one := by
   intro h
@@ -266,20 +244,6 @@ theorem neg_one_ne_one : neg (one : Real) ≠ one := by
 own conjugates, so the base level contributes only a negation). -/
 def conjC (z : Complex) : Complex := ⟨z.re, neg z.im⟩
 
-/-- The unfolding of `conjC`. -/
-theorem conjC_mk (a b : Real) : conjC ⟨a, b⟩ = ⟨a, neg b⟩ := by
-  show Complex.mk a (neg b) = Complex.mk a (neg b)
-  exact Eq.refl (Complex.mk a (neg b))
-#print axioms Principia.CD.conjC_mk
-
-/-- Conjugation of complex numbers is an involution. -/
-theorem conjC_conjC (z : Complex) : conjC (conjC z) = z := by
-  cases z with
-  | mk a b =>
-    show Complex.mk a (neg (neg b)) = Complex.mk a b
-    rw [neg_neg b]
-#print axioms Principia.CD.conjC_conjC
-
 /-- The conjugate of zero. -/
 theorem conjC_zero : conjC czero = czero := by
   show Complex.mk zero (neg zero) = Complex.mk zero zero
@@ -294,12 +258,6 @@ theorem conjC_cone : conjC cone = cone := by
 
 /-- Negation of complex numbers, componentwise. -/
 def negC (z : Complex) : Complex := ⟨neg z.re, neg z.im⟩
-
-/-- The unfolding of `negC`. -/
-theorem negC_mk (a b : Real) : negC ⟨a, b⟩ = ⟨neg a, neg b⟩ := by
-  show Complex.mk (neg a) (neg b) = Complex.mk (neg a) (neg b)
-  exact Eq.refl (Complex.mk (neg a) (neg b))
-#print axioms Principia.CD.negC_mk
 
 /-- Negation of complex numbers is an involution. -/
 theorem negC_negC (z : Complex) : negC (negC z) = z := by
@@ -341,17 +299,6 @@ def mulC (z w : Complex) : Complex :=
   ⟨add (mul z.re w.re) (neg (mul w.im z.im)),
    add (mul w.im z.re) (mul z.im w.re)⟩
 
-/-- The unfolding of `mulC`, with the subtraction written out as `add`/`neg`. -/
-theorem mulC_mk (a b c d : Real) :
-    mulC ⟨a, b⟩ ⟨c, d⟩ = ⟨add (mul a c) (neg (mul d b)), add (mul d a) (mul b c)⟩ := by
-  show Complex.mk (add (mul a c) (neg (mul d b))) (add (mul d a) (mul b c))
-     = Complex.mk (add (mul a c) (neg (mul d b))) (add (mul d a) (mul b c))
-  exact Eq.refl _
-#print axioms Principia.CD.mulC_mk
-
-/-- One as a complex number, named for the one laws. -/
-abbrev oneC : Complex := cone
-
 /-- `conj i` and `-i` are the same complex number. -/
 theorem conjC_ci : conjC ci = negC ci := by
   show Complex.mk zero (neg one) = Complex.mk (neg zero) (neg one)
@@ -367,10 +314,6 @@ theorem one_mulC_cone (z : Complex) : mulC cone z = z := by
     rw [one_mul c, mul_zero d, zero_mul c, mul_one d, neg_zero, add_zero c, add_zero d]
 #print axioms Principia.CD.one_mulC_cone
 
-/-- One is a left unit for complex multiplication. -/
-theorem one_mulC (z : Complex) : mulC oneC z = z := one_mulC_cone z
-#print axioms Principia.CD.one_mulC
-
 /-- One is a right unit for complex multiplication (stated for `cone`). -/
 theorem mulC_one_cone (z : Complex) : mulC z cone = z := by
   cases z with
@@ -379,10 +322,6 @@ theorem mulC_one_cone (z : Complex) : mulC z cone = z := by
        = Complex.mk c d
     rw [mul_one c, mul_one d, zero_mul d, zero_mul c, neg_zero, add_zero c, zero_add d]
 #print axioms Principia.CD.mulC_one_cone
-
-/-- One is a right unit for complex multiplication. -/
-theorem mulC_one (z : Complex) : mulC z oneC = z := mulC_one_cone z
-#print axioms Principia.CD.mulC_one
 
 /-- Zero is a left absorber for complex multiplication. -/
 theorem zero_mulC (w : Complex) : mulC czero w = czero := by
@@ -407,20 +346,6 @@ theorem mulC_zero (z : Complex) : mulC z czero = czero := by
 /-- Conjugation of quaternions: `⟨a, b⟩ ↦ ⟨conj a, -b⟩`. -/
 def conjH (x : Quat) : Quat := ⟨conjC x.re, negC x.im⟩
 
-/-- The unfolding of `conjH`. -/
-theorem conjH_mk (a b : Complex) : conjH ⟨a, b⟩ = ⟨conjC a, negC b⟩ := by
-  show Quat.mk (conjC a) (negC b) = Quat.mk (conjC a) (negC b)
-  exact Eq.refl _
-#print axioms Principia.CD.conjH_mk
-
-/-- Conjugation of quaternions is an involution. -/
-theorem conjH_conjH (x : Quat) : conjH (conjH x) = x := by
-  cases x with
-  | mk a b =>
-    show Quat.mk (conjC (conjC a)) (negC (negC b)) = Quat.mk a b
-    rw [conjC_conjC a, negC_negC b]
-#print axioms Principia.CD.conjH_conjH
-
 /-- The conjugate of zero, at the level of `ℍ`. -/
 theorem conjH_zero : conjH hzero = hzero := by
   show Quat.mk (conjC czero) (negC czero) = Quat.mk czero czero
@@ -435,12 +360,6 @@ theorem conjH_hone : conjH hone = hone := by
 
 /-- Negation of quaternions, componentwise. -/
 def negH (x : Quat) : Quat := ⟨negC x.re, negC x.im⟩
-
-/-- The unfolding of `negH`. -/
-theorem negH_mk (a b : Complex) : negH ⟨a, b⟩ = ⟨negC a, negC b⟩ := by
-  show Quat.mk (negC a) (negC b) = Quat.mk (negC a) (negC b)
-  exact Eq.refl _
-#print axioms Principia.CD.negH_mk
 
 /-- Negation of quaternions is an involution. -/
 theorem negH_negH (x : Quat) : negH (negH x) = x := by
@@ -478,20 +397,6 @@ def mulH (x y : Quat) : Quat :=
   ⟨cadd (mulC x.re y.re) (negC (mulC (conjC y.im) x.im)),
    cadd (mulC y.im x.re) (mulC x.im (conjC y.re))⟩
 
-/-- The unfolding of `mulH`. -/
-theorem mulH_mk (a b c d : Complex) :
-    mulH ⟨a, b⟩ ⟨c, d⟩ =
-      ⟨cadd (mulC a c) (negC (mulC (conjC d) b)), cadd (mulC d a) (mulC b (conjC c))⟩ := by
-  show Quat.mk (cadd (mulC a c) (negC (mulC (conjC d) b)))
-      (cadd (mulC d a) (mulC b (conjC c)))
-    = Quat.mk (cadd (mulC a c) (negC (mulC (conjC d) b)))
-      (cadd (mulC d a) (mulC b (conjC c)))
-  exact Eq.refl _
-#print axioms Principia.CD.mulH_mk
-
-/-- One as a quaternion, named for the one laws. -/
-abbrev oneH : Quat := hone
-
 /-- One is a left unit for quaternion multiplication (stated for `hone`). -/
 theorem one_mulH_hone (z : Quat) : mulH hone z = z := by
   cases z with
@@ -502,10 +407,6 @@ theorem one_mulH_hone (z : Quat) : mulH hone z = z := by
       mulC_one_cone d, zero_mulC (conjC c), cadd_zero_r d]
 #print axioms Principia.CD.one_mulH_hone
 
-/-- One is a left unit for quaternion multiplication. -/
-theorem one_mulH (z : Quat) : mulH oneH z = z := one_mulH_hone z
-#print axioms Principia.CD.one_mulH
-
 /-- One is a right unit for quaternion multiplication (stated for `hone`). -/
 theorem mulH_one_hone (z : Quat) : mulH z hone = z := by
   cases z with
@@ -515,10 +416,6 @@ theorem mulH_one_hone (z : Quat) : mulH z hone = z := by
     rw [conjC_zero, conjC_cone, zero_mulC d, zero_mulC c, negC_zero,
       cadd_zero_r (mulC c cone), mulC_one_cone c, mulC_one_cone d, cadd_zero_l d]
 #print axioms Principia.CD.mulH_one_hone
-
-/-- One is a right unit for quaternion multiplication. -/
-theorem mulH_one (z : Quat) : mulH z oneH = z := mulH_one_hone z
-#print axioms Principia.CD.mulH_one
 
 /-- Zero is a left absorber for quaternion multiplication. -/
 theorem mulH_zero_l (z : Quat) : mulH hzero z = hzero := by
@@ -577,92 +474,19 @@ theorem ij_ne_ji : mulH i j ≠ mulH j i := by
   exact neg_one_ne_one (Eq.symm hre)
 #print axioms Principia.CD.ij_ne_ji
 
-/-! ### Level 3: conjugation, negation and multiplication of `𝕆` -/
+/-- `ij = -(ji)`: the two products of `i` and `j` differ exactly by a sign. -/
+theorem ij_eq_neg_ji : mulH i j = negH (mulH j i) := by
+  rw [i_mul_j, j_mul_i]
+  exact Eq.symm (negH_negH k)
+#print axioms Principia.CD.ij_eq_neg_ji
 
-/-- Conjugation of octonions: `⟨a, b⟩ ↦ ⟨conj a, -b⟩`. -/
-def conjO (x : Oct) : Oct := ⟨conjH x.re, negH x.im⟩
-
-/-- The unfolding of `conjO`. -/
-theorem conjO_mk (a b : Quat) : conjO ⟨a, b⟩ = ⟨conjH a, negH b⟩ := by
-  show Oct.mk (conjH a) (negH b) = Oct.mk (conjH a) (negH b)
-  exact Eq.refl _
-#print axioms Principia.CD.conjO_mk
-
-/-- Conjugation of octonions is an involution. -/
-theorem conjO_conjO (x : Oct) : conjO (conjO x) = x := by
-  cases x with
-  | mk a b =>
-    show Oct.mk (conjH (conjH a)) (negH (negH b)) = Oct.mk a b
-    rw [conjH_conjH a, negH_negH b]
-#print axioms Principia.CD.conjO_conjO
-
-/-- The conjugate of zero, at the level of `𝕆`. -/
-theorem conjO_zero : conjO ozero = ozero := by
-  show Oct.mk (conjH hzero) (negH hzero) = Oct.mk hzero hzero
-  rw [conjH_zero, negH_zero]
-#print axioms Principia.CD.conjO_zero
-
-/-- Negation of octonions, componentwise. -/
-def negO (x : Oct) : Oct := ⟨negH x.re, negH x.im⟩
-
-/-- The unfolding of `negO`. -/
-theorem negO_mk (a b : Quat) : negO ⟨a, b⟩ = ⟨negH a, negH b⟩ := by
-  show Oct.mk (negH a) (negH b) = Oct.mk (negH a) (negH b)
-  exact Eq.refl _
-#print axioms Principia.CD.negO_mk
-
-/-- Negation of octonions is an involution. -/
-theorem negO_negO (x : Oct) : negO (negO x) = x := by
-  cases x with
-  | mk a b =>
-    show Oct.mk (negH (negH a)) (negH (negH b)) = Oct.mk a b
-    rw [negH_negH a, negH_negH b]
-#print axioms Principia.CD.negO_negO
-
-/-- The negative of zero, at the level of `𝕆`. -/
-theorem negO_zero : negO ozero = ozero := by
-  show Oct.mk (negH hzero) (negH hzero) = Oct.mk hzero hzero
-  rw [negH_zero]
-#print axioms Principia.CD.negO_zero
-
-/-- Zero is a left unit for addition of octonions. -/
-theorem oadd_zero_l (z : Oct) : oadd ozero z = z := by
-  cases z with
-  | mk c d =>
-    show Oct.mk (hadd hzero c) (hadd hzero d) = Oct.mk c d
-    rw [hadd_zero_l c, hadd_zero_l d]
-#print axioms Principia.CD.oadd_zero_l
-
-/-- Zero is a right unit for addition of octonions. -/
-theorem oadd_zero_r (z : Oct) : oadd z ozero = z := by
-  cases z with
-  | mk c d =>
-    show Oct.mk (hadd c hzero) (hadd d hzero) = Oct.mk c d
-    rw [hadd_zero_r c, hadd_zero_r d]
-#print axioms Principia.CD.oadd_zero_r
+/-! ### Level 3: multiplication of `𝕆` -/
 
 /-- Multiplication of octonions by the Cayley–Dickson formula
 `(a, b)(c, d) = (a c - conj d * b, d a + b * conj c)`. -/
 def mulO (x y : Oct) : Oct :=
   ⟨hadd (mulH x.re y.re) (negH (mulH (conjH y.im) x.im)),
    hadd (mulH y.im x.re) (mulH x.im (conjH y.re))⟩
-
-/-- The unfolding of `mulO`. -/
-theorem mulO_mk (a b c d : Quat) :
-    mulO ⟨a, b⟩ ⟨c, d⟩ =
-      ⟨hadd (mulH a c) (negH (mulH (conjH d) b)), hadd (mulH d a) (mulH b (conjH c))⟩ := by
-  show Oct.mk (hadd (mulH a c) (negH (mulH (conjH d) b)))
-      (hadd (mulH d a) (mulH b (conjH c)))
-    = Oct.mk (hadd (mulH a c) (negH (mulH (conjH d) b)))
-      (hadd (mulH d a) (mulH b (conjH c)))
-  exact Eq.refl _
-#print axioms Principia.CD.mulO_mk
-
-/-- One as an octonion, named for the one laws. -/
-abbrev oneO : Oct := oone
-
-/-- Two as an octonion, named for `«✱54.43_survives»`. -/
-abbrev twoO : Oct := otwo
 
 /-- One is a left unit for octonion multiplication (stated for `oone`). -/
 theorem one_mulO_oone (z : Oct) : mulO oone z = z := by
@@ -673,24 +497,6 @@ theorem one_mulO_oone (z : Oct) : mulO oone z = z := by
     rw [one_mulH_hone c, mulH_zero_r (conjH d), negH_zero, hadd_zero_r c,
       mulH_one_hone d, mulH_zero_l (conjH c), hadd_zero_r d]
 #print axioms Principia.CD.one_mulO_oone
-
-/-- One is a left unit for octonion multiplication. -/
-theorem one_mulO (z : Oct) : mulO oneO z = z := one_mulO_oone z
-#print axioms Principia.CD.one_mulO
-
-/-- One is a right unit for octonion multiplication (stated for `oone`). -/
-theorem mulO_one_oone (z : Oct) : mulO z oone = z := by
-  cases z with
-  | mk c d =>
-    show Oct.mk (hadd (mulH c hone) (negH (mulH (conjH hzero) d)))
-               (hadd (mulH hzero c) (mulH d (conjH hone))) = Oct.mk c d
-    rw [mulH_one_hone c, conjH_zero, mulH_zero_l d, negH_zero, hadd_zero_r c,
-      mulH_zero_l c, conjH_hone, mulH_one_hone d, hadd_zero_l d]
-#print axioms Principia.CD.mulO_one_oone
-
-/-- One is a right unit for octonion multiplication. -/
-theorem mulO_one (z : Oct) : mulO z oneO = z := mulO_one_oone z
-#print axioms Principia.CD.mulO_one
 
 /-! ### The Cayley–Dickson units `e₁, e₂, e₄` of `𝕆` and the failure of
 associativity
@@ -749,12 +555,6 @@ theorem mulO_e1_e6 : mulO e1 e6 = ⟨hzero, negH k⟩ := by
     j_mul_i, mulH_zero_l (conjH hzero), hadd_zero_r (negH k)]
 #print axioms Principia.CD.mulO_e1_e6
 
-/-- `-e7` is the octonion `(0, -k)`. -/
-theorem negO_e7 : negO e7 = ⟨hzero, negH k⟩ := by
-  show Oct.mk (negH hzero) (negH k) = Oct.mk hzero (negH k)
-  rw [negH_zero]
-#print axioms Principia.CD.negO_e7
-
 /-- Multiplication in `𝕆` is not associative: `(e1 e2) e4 = e7` while
 `e1 (e2 e4) = -e7`. -/
 theorem oct_not_assoc : mulO (mulO e1 e2) e4 ≠ mulO e1 (mulO e2 e4) := by
@@ -772,12 +572,13 @@ theorem oct_assoc_fails : ∃ x y z : Oct, mulO (mulO x y) z ≠ mulO x (mulO y 
   ⟨e1, e2, e4, oct_not_assoc⟩
 #print axioms Principia.CD.oct_assoc_fails
 
-/-- In `𝕆`, one plus one is two and one times one is one: `✱54.43` survives
-the passage to the octonions. -/
-theorem «✱54.43_survives» : oadd oneO oneO = twoO ∧ mulO oneO oneO = oneO := by
-  constructor
-  · exact o_one_add_one
-  · exact one_mulO oneO
+/-- In `𝕆`, where multiplication is no longer associative, one plus one is
+still two and one times one is still one: `✱54.43` survives the passage to the
+octonions together with the failure of associativity. -/
+theorem «✱54.43_survives» :
+    oadd oone oone = otwo ∧ mulO oone oone = oone ∧
+      ∃ x y z : Oct, mulO (mulO x y) z ≠ mulO x (mulO y z) :=
+  ⟨o_one_add_one, one_mulO_oone oone, oct_assoc_fails⟩
 #print axioms Principia.CD.«✱54.43_survives»
 
 /-! ### Explicit coordinates of the witnesses

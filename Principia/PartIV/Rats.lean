@@ -93,9 +93,6 @@ def two : Q := mk Ints.two N.one (by intro h; exact N.succ_ne_zero N.zero h)
 /-- The embedding of the naturals. -/
 def ofNat (n : N) : Q := mk (ofN n) N.one (by intro h; exact N.succ_ne_zero N.zero h)
 
-/-- The embedding of the integers. -/
-def ofInt (a : Z) : Q := mk a N.one (by intro h; exact N.succ_ne_zero N.zero h)
-
 /-! ### Addition, negation and subtraction -/
 
 /-- Addition of rationals. -/
@@ -324,11 +321,6 @@ theorem sub_add_sub (a b c d : Q) : sub (add a b) (add c d) = add (sub a c) (sub
 
 /-! ### Nonnegativity and the order -/
 
-/-- Zero is nonnegative. -/
-theorem nonneg_zero : Nonneg zero := by
-  refine ⟨Ints.zero, N.one, N.succ_ne_zero N.zero, ?_, Ints.le_refl Ints.zero⟩
-  rw [zero_mk]
-
 /-- A rational with nonnegative numerator is nonnegative. -/
 theorem nonneg_mk {a : Z} {b : N} (hb : b ≠ N.zero) (ha : Ints.le Ints.zero a) :
     Nonneg (mk a b hb) := ⟨a, b, hb, Eq.refl (mk a b hb), ha⟩
@@ -339,9 +331,6 @@ theorem nonneg_add {x y : Q} (hx : Nonneg x) (hy : Nonneg y) : Nonneg (add x y) 
   obtain ⟨c, d, hd, hy', hc⟩ := hy
   rw [hx', hy', add_mk]
   exact nonneg_mk (N.mul_ne_zero hb hd) (Ints.le_add (Ints.le_mul_ofN ha d) (Ints.le_mul_ofN hc b))
-
-/-- The sum of two nonnegative rationals is nonnegative, restated. -/
-theorem nonneg_of_le {x y : Q} (h : le x y) : Nonneg (sub y x) := h
 
 /-- The order on rationals is reflexive. -/
 theorem le_refl (x : Q) : le x x := by
@@ -490,14 +479,6 @@ theorem le_total (x y : Q) : le x y ∨ le y x := by
       show Nonneg (sub x y)
       rw [← e]
       exact h
-
-/-- Strict order is irreflexive. -/
-theorem lt_irrefl (x : Q) : ¬ lt x x := by
-  intro h
-  exact h.2 (Eq.refl x)
-
-/-- A strict inequality gives a non-strict one. -/
-theorem le_of_lt {x y : Q} (h : lt x y) : le x y := h.1
 
 end Rats
 end Principia

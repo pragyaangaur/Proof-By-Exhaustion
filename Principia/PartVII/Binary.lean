@@ -104,25 +104,13 @@ theorem tailBin_i (b : Bin) : tailBin (i b) = b := by
 
 /-! ### The numerals one and two -/
 
-theorem one_eq : N.one = N.succ N.zero := by
-  show N.succ N.zero = N.succ N.zero
-  exact Eq.refl (N.succ N.zero)
-
-theorem two_eq : N.two = N.succ N.one := by
-  show N.succ (N.succ N.zero) = N.succ (N.succ N.zero)
-  exact Eq.refl (N.succ (N.succ N.zero))
-
-/-- Adding one on the right is taking a successor. -/
-theorem add_one (a : N) : N.add a N.one = N.succ a := by
-  rw [one_eq, N.add_succ, N.add_zero]
-
 /-- Adding two on the right is taking two successors. -/
 theorem add_two (a : N) : N.add a N.two = N.succ (N.succ a) := by
-  rw [two_eq, N.add_succ, add_one]
+  rw [N.two, N.add_succ, N.add_one]
 
 /-- Adding one on the left is taking a successor. -/
 theorem one_add (a : N) : N.add N.one a = N.succ a := by
-  rw [one_eq, N.succ_add, N.zero_add]
+  rw [N.one, N.succ_add, N.zero_add]
 
 /-! ### Splitting a numeral into a bit and a tail -/
 
@@ -239,13 +227,13 @@ theorem val_inc (b : Bin) : val (inc b) = N.add (val b) N.one := by
   induction b with
   | z =>
       show val (i z) = N.add (val z) N.one
-      rw [val_i, val_z, N.mul_zero, add_one]
+      rw [val_i, val_z, N.mul_zero, N.add_one]
   | o b _ =>
       show val (i b) = N.add (val (o b)) N.one
-      rw [val_i, val_o, add_one]
+      rw [val_i, val_o, N.add_one]
   | i b ih =>
       show val (o (inc b)) = N.add (val (i b)) N.one
-      rw [val_o, ih, N.mul_add, N.mul_one, val_i, N.succ_add, add_one, add_two]
+      rw [val_o, ih, N.mul_add, N.mul_one, val_i, N.succ_add, N.add_one, add_two]
 
 /-- Adding the carry bit `c` to a numeral adds the value of `c` to its value. -/
 theorem val_addCarry (y : Bin) (c : Bool) :
@@ -409,9 +397,9 @@ theorem one_add_one_trace : val (add (i z) (i z)).1 = N.two := by
 #print axioms bitVal_true
 #print axioms headBit_i
 #print axioms tailBin_i
-#print axioms one_eq
-#print axioms two_eq
-#print axioms add_one
+#print axioms N.one
+#print axioms N.two
+#print axioms N.add_one
 #print axioms add_two
 #print axioms one_add
 #print axioms val_consBit

@@ -4,15 +4,15 @@
 Numerals n0, n1, n2, ... are introduced one successor at a time.  The lemma
 `count_k : sub n_{k+2} n_k = n2` is proved by one unfolding of the subtraction
 recursion applied to `count_{k-1}`.  Every numeral and every lemma is used by
-the next, and the whole chain is consumed by the final theorem, which evaluates
-`1 + 1 = 2` by transporting it to `n_{M-2}`.
+the next, and the whole chain is consumed by the final theorem,
+`«✱54.43_countdown» : sub n_M n_{M-2} = add one one`.
 
-Usage: gen_countdown_chain.py M FILES
+Usage: gen_countdown_chain.py [M] [FILES], default 100000 and 24.
 """
 import sys, os
 
-M = int(sys.argv[1]) if len(sys.argv) > 1 else 170000
-FILES = int(sys.argv[2]) if len(sys.argv) > 2 else 60
+M = int(sys.argv[1]) if len(sys.argv) > 1 else 100000
+FILES = int(sys.argv[2]) if len(sys.argv) > 2 else 24
 
 B = (M - 2 + FILES - 1) // FILES          # numerals defined per step file
 
@@ -81,15 +81,27 @@ while defined < M:
     emit_step()
 
 # final file: the headline theorem
-out = [header(j, defined, defined, proved + 1, proved + 1)]
-out.append("""/-- One plus one is two, obtained by transporting along the countdown: the
-general identity `1 + 1 = (a+2) - a` is evaluated at `a = n%d` with the chain
-above. -/
-theorem add_one_one_by_countdown : add one one = two := by
-  show add one one = n2
-  rw [← count_%d]
-  exact Eq.symm (sub_succ_succ_of_succ n%d)
-""" % (M - 2, M - 2, M - 2))
+out = ["""/-
+Part VII (a): the countdown, conclusion.
+
+The last lemma of the chain, `count_%d`, says that %d minus %d is two.  The
+theorem below reads it as one plus one.
+-/
+import Principia.PartVII.Countdown.Step%04d
+
+namespace Principia
+namespace Countdown
+
+open Principia.N
+
+""" % (M - 2, M, M - 2, j - 1)]
+out.append("""/-- %d minus %d is one plus one. -/
+theorem «✱54.43_countdown» : sub n%d n%d = add one one := by
+  rw [count_%d]
+  show two = add one one
+  exact Eq.symm one_add_one
+#print axioms «✱54.43_countdown»
+""" % (M, M - 2, M, M - 2, M - 2))
 out.append(footer)
 path = os.path.join(outdir, "Step%04d.lean" % j)
 open(path, "w").write("".join(out))

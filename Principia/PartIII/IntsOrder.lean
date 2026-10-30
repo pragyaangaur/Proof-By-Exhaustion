@@ -1,8 +1,7 @@
 /-
 Part III, continued: the integers have no zero divisors.
 
-New file; nothing in `Principia/PartIII/Ints.lean` is changed.  The content is
-the combinatorial fact about products of naturals
+The content is the combinatorial fact about products of naturals
 
   `a*c + b*d = a*d + b*c → a = b ∨ c = d`
 
@@ -133,13 +132,6 @@ theorem mul_ne_zero {x y : Z} (hx : x ≠ zero) (hy : y ≠ zero) : mul x y ≠ 
   | inr h' => exact hy h'
 
 #print axioms Principia.Ints.mul_ne_zero
-
-/-- An embedded nonzero natural is a nonzero integer. -/
-theorem ofN_ne_zero {n : N} (h : n ≠ N.zero) : ofN n ≠ zero := by
-  intro hz
-  exact h (ofN_eq_zero hz)
-
-#print axioms Principia.Ints.ofN_ne_zero
 
 /-- Nonnegativity of an integer is inherited by its negation only from zero:
 the negation of a nonnegative integer is nonpositive. -/

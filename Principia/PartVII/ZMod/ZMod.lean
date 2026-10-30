@@ -159,13 +159,6 @@ def one (n : N) : ZMod n := mk n N.one
 /-- The image of a natural in `Z/nZ`. -/
 def ofNat (n : N) (a : N) : ZMod n := mk n a
 
-/-- Addition of classes is the class of the sum of the representatives. -/
-theorem add_mk (n a b : N) : add n (mk n a) (mk n b) = mk n (N.add a b) := by
-  show add n (mk n a) (mk n b) = mk n (N.add a b)
-  exact Eq.refl (mk n (N.add a b))
-
-#print axioms add_mk
-
 /-- Addition is commutative. -/
 theorem add_comm (n : N) (x y : ZMod n) : add n x y = add n y x := by
   refine Quotient.inductionOn₂ (motive := fun x y => add n x y = add n y x) x y ?_
@@ -204,33 +197,6 @@ theorem zero_add (n : N) (x : ZMod n) : add n (zero n) x = x := by
 
 /-! ### The embedding of the naturals -/
 
-/-- The image of a natural is its class. -/
-theorem ofNat_eq_mk (n a : N) : ofNat n a = mk n a := by
-  show mk n a = mk n a
-  exact Eq.refl (mk n a)
-
-#print axioms ofNat_eq_mk
-
-/-- Zero is the image of zero. -/
-theorem zero_eq_ofNat_zero (n : N) : zero n = ofNat n N.zero := by
-  show mk n N.zero = mk n N.zero
-  exact Eq.refl (mk n N.zero)
-
-#print axioms zero_eq_ofNat_zero
-
-/-- One is the image of one. -/
-theorem one_eq_ofNat_one (n : N) : one n = ofNat n N.one := by
-  show mk n N.one = mk n N.one
-  exact Eq.refl (mk n N.one)
-
-#print axioms one_eq_ofNat_one
-
-/-- The image of a sum is the sum of the images. -/
-theorem add_ofNat (n a b : N) : add n (ofNat n a) (ofNat n b) = ofNat n (N.add a b) :=
-  add_mk n a b
-
-#print axioms add_ofNat
-
 /-- One plus one is two in every `Z/nZ`. -/
 theorem char (n : N) : add n (one n) (one n) = ofNat n N.two := by
   apply mk_eq_of_congr
@@ -244,11 +210,6 @@ theorem char (n : N) : add n (one n) (one n) = ofNat n N.two := by
 theorem two_ne_zero : N.two ≠ N.zero := N.succ_ne_zero N.one
 
 #print axioms two_ne_zero
-
-/-- One is not zero. -/
-theorem one_ne_zero : N.one ≠ N.zero := N.succ_ne_zero N.zero
-
-#print axioms one_ne_zero
 
 /-! ### The two-element ring: `1 + 1 = 0` -/
 

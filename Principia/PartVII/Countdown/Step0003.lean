@@ -1,7 +1,7 @@
 /-
 Part VII (a): the countdown, part 3.
 
-Numerals `n12453` to `n16600`, and the chain lemmas `count_12451` to `count_16598`.
+Numerals `n12504` to `n16670`, and the chain lemmas `count_12502` to `count_16668`.
 Every numeral is the successor of its predecessor and every lemma is one
 unfolding of the subtraction recursion applied to the preceding lemma.
 -/
@@ -12,108 +12,6 @@ namespace Countdown
 
 open Principia.N
 
-/-- The numeral 12453. -/
-def n12453 : N := succ n12452
-/-- The numeral 12454. -/
-def n12454 : N := succ n12453
-/-- The numeral 12455. -/
-def n12455 : N := succ n12454
-/-- The numeral 12456. -/
-def n12456 : N := succ n12455
-/-- The numeral 12457. -/
-def n12457 : N := succ n12456
-/-- The numeral 12458. -/
-def n12458 : N := succ n12457
-/-- The numeral 12459. -/
-def n12459 : N := succ n12458
-/-- The numeral 12460. -/
-def n12460 : N := succ n12459
-/-- The numeral 12461. -/
-def n12461 : N := succ n12460
-/-- The numeral 12462. -/
-def n12462 : N := succ n12461
-/-- The numeral 12463. -/
-def n12463 : N := succ n12462
-/-- The numeral 12464. -/
-def n12464 : N := succ n12463
-/-- The numeral 12465. -/
-def n12465 : N := succ n12464
-/-- The numeral 12466. -/
-def n12466 : N := succ n12465
-/-- The numeral 12467. -/
-def n12467 : N := succ n12466
-/-- The numeral 12468. -/
-def n12468 : N := succ n12467
-/-- The numeral 12469. -/
-def n12469 : N := succ n12468
-/-- The numeral 12470. -/
-def n12470 : N := succ n12469
-/-- The numeral 12471. -/
-def n12471 : N := succ n12470
-/-- The numeral 12472. -/
-def n12472 : N := succ n12471
-/-- The numeral 12473. -/
-def n12473 : N := succ n12472
-/-- The numeral 12474. -/
-def n12474 : N := succ n12473
-/-- The numeral 12475. -/
-def n12475 : N := succ n12474
-/-- The numeral 12476. -/
-def n12476 : N := succ n12475
-/-- The numeral 12477. -/
-def n12477 : N := succ n12476
-/-- The numeral 12478. -/
-def n12478 : N := succ n12477
-/-- The numeral 12479. -/
-def n12479 : N := succ n12478
-/-- The numeral 12480. -/
-def n12480 : N := succ n12479
-/-- The numeral 12481. -/
-def n12481 : N := succ n12480
-/-- The numeral 12482. -/
-def n12482 : N := succ n12481
-/-- The numeral 12483. -/
-def n12483 : N := succ n12482
-/-- The numeral 12484. -/
-def n12484 : N := succ n12483
-/-- The numeral 12485. -/
-def n12485 : N := succ n12484
-/-- The numeral 12486. -/
-def n12486 : N := succ n12485
-/-- The numeral 12487. -/
-def n12487 : N := succ n12486
-/-- The numeral 12488. -/
-def n12488 : N := succ n12487
-/-- The numeral 12489. -/
-def n12489 : N := succ n12488
-/-- The numeral 12490. -/
-def n12490 : N := succ n12489
-/-- The numeral 12491. -/
-def n12491 : N := succ n12490
-/-- The numeral 12492. -/
-def n12492 : N := succ n12491
-/-- The numeral 12493. -/
-def n12493 : N := succ n12492
-/-- The numeral 12494. -/
-def n12494 : N := succ n12493
-/-- The numeral 12495. -/
-def n12495 : N := succ n12494
-/-- The numeral 12496. -/
-def n12496 : N := succ n12495
-/-- The numeral 12497. -/
-def n12497 : N := succ n12496
-/-- The numeral 12498. -/
-def n12498 : N := succ n12497
-/-- The numeral 12499. -/
-def n12499 : N := succ n12498
-/-- The numeral 12500. -/
-def n12500 : N := succ n12499
-/-- The numeral 12501. -/
-def n12501 : N := succ n12500
-/-- The numeral 12502. -/
-def n12502 : N := succ n12501
-/-- The numeral 12503. -/
-def n12503 : N := succ n12502
 /-- The numeral 12504. -/
 def n12504 : N := succ n12503
 /-- The numeral 12505. -/
@@ -8308,210 +8206,146 @@ def n16598 : N := succ n16597
 def n16599 : N := succ n16598
 /-- The numeral 16600. -/
 def n16600 : N := succ n16599
-/-- The countdown step at 12451. -/
-theorem count_12451 : sub n12453 n12451 = n2 := by
-  rw [n12453, n12451, sub_succ_succ]
-  exact count_12450
-/-- The countdown step at 12452. -/
-theorem count_12452 : sub n12454 n12452 = n2 := by
-  rw [n12454, n12452, sub_succ_succ]
-  exact count_12451
-/-- The countdown step at 12453. -/
-theorem count_12453 : sub n12455 n12453 = n2 := by
-  rw [n12455, n12453, sub_succ_succ]
-  exact count_12452
-/-- The countdown step at 12454. -/
-theorem count_12454 : sub n12456 n12454 = n2 := by
-  rw [n12456, n12454, sub_succ_succ]
-  exact count_12453
-/-- The countdown step at 12455. -/
-theorem count_12455 : sub n12457 n12455 = n2 := by
-  rw [n12457, n12455, sub_succ_succ]
-  exact count_12454
-/-- The countdown step at 12456. -/
-theorem count_12456 : sub n12458 n12456 = n2 := by
-  rw [n12458, n12456, sub_succ_succ]
-  exact count_12455
-/-- The countdown step at 12457. -/
-theorem count_12457 : sub n12459 n12457 = n2 := by
-  rw [n12459, n12457, sub_succ_succ]
-  exact count_12456
-/-- The countdown step at 12458. -/
-theorem count_12458 : sub n12460 n12458 = n2 := by
-  rw [n12460, n12458, sub_succ_succ]
-  exact count_12457
-/-- The countdown step at 12459. -/
-theorem count_12459 : sub n12461 n12459 = n2 := by
-  rw [n12461, n12459, sub_succ_succ]
-  exact count_12458
-/-- The countdown step at 12460. -/
-theorem count_12460 : sub n12462 n12460 = n2 := by
-  rw [n12462, n12460, sub_succ_succ]
-  exact count_12459
-/-- The countdown step at 12461. -/
-theorem count_12461 : sub n12463 n12461 = n2 := by
-  rw [n12463, n12461, sub_succ_succ]
-  exact count_12460
-/-- The countdown step at 12462. -/
-theorem count_12462 : sub n12464 n12462 = n2 := by
-  rw [n12464, n12462, sub_succ_succ]
-  exact count_12461
-/-- The countdown step at 12463. -/
-theorem count_12463 : sub n12465 n12463 = n2 := by
-  rw [n12465, n12463, sub_succ_succ]
-  exact count_12462
-/-- The countdown step at 12464. -/
-theorem count_12464 : sub n12466 n12464 = n2 := by
-  rw [n12466, n12464, sub_succ_succ]
-  exact count_12463
-/-- The countdown step at 12465. -/
-theorem count_12465 : sub n12467 n12465 = n2 := by
-  rw [n12467, n12465, sub_succ_succ]
-  exact count_12464
-/-- The countdown step at 12466. -/
-theorem count_12466 : sub n12468 n12466 = n2 := by
-  rw [n12468, n12466, sub_succ_succ]
-  exact count_12465
-/-- The countdown step at 12467. -/
-theorem count_12467 : sub n12469 n12467 = n2 := by
-  rw [n12469, n12467, sub_succ_succ]
-  exact count_12466
-/-- The countdown step at 12468. -/
-theorem count_12468 : sub n12470 n12468 = n2 := by
-  rw [n12470, n12468, sub_succ_succ]
-  exact count_12467
-/-- The countdown step at 12469. -/
-theorem count_12469 : sub n12471 n12469 = n2 := by
-  rw [n12471, n12469, sub_succ_succ]
-  exact count_12468
-/-- The countdown step at 12470. -/
-theorem count_12470 : sub n12472 n12470 = n2 := by
-  rw [n12472, n12470, sub_succ_succ]
-  exact count_12469
-/-- The countdown step at 12471. -/
-theorem count_12471 : sub n12473 n12471 = n2 := by
-  rw [n12473, n12471, sub_succ_succ]
-  exact count_12470
-/-- The countdown step at 12472. -/
-theorem count_12472 : sub n12474 n12472 = n2 := by
-  rw [n12474, n12472, sub_succ_succ]
-  exact count_12471
-/-- The countdown step at 12473. -/
-theorem count_12473 : sub n12475 n12473 = n2 := by
-  rw [n12475, n12473, sub_succ_succ]
-  exact count_12472
-/-- The countdown step at 12474. -/
-theorem count_12474 : sub n12476 n12474 = n2 := by
-  rw [n12476, n12474, sub_succ_succ]
-  exact count_12473
-/-- The countdown step at 12475. -/
-theorem count_12475 : sub n12477 n12475 = n2 := by
-  rw [n12477, n12475, sub_succ_succ]
-  exact count_12474
-/-- The countdown step at 12476. -/
-theorem count_12476 : sub n12478 n12476 = n2 := by
-  rw [n12478, n12476, sub_succ_succ]
-  exact count_12475
-/-- The countdown step at 12477. -/
-theorem count_12477 : sub n12479 n12477 = n2 := by
-  rw [n12479, n12477, sub_succ_succ]
-  exact count_12476
-/-- The countdown step at 12478. -/
-theorem count_12478 : sub n12480 n12478 = n2 := by
-  rw [n12480, n12478, sub_succ_succ]
-  exact count_12477
-/-- The countdown step at 12479. -/
-theorem count_12479 : sub n12481 n12479 = n2 := by
-  rw [n12481, n12479, sub_succ_succ]
-  exact count_12478
-/-- The countdown step at 12480. -/
-theorem count_12480 : sub n12482 n12480 = n2 := by
-  rw [n12482, n12480, sub_succ_succ]
-  exact count_12479
-/-- The countdown step at 12481. -/
-theorem count_12481 : sub n12483 n12481 = n2 := by
-  rw [n12483, n12481, sub_succ_succ]
-  exact count_12480
-/-- The countdown step at 12482. -/
-theorem count_12482 : sub n12484 n12482 = n2 := by
-  rw [n12484, n12482, sub_succ_succ]
-  exact count_12481
-/-- The countdown step at 12483. -/
-theorem count_12483 : sub n12485 n12483 = n2 := by
-  rw [n12485, n12483, sub_succ_succ]
-  exact count_12482
-/-- The countdown step at 12484. -/
-theorem count_12484 : sub n12486 n12484 = n2 := by
-  rw [n12486, n12484, sub_succ_succ]
-  exact count_12483
-/-- The countdown step at 12485. -/
-theorem count_12485 : sub n12487 n12485 = n2 := by
-  rw [n12487, n12485, sub_succ_succ]
-  exact count_12484
-/-- The countdown step at 12486. -/
-theorem count_12486 : sub n12488 n12486 = n2 := by
-  rw [n12488, n12486, sub_succ_succ]
-  exact count_12485
-/-- The countdown step at 12487. -/
-theorem count_12487 : sub n12489 n12487 = n2 := by
-  rw [n12489, n12487, sub_succ_succ]
-  exact count_12486
-/-- The countdown step at 12488. -/
-theorem count_12488 : sub n12490 n12488 = n2 := by
-  rw [n12490, n12488, sub_succ_succ]
-  exact count_12487
-/-- The countdown step at 12489. -/
-theorem count_12489 : sub n12491 n12489 = n2 := by
-  rw [n12491, n12489, sub_succ_succ]
-  exact count_12488
-/-- The countdown step at 12490. -/
-theorem count_12490 : sub n12492 n12490 = n2 := by
-  rw [n12492, n12490, sub_succ_succ]
-  exact count_12489
-/-- The countdown step at 12491. -/
-theorem count_12491 : sub n12493 n12491 = n2 := by
-  rw [n12493, n12491, sub_succ_succ]
-  exact count_12490
-/-- The countdown step at 12492. -/
-theorem count_12492 : sub n12494 n12492 = n2 := by
-  rw [n12494, n12492, sub_succ_succ]
-  exact count_12491
-/-- The countdown step at 12493. -/
-theorem count_12493 : sub n12495 n12493 = n2 := by
-  rw [n12495, n12493, sub_succ_succ]
-  exact count_12492
-/-- The countdown step at 12494. -/
-theorem count_12494 : sub n12496 n12494 = n2 := by
-  rw [n12496, n12494, sub_succ_succ]
-  exact count_12493
-/-- The countdown step at 12495. -/
-theorem count_12495 : sub n12497 n12495 = n2 := by
-  rw [n12497, n12495, sub_succ_succ]
-  exact count_12494
-/-- The countdown step at 12496. -/
-theorem count_12496 : sub n12498 n12496 = n2 := by
-  rw [n12498, n12496, sub_succ_succ]
-  exact count_12495
-/-- The countdown step at 12497. -/
-theorem count_12497 : sub n12499 n12497 = n2 := by
-  rw [n12499, n12497, sub_succ_succ]
-  exact count_12496
-/-- The countdown step at 12498. -/
-theorem count_12498 : sub n12500 n12498 = n2 := by
-  rw [n12500, n12498, sub_succ_succ]
-  exact count_12497
-/-- The countdown step at 12499. -/
-theorem count_12499 : sub n12501 n12499 = n2 := by
-  rw [n12501, n12499, sub_succ_succ]
-  exact count_12498
-/-- The countdown step at 12500. -/
-theorem count_12500 : sub n12502 n12500 = n2 := by
-  rw [n12502, n12500, sub_succ_succ]
-  exact count_12499
-/-- The countdown step at 12501. -/
-theorem count_12501 : sub n12503 n12501 = n2 := by
-  rw [n12503, n12501, sub_succ_succ]
-  exact count_12500
+/-- The numeral 16601. -/
+def n16601 : N := succ n16600
+/-- The numeral 16602. -/
+def n16602 : N := succ n16601
+/-- The numeral 16603. -/
+def n16603 : N := succ n16602
+/-- The numeral 16604. -/
+def n16604 : N := succ n16603
+/-- The numeral 16605. -/
+def n16605 : N := succ n16604
+/-- The numeral 16606. -/
+def n16606 : N := succ n16605
+/-- The numeral 16607. -/
+def n16607 : N := succ n16606
+/-- The numeral 16608. -/
+def n16608 : N := succ n16607
+/-- The numeral 16609. -/
+def n16609 : N := succ n16608
+/-- The numeral 16610. -/
+def n16610 : N := succ n16609
+/-- The numeral 16611. -/
+def n16611 : N := succ n16610
+/-- The numeral 16612. -/
+def n16612 : N := succ n16611
+/-- The numeral 16613. -/
+def n16613 : N := succ n16612
+/-- The numeral 16614. -/
+def n16614 : N := succ n16613
+/-- The numeral 16615. -/
+def n16615 : N := succ n16614
+/-- The numeral 16616. -/
+def n16616 : N := succ n16615
+/-- The numeral 16617. -/
+def n16617 : N := succ n16616
+/-- The numeral 16618. -/
+def n16618 : N := succ n16617
+/-- The numeral 16619. -/
+def n16619 : N := succ n16618
+/-- The numeral 16620. -/
+def n16620 : N := succ n16619
+/-- The numeral 16621. -/
+def n16621 : N := succ n16620
+/-- The numeral 16622. -/
+def n16622 : N := succ n16621
+/-- The numeral 16623. -/
+def n16623 : N := succ n16622
+/-- The numeral 16624. -/
+def n16624 : N := succ n16623
+/-- The numeral 16625. -/
+def n16625 : N := succ n16624
+/-- The numeral 16626. -/
+def n16626 : N := succ n16625
+/-- The numeral 16627. -/
+def n16627 : N := succ n16626
+/-- The numeral 16628. -/
+def n16628 : N := succ n16627
+/-- The numeral 16629. -/
+def n16629 : N := succ n16628
+/-- The numeral 16630. -/
+def n16630 : N := succ n16629
+/-- The numeral 16631. -/
+def n16631 : N := succ n16630
+/-- The numeral 16632. -/
+def n16632 : N := succ n16631
+/-- The numeral 16633. -/
+def n16633 : N := succ n16632
+/-- The numeral 16634. -/
+def n16634 : N := succ n16633
+/-- The numeral 16635. -/
+def n16635 : N := succ n16634
+/-- The numeral 16636. -/
+def n16636 : N := succ n16635
+/-- The numeral 16637. -/
+def n16637 : N := succ n16636
+/-- The numeral 16638. -/
+def n16638 : N := succ n16637
+/-- The numeral 16639. -/
+def n16639 : N := succ n16638
+/-- The numeral 16640. -/
+def n16640 : N := succ n16639
+/-- The numeral 16641. -/
+def n16641 : N := succ n16640
+/-- The numeral 16642. -/
+def n16642 : N := succ n16641
+/-- The numeral 16643. -/
+def n16643 : N := succ n16642
+/-- The numeral 16644. -/
+def n16644 : N := succ n16643
+/-- The numeral 16645. -/
+def n16645 : N := succ n16644
+/-- The numeral 16646. -/
+def n16646 : N := succ n16645
+/-- The numeral 16647. -/
+def n16647 : N := succ n16646
+/-- The numeral 16648. -/
+def n16648 : N := succ n16647
+/-- The numeral 16649. -/
+def n16649 : N := succ n16648
+/-- The numeral 16650. -/
+def n16650 : N := succ n16649
+/-- The numeral 16651. -/
+def n16651 : N := succ n16650
+/-- The numeral 16652. -/
+def n16652 : N := succ n16651
+/-- The numeral 16653. -/
+def n16653 : N := succ n16652
+/-- The numeral 16654. -/
+def n16654 : N := succ n16653
+/-- The numeral 16655. -/
+def n16655 : N := succ n16654
+/-- The numeral 16656. -/
+def n16656 : N := succ n16655
+/-- The numeral 16657. -/
+def n16657 : N := succ n16656
+/-- The numeral 16658. -/
+def n16658 : N := succ n16657
+/-- The numeral 16659. -/
+def n16659 : N := succ n16658
+/-- The numeral 16660. -/
+def n16660 : N := succ n16659
+/-- The numeral 16661. -/
+def n16661 : N := succ n16660
+/-- The numeral 16662. -/
+def n16662 : N := succ n16661
+/-- The numeral 16663. -/
+def n16663 : N := succ n16662
+/-- The numeral 16664. -/
+def n16664 : N := succ n16663
+/-- The numeral 16665. -/
+def n16665 : N := succ n16664
+/-- The numeral 16666. -/
+def n16666 : N := succ n16665
+/-- The numeral 16667. -/
+def n16667 : N := succ n16666
+/-- The numeral 16668. -/
+def n16668 : N := succ n16667
+/-- The numeral 16669. -/
+def n16669 : N := succ n16668
+/-- The numeral 16670. -/
+def n16670 : N := succ n16669
 /-- The countdown step at 12502. -/
 theorem count_12502 : sub n12504 n12502 = n2 := by
   rw [n12504, n12502, sub_succ_succ]
@@ -24900,6 +24734,286 @@ theorem count_16597 : sub n16599 n16597 = n2 := by
 theorem count_16598 : sub n16600 n16598 = n2 := by
   rw [n16600, n16598, sub_succ_succ]
   exact count_16597
+/-- The countdown step at 16599. -/
+theorem count_16599 : sub n16601 n16599 = n2 := by
+  rw [n16601, n16599, sub_succ_succ]
+  exact count_16598
+/-- The countdown step at 16600. -/
+theorem count_16600 : sub n16602 n16600 = n2 := by
+  rw [n16602, n16600, sub_succ_succ]
+  exact count_16599
+/-- The countdown step at 16601. -/
+theorem count_16601 : sub n16603 n16601 = n2 := by
+  rw [n16603, n16601, sub_succ_succ]
+  exact count_16600
+/-- The countdown step at 16602. -/
+theorem count_16602 : sub n16604 n16602 = n2 := by
+  rw [n16604, n16602, sub_succ_succ]
+  exact count_16601
+/-- The countdown step at 16603. -/
+theorem count_16603 : sub n16605 n16603 = n2 := by
+  rw [n16605, n16603, sub_succ_succ]
+  exact count_16602
+/-- The countdown step at 16604. -/
+theorem count_16604 : sub n16606 n16604 = n2 := by
+  rw [n16606, n16604, sub_succ_succ]
+  exact count_16603
+/-- The countdown step at 16605. -/
+theorem count_16605 : sub n16607 n16605 = n2 := by
+  rw [n16607, n16605, sub_succ_succ]
+  exact count_16604
+/-- The countdown step at 16606. -/
+theorem count_16606 : sub n16608 n16606 = n2 := by
+  rw [n16608, n16606, sub_succ_succ]
+  exact count_16605
+/-- The countdown step at 16607. -/
+theorem count_16607 : sub n16609 n16607 = n2 := by
+  rw [n16609, n16607, sub_succ_succ]
+  exact count_16606
+/-- The countdown step at 16608. -/
+theorem count_16608 : sub n16610 n16608 = n2 := by
+  rw [n16610, n16608, sub_succ_succ]
+  exact count_16607
+/-- The countdown step at 16609. -/
+theorem count_16609 : sub n16611 n16609 = n2 := by
+  rw [n16611, n16609, sub_succ_succ]
+  exact count_16608
+/-- The countdown step at 16610. -/
+theorem count_16610 : sub n16612 n16610 = n2 := by
+  rw [n16612, n16610, sub_succ_succ]
+  exact count_16609
+/-- The countdown step at 16611. -/
+theorem count_16611 : sub n16613 n16611 = n2 := by
+  rw [n16613, n16611, sub_succ_succ]
+  exact count_16610
+/-- The countdown step at 16612. -/
+theorem count_16612 : sub n16614 n16612 = n2 := by
+  rw [n16614, n16612, sub_succ_succ]
+  exact count_16611
+/-- The countdown step at 16613. -/
+theorem count_16613 : sub n16615 n16613 = n2 := by
+  rw [n16615, n16613, sub_succ_succ]
+  exact count_16612
+/-- The countdown step at 16614. -/
+theorem count_16614 : sub n16616 n16614 = n2 := by
+  rw [n16616, n16614, sub_succ_succ]
+  exact count_16613
+/-- The countdown step at 16615. -/
+theorem count_16615 : sub n16617 n16615 = n2 := by
+  rw [n16617, n16615, sub_succ_succ]
+  exact count_16614
+/-- The countdown step at 16616. -/
+theorem count_16616 : sub n16618 n16616 = n2 := by
+  rw [n16618, n16616, sub_succ_succ]
+  exact count_16615
+/-- The countdown step at 16617. -/
+theorem count_16617 : sub n16619 n16617 = n2 := by
+  rw [n16619, n16617, sub_succ_succ]
+  exact count_16616
+/-- The countdown step at 16618. -/
+theorem count_16618 : sub n16620 n16618 = n2 := by
+  rw [n16620, n16618, sub_succ_succ]
+  exact count_16617
+/-- The countdown step at 16619. -/
+theorem count_16619 : sub n16621 n16619 = n2 := by
+  rw [n16621, n16619, sub_succ_succ]
+  exact count_16618
+/-- The countdown step at 16620. -/
+theorem count_16620 : sub n16622 n16620 = n2 := by
+  rw [n16622, n16620, sub_succ_succ]
+  exact count_16619
+/-- The countdown step at 16621. -/
+theorem count_16621 : sub n16623 n16621 = n2 := by
+  rw [n16623, n16621, sub_succ_succ]
+  exact count_16620
+/-- The countdown step at 16622. -/
+theorem count_16622 : sub n16624 n16622 = n2 := by
+  rw [n16624, n16622, sub_succ_succ]
+  exact count_16621
+/-- The countdown step at 16623. -/
+theorem count_16623 : sub n16625 n16623 = n2 := by
+  rw [n16625, n16623, sub_succ_succ]
+  exact count_16622
+/-- The countdown step at 16624. -/
+theorem count_16624 : sub n16626 n16624 = n2 := by
+  rw [n16626, n16624, sub_succ_succ]
+  exact count_16623
+/-- The countdown step at 16625. -/
+theorem count_16625 : sub n16627 n16625 = n2 := by
+  rw [n16627, n16625, sub_succ_succ]
+  exact count_16624
+/-- The countdown step at 16626. -/
+theorem count_16626 : sub n16628 n16626 = n2 := by
+  rw [n16628, n16626, sub_succ_succ]
+  exact count_16625
+/-- The countdown step at 16627. -/
+theorem count_16627 : sub n16629 n16627 = n2 := by
+  rw [n16629, n16627, sub_succ_succ]
+  exact count_16626
+/-- The countdown step at 16628. -/
+theorem count_16628 : sub n16630 n16628 = n2 := by
+  rw [n16630, n16628, sub_succ_succ]
+  exact count_16627
+/-- The countdown step at 16629. -/
+theorem count_16629 : sub n16631 n16629 = n2 := by
+  rw [n16631, n16629, sub_succ_succ]
+  exact count_16628
+/-- The countdown step at 16630. -/
+theorem count_16630 : sub n16632 n16630 = n2 := by
+  rw [n16632, n16630, sub_succ_succ]
+  exact count_16629
+/-- The countdown step at 16631. -/
+theorem count_16631 : sub n16633 n16631 = n2 := by
+  rw [n16633, n16631, sub_succ_succ]
+  exact count_16630
+/-- The countdown step at 16632. -/
+theorem count_16632 : sub n16634 n16632 = n2 := by
+  rw [n16634, n16632, sub_succ_succ]
+  exact count_16631
+/-- The countdown step at 16633. -/
+theorem count_16633 : sub n16635 n16633 = n2 := by
+  rw [n16635, n16633, sub_succ_succ]
+  exact count_16632
+/-- The countdown step at 16634. -/
+theorem count_16634 : sub n16636 n16634 = n2 := by
+  rw [n16636, n16634, sub_succ_succ]
+  exact count_16633
+/-- The countdown step at 16635. -/
+theorem count_16635 : sub n16637 n16635 = n2 := by
+  rw [n16637, n16635, sub_succ_succ]
+  exact count_16634
+/-- The countdown step at 16636. -/
+theorem count_16636 : sub n16638 n16636 = n2 := by
+  rw [n16638, n16636, sub_succ_succ]
+  exact count_16635
+/-- The countdown step at 16637. -/
+theorem count_16637 : sub n16639 n16637 = n2 := by
+  rw [n16639, n16637, sub_succ_succ]
+  exact count_16636
+/-- The countdown step at 16638. -/
+theorem count_16638 : sub n16640 n16638 = n2 := by
+  rw [n16640, n16638, sub_succ_succ]
+  exact count_16637
+/-- The countdown step at 16639. -/
+theorem count_16639 : sub n16641 n16639 = n2 := by
+  rw [n16641, n16639, sub_succ_succ]
+  exact count_16638
+/-- The countdown step at 16640. -/
+theorem count_16640 : sub n16642 n16640 = n2 := by
+  rw [n16642, n16640, sub_succ_succ]
+  exact count_16639
+/-- The countdown step at 16641. -/
+theorem count_16641 : sub n16643 n16641 = n2 := by
+  rw [n16643, n16641, sub_succ_succ]
+  exact count_16640
+/-- The countdown step at 16642. -/
+theorem count_16642 : sub n16644 n16642 = n2 := by
+  rw [n16644, n16642, sub_succ_succ]
+  exact count_16641
+/-- The countdown step at 16643. -/
+theorem count_16643 : sub n16645 n16643 = n2 := by
+  rw [n16645, n16643, sub_succ_succ]
+  exact count_16642
+/-- The countdown step at 16644. -/
+theorem count_16644 : sub n16646 n16644 = n2 := by
+  rw [n16646, n16644, sub_succ_succ]
+  exact count_16643
+/-- The countdown step at 16645. -/
+theorem count_16645 : sub n16647 n16645 = n2 := by
+  rw [n16647, n16645, sub_succ_succ]
+  exact count_16644
+/-- The countdown step at 16646. -/
+theorem count_16646 : sub n16648 n16646 = n2 := by
+  rw [n16648, n16646, sub_succ_succ]
+  exact count_16645
+/-- The countdown step at 16647. -/
+theorem count_16647 : sub n16649 n16647 = n2 := by
+  rw [n16649, n16647, sub_succ_succ]
+  exact count_16646
+/-- The countdown step at 16648. -/
+theorem count_16648 : sub n16650 n16648 = n2 := by
+  rw [n16650, n16648, sub_succ_succ]
+  exact count_16647
+/-- The countdown step at 16649. -/
+theorem count_16649 : sub n16651 n16649 = n2 := by
+  rw [n16651, n16649, sub_succ_succ]
+  exact count_16648
+/-- The countdown step at 16650. -/
+theorem count_16650 : sub n16652 n16650 = n2 := by
+  rw [n16652, n16650, sub_succ_succ]
+  exact count_16649
+/-- The countdown step at 16651. -/
+theorem count_16651 : sub n16653 n16651 = n2 := by
+  rw [n16653, n16651, sub_succ_succ]
+  exact count_16650
+/-- The countdown step at 16652. -/
+theorem count_16652 : sub n16654 n16652 = n2 := by
+  rw [n16654, n16652, sub_succ_succ]
+  exact count_16651
+/-- The countdown step at 16653. -/
+theorem count_16653 : sub n16655 n16653 = n2 := by
+  rw [n16655, n16653, sub_succ_succ]
+  exact count_16652
+/-- The countdown step at 16654. -/
+theorem count_16654 : sub n16656 n16654 = n2 := by
+  rw [n16656, n16654, sub_succ_succ]
+  exact count_16653
+/-- The countdown step at 16655. -/
+theorem count_16655 : sub n16657 n16655 = n2 := by
+  rw [n16657, n16655, sub_succ_succ]
+  exact count_16654
+/-- The countdown step at 16656. -/
+theorem count_16656 : sub n16658 n16656 = n2 := by
+  rw [n16658, n16656, sub_succ_succ]
+  exact count_16655
+/-- The countdown step at 16657. -/
+theorem count_16657 : sub n16659 n16657 = n2 := by
+  rw [n16659, n16657, sub_succ_succ]
+  exact count_16656
+/-- The countdown step at 16658. -/
+theorem count_16658 : sub n16660 n16658 = n2 := by
+  rw [n16660, n16658, sub_succ_succ]
+  exact count_16657
+/-- The countdown step at 16659. -/
+theorem count_16659 : sub n16661 n16659 = n2 := by
+  rw [n16661, n16659, sub_succ_succ]
+  exact count_16658
+/-- The countdown step at 16660. -/
+theorem count_16660 : sub n16662 n16660 = n2 := by
+  rw [n16662, n16660, sub_succ_succ]
+  exact count_16659
+/-- The countdown step at 16661. -/
+theorem count_16661 : sub n16663 n16661 = n2 := by
+  rw [n16663, n16661, sub_succ_succ]
+  exact count_16660
+/-- The countdown step at 16662. -/
+theorem count_16662 : sub n16664 n16662 = n2 := by
+  rw [n16664, n16662, sub_succ_succ]
+  exact count_16661
+/-- The countdown step at 16663. -/
+theorem count_16663 : sub n16665 n16663 = n2 := by
+  rw [n16665, n16663, sub_succ_succ]
+  exact count_16662
+/-- The countdown step at 16664. -/
+theorem count_16664 : sub n16666 n16664 = n2 := by
+  rw [n16666, n16664, sub_succ_succ]
+  exact count_16663
+/-- The countdown step at 16665. -/
+theorem count_16665 : sub n16667 n16665 = n2 := by
+  rw [n16667, n16665, sub_succ_succ]
+  exact count_16664
+/-- The countdown step at 16666. -/
+theorem count_16666 : sub n16668 n16666 = n2 := by
+  rw [n16668, n16666, sub_succ_succ]
+  exact count_16665
+/-- The countdown step at 16667. -/
+theorem count_16667 : sub n16669 n16667 = n2 := by
+  rw [n16669, n16667, sub_succ_succ]
+  exact count_16666
+/-- The countdown step at 16668. -/
+theorem count_16668 : sub n16670 n16668 = n2 := by
+  rw [n16670, n16668, sub_succ_succ]
+  exact count_16667
 
 end Countdown
 end Principia

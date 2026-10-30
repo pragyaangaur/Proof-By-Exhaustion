@@ -1,12 +1,11 @@
 /-
 Part V (b): multiplication of the Cauchy reals.
 
-New file; nothing in `Principia/PartV/Cauchy.lean` or in
-`Principia/PartIV/Rats.lean` is changed.  The content is
+The content is
 
 * powers of two in the Peano naturals and the Archimedean fact that every
   natural is below a power of two;
-* the bound `Cauchy.bounded`: a Cauchy sequence of rationals is bounded above
+* the bound `Cauchy.bounded_poly`: a Cauchy sequence of rationals is bounded above
   in absolute value, in the two-sided formulation
   `m <= f n <= M` and `-M <= f n <= M`, with a bound that is itself below a
   power of two (this is what lets the product estimate divide by the bound
@@ -17,6 +16,7 @@ New file; nothing in `Principia/PartV/Cauchy.lean` or in
 -/
 import Principia.PartV.Cauchy
 import Principia.PartIV.RatsMul
+import Principia.PartIII.IntsOrder
 
 open Principia.N
 open Principia.Ints
@@ -112,27 +112,6 @@ theorem add_mk (p r s t : N) :
   show Ints.mk (N.add p s) (N.add r t) = Ints.mk (N.add p s) (N.add r t)
   exact Eq.refl _
 #print axioms Principia.Ints.add_mk
-
-/-- The unfolding of integer negation on representatives. -/
-theorem neg_mk (p r : N) : Ints.neg (Ints.mk p r) = Ints.mk r p := by
-  show Ints.mk r p = Ints.mk r p
-  exact Eq.refl (Ints.mk r p)
-#print axioms Principia.Ints.neg_mk
-
-/-- Cancelling a term on the left against a term on the right. -/
-theorem add_neg_cancel_right (x y : Ints.Z) : Ints.add (Ints.add x y) (Ints.neg x) = y := by
-  show Ints.add (Ints.add x y) (Ints.neg x) = y
-  rw [Ints.add_assoc, Ints.add_comm y (Ints.neg x), ← Ints.add_assoc, Ints.add_neg_cancel,
-    Ints.zero_add]
-#print axioms Principia.Ints.add_neg_cancel_right
-
-/-- The embedding of the naturals into the integers is monotone. -/
-theorem le_ofN_ofN {a b : N} (h : N.le a b) : Ints.le (ofN a) (ofN b) := by
-  obtain ⟨j, hj⟩ := h
-  refine ⟨j, ?_⟩
-  show ofN b = Ints.add (ofN a) (ofN j)
-  rw [← Ints.ofN_add, hj]
-#print axioms Principia.Ints.le_ofN_ofN
 
 /-- An integer is below the embedded natural given by the sum of the two
 coordinates of a representative. -/
@@ -233,7 +212,7 @@ theorem le_mk_den_one {a : Z} {K : N} (hK : K ≠ N.zero) (h1 : N.one ≠ N.zero
   obtain ⟨m, hm⟩ := N.one_le_of_ne_zero hK
   rw [hm, Ints.ofN_add, Ints.ofN_one, Ints.mul_add, Ints.mul_one]
   have hcan : Ints.add (Ints.add a (Ints.mul a (ofN m))) (Ints.neg a) = Ints.mul a (ofN m) :=
-    Ints.add_neg_cancel_right a (Ints.mul a (ofN m))
+    Ints.add_add_neg_left a (Ints.mul a (ofN m))
   rw [hcan]
   exact Ints.le_mul_ofN ha m
 #print axioms Principia.Rats.le_mk_den_one
@@ -522,21 +501,6 @@ theorem bounded_poly {f : N → Q} (hf : Cau f) :
       Rats.exists_pow2_ge_add hp1 hp2
     exact Rats.exists_pow2_ge_add hp3 (Rats.exists_pow2_ge_of_num Rats.num_one)
 #print axioms Principia.Cauchy.bounded_poly
-
-/-- A Cauchy sequence of rationals is bounded, in the two-sided formulation of
-the task: there is a positive rational `M` with `f n <= M` and `-f n <= M`. -/
-theorem bounded {f : N → Q} (hf : Cau f) :
-    ∃ M : Q, lt Rats.zero M ∧ ∀ n : N, le (Rats.sub (f n) Rats.zero) M ∧
-      le (Rats.sub Rats.zero (f n)) M := by
-  obtain ⟨M, hlt, hbd, _hpoly⟩ := bounded_poly hf
-  refine ⟨M, hlt, ?_⟩
-  intro n
-  constructor
-  · rw [Rats.sub_zero]
-    exact (hbd n).1
-  · rw [Rats.sub_zero_left]
-    exact (hbd n).2
-#print axioms Principia.Cauchy.bounded
 
 /-! ### Multiplication of reals -/
 

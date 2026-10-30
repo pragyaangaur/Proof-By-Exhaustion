@@ -76,19 +76,11 @@ structure Oct : Type where
 /-- Addition of octonions. -/
 def oadd (x y : Oct) : Oct := ⟨hadd x.re y.re, hadd x.im y.im⟩
 
-/-- The zero octonion. -/
-def ozero : Oct := ⟨hzero, hzero⟩
-
 /-- The octonion one. -/
 def oone : Oct := ⟨hone, hzero⟩
 
 /-- The octonion two. -/
 def otwo : Oct := ⟨htwo, hzero⟩
-
-/-- Adding zero octonions gives zero. -/
-theorem oadd_zero : oadd ozero ozero = ozero := by
-  show Oct.mk (hadd hzero hzero) (hadd hzero hzero) = Oct.mk hzero hzero
-  rw [hadd_zero]
 
 /-- One plus one is two in the octonions. -/
 theorem o_one_add_one : oadd oone oone = otwo := by

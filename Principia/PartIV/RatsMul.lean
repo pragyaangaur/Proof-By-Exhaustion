@@ -1,12 +1,10 @@
 /-
 Part IV (b): multiplication of the rationals.
 
-New file; nothing in `Principia/PartIV/Rats.lean` is changed.  Multiplication is
-defined on representatives, `(a/b) * (c/d) = (a*c)/(b*d)`, with the respect
-proof for cross multiplication (four-fold commutation of integer products), and
-the laws of addition and multiplication, and the compatibility of
-multiplication with the order, are proved
-from the additive development of Part IV.
+Multiplication is defined on representatives, `(a/b) * (c/d) = (a*c)/(b*d)`,
+and is well defined by a cross-multiplication argument (a four-fold commutation
+of integer products).  The ring laws, and the compatibility of multiplication
+with the order, are proved from the additive development of Part IV.
 -/
 import Principia.PartIV.Rats
 
@@ -62,13 +60,6 @@ theorem one_mk : one = mk Ints.one N.one (N.succ_ne_zero N.zero) := by
      = mk Ints.one N.one (N.succ_ne_zero N.zero)
   exact Eq.refl _
 #print axioms Principia.Rats.one_mk
-
-/-- Unfolding of two. -/
-theorem two_mk : two = mk Ints.two N.one (N.succ_ne_zero N.zero) := by
-  show mk Ints.two N.one (N.succ_ne_zero N.zero)
-     = mk Ints.two N.one (N.succ_ne_zero N.zero)
-  exact Eq.refl _
-#print axioms Principia.Rats.two_mk
 
 /-! ### The commutative monoid laws -/
 
@@ -272,13 +263,6 @@ theorem neg_sub_neg (x y : Q) : sub (neg x) (neg y) = sub y x := by
   rw [neg_neg, add_comm]
 #print axioms Principia.Rats.neg_sub_neg
 
-/-- Negation reverses the order. -/
-theorem neg_le_neg {x y : Q} (h : le x y) : le (neg y) (neg x) := by
-  show Nonneg (sub (neg x) (neg y))
-  rw [neg_sub_neg]
-  exact h
-#print axioms Principia.Rats.neg_le_neg
-
 /-! ### Multiplication and the order -/
 
 /-- A product of nonnegative integers is nonnegative. -/
@@ -289,18 +273,6 @@ theorem Ints.mul_nonneg {a c : Z} (ha : Ints.le Ints.zero a) (hc : Ints.le Ints.
   rw [hk, hl, Ints.zero_add, Ints.zero_add, ← Ints.ofN_mul]
   exact Ints.le_zero_ofN (N.mul k l)
 #print axioms Principia.Rats.Ints.mul_nonneg
-
-/-- A nonnegative difference gives an inequality of integers. -/
-theorem Ints.le_of_le_zero_sub {a b : Z} (h : Ints.le Ints.zero (Ints.sub b a)) :
-    Ints.le a b := by
-  obtain ⟨j, hj⟩ := h
-  rw [Ints.zero_add] at hj
-  refine ⟨j, ?_⟩
-  rw [← hj]
-  show b = Ints.add a (Ints.add b (Ints.neg a))
-  rw [Ints.add_comm a (Ints.add b (Ints.neg a)), Ints.add_assoc,
-    Ints.add_comm (Ints.neg a) a, Ints.add_neg_cancel, Ints.add_zero]
-#print axioms Principia.Rats.Ints.le_of_le_zero_sub
 
 /-- An inequality of integers gives a nonnegative difference. -/
 theorem Ints.le_zero_sub_of_le {a b : Z} (h : Ints.le a b) : Ints.le Ints.zero (Ints.sub b a) := by
@@ -422,38 +394,12 @@ theorem le_of_sub_le {a b c : Q} (h : le (sub a b) c) : le a (add b c) := by
 
 /-! ### The embeddings and halving -/
 
-/-- The embedding of the naturals carries zero to zero. -/
-theorem ofNat_zero : ofNat N.zero = zero := by
-  apply mk_congr
-  · exact Ints.ofN_zero
-  · exact Eq.refl N.one
-#print axioms Principia.Rats.ofNat_zero
-
 /-- The embedding of the naturals carries one to one. -/
 theorem ofNat_one : ofNat N.one = one := by
   apply mk_congr
   · exact Ints.ofN_one
   · exact Eq.refl N.one
 #print axioms Principia.Rats.ofNat_one
-
-/-- The embedding of the naturals carries two to two. -/
-theorem ofNat_two : ofNat N.two = two := by
-  apply mk_congr
-  · show ofN N.two = Ints.two
-    exact Eq.refl (ofN N.two)
-  · exact Eq.refl N.one
-#print axioms Principia.Rats.ofNat_two
-
-/-- The embedding of the naturals preserves multiplication. -/
-theorem ofNat_mul (a b : N) : ofNat (N.mul a b) = mul (ofNat a) (ofNat b) := by
-  show mk (ofN (N.mul a b)) N.one _ = mul (mk (ofN a) N.one _) (mk (ofN b) N.one _)
-  rw [mul_mk]
-  apply mk_eq_iff.2
-  rw [N.mul_one, Ints.ofN_one]
-  have h : Ints.mul (Ints.mul (ofN a) (ofN b)) Ints.one = Ints.mul (ofN a) (ofN b) :=
-    Ints.mul_one (Ints.mul (ofN a) (ofN b))
-  rw [h, Ints.ofN_mul, Ints.mul_one]
-#print axioms Principia.Rats.ofNat_mul
 
 /-- Doubling is multiplication by two. -/
 theorem mul_two (x : Q) : mul two x = add x x := by

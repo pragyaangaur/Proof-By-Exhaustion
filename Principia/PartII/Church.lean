@@ -29,9 +29,6 @@ def ofN (n : N) : Church := fun X f x => iterate X f n x
 /-- Addition of Church numerals: compose the iterators. -/
 def add (a b : Church) : Church := fun X f x => a X f (b X f x)
 
-/-- The Church numeral zero. -/
-def zero : Church := ofN N.zero
-
 /-- The Church numeral one. -/
 def one : Church := ofN N.one
 
