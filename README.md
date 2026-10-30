@@ -103,3 +103,7 @@ This project was produced with AI models. The development was led by Claude Opus
 ## Acknowledgements
 
 The architecture follows Whitehead and Russell's *Principia Mathematica*. The idea of formalising it in Lean follows the [Lean Principia project](https://github.com/ndrwnaguib/principia) by ndrwnaguib. The ambition of a formalisation measured in millions of lines follows the Axiom project's formalisation of the classification of finite simple groups, at 43.1 million lines.
+
+## Licence
+
+MIT. See [LICENSE](LICENSE).
