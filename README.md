@@ -87,7 +87,7 @@ lake build
 ./scripts/check.sh
 ```
 
-Lean 4.33.1, Lake 5.0.0, no dependencies. A clean build takes about four minutes on a ten-core Apple Silicon Mac.
+Lean 4.33.1, Lake 5.0.0, no dependencies. A clean build and check take about five minutes on a ten-core Apple Silicon Mac. The countdown modules build one after another, about ten seconds each.
 
 The countdown, the addition table and the Z/nZ table are produced by `scripts/gen_countdown_chain.py`, `scripts/gen_table.py` and `scripts/gen_zmodtable.py`. With no arguments each one regenerates the committed files exactly. The countdown takes the number of numerals and the number of modules on the command line, and a reader may regenerate it at any size.
 
