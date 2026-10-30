@@ -8,8 +8,8 @@ Every figure below is produced by `wc -l` or by `scripts/audit.py` on the commit
 
 | Quantity | Value |
 |---|---|
-| Lines of Lean | 616,869, of which 616,346 are built by `lake build` |
-| Written by hand | 7,489 |
+| Lines of Lean | 616,870, of which 616,347 are built by `lake build` |
+| Written by hand | 7,490 |
 | Produced by the generators | 609,380 |
 | Lean files | 51 |
 | Theorems | 101,708 |
@@ -25,14 +25,14 @@ Every figure below is produced by `wc -l` or by `scripts/audit.py` on the commit
 
 | Part | Lines |
 |---|---:|
-| PartI | 636 |
-| PartII | 671 |
-| PartIII | 800 |
-| PartIV | 1,120 |
-| PartV | 1,643 |
-| PartVI | 741 |
-| PartVII | 610,576 |
-| PartVIII | 158 |
+| I | 636 |
+| II | 671 |
+| III | 800 |
+| IV | 1,120 |
+| V | 1,643 |
+| VI | 741 |
+| VII | 610,576 |
+| VIII | 159 |
 
 ## Files
 
@@ -64,7 +64,7 @@ Every figure below is produced by `wc -l` or by `scripts/audit.py` on the commit
 | `PartVII/Table.lean` | 914 |
 | `PartVII/ZMod/ZMod.lean` | 315 |
 | `PartVII/ZMod/ZModTable.lean` | 7,515 |
-| `PartVIII/Main.lean` | 158 |
+| `PartVIII/Main.lean` | 159 |
 
 ## Generated families
 
@@ -73,5 +73,6 @@ Every figure below is produced by `wc -l` or by `scripts/audit.py` on the commit
 | Countdown | `gen_countdown_chain.py 100000 24` | 100,001 numerals `n0` to `n100000`, 99,999 chained lemmas `count_0` to `count_99998`, 26 modules of about ten seconds each |
 | Addition table | `gen_table.py 20` | numerals `t0` to `t20`, 210 entries, and `diagonal` |
 | Z/nZ table | `gen_zmodtable.py` | numerals `n3` to `n500`, 498 bounds, 498 entries, and `«✱54.43_zmod_table»` |
+| Axiom audit | `gen_axioms.py` | `Principia/Axioms.lean`, 516 `#print axioms` lines |
 
 Each generator regenerates the committed files exactly when run with no arguments. The countdown takes the number of numerals and the number of modules on the command line.

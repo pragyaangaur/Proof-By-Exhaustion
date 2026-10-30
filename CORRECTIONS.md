@@ -1,8 +1,9 @@
 # Corrections
 
-Records of statements that were specified, found to be false, and replaced.
-The false statements are not deleted from the record; the refutations are
-theorems in the tree.
+Records of errors found in this project: statements that were specified and
+found to be false, commits that do not build, and mistakes in earlier versions
+of these documents. A false statement is not deleted from the record. Its
+refutation is a theorem in the tree.
 
 ## 1. The sum of `0.999…` and `1.999…`
 
@@ -23,11 +24,11 @@ The refutation is a theorem: `nines_twos_ne_two`, in
 `Principia/PartV/Nines.lean`, states that the sum of the two classes is not
 two. The true statements are recorded alongside it:
 
-- `«✱54.43_nines»` — `0.999… + 0.999… = 2`. This is the useful form: the
-  numeral that is not one, added to itself, is two.
-- `nines_add_twos` — `0.999… + 1.999… = 1 + 2`, that is, three.
+- `«✱54.43_nines»` states `0.999… + 0.999… = 2`. This is the useful form: a
+  numeral that does not look like one, added to itself, is two.
+- `nines_add_twos` states `0.999… + 1.999… = 1 + 2`, that is, three.
 
-The Grand Unification cites `«✱54.43_nines»`.
+The Grand Unification cites all three.
 
 ## 2. Base of the expansion
 
@@ -68,9 +69,12 @@ produced by the code. Every figure in the current documents is produced by
 ## 6. Unused and repeated lemmas
 
 The development was meant to have no unused lemma and no statement proved
-twice. A check in Lean of every declaration found 90 unused hand-written
-declarations, 707 unused table entries and six pairs of theorems with
-identical statements, among them the derivation of `1 + 1 = 2` in Part I,
-which was proved once briefly and once expanded. The unused helpers and the
-repeats were deleted, and the remaining results are cited by `«✱54.46»`.
+twice. It had both. About a hundred hand-written declarations were used
+nowhere, none of the 707 entries of the two tables was used, and about a dozen
+theorems were stated twice. Among the repeats were the derivation of
+`1 + 1 = 2` in Part I, proved once briefly and once expanded, and the powers of
+two, defined in two files. The unused helpers and the repeats were deleted, and
+the remaining results are cited by `«✱54.46»`. A check in Lean over the whole
+environment now finds no unused declaration other than `«✱54.46»` and no two
+theorems with the same statement.
 
