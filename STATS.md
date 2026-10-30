@@ -1,74 +1,77 @@
 # Statistics
 
+Every figure below is produced by `wc -l` or by `scripts/audit.py` on the committed tree.
+
 ## Built tree
 
-`lake build` passes: **31 jobs**, no warnings. Every file below is in the default
-target and checked by Lean's kernel.
+`lake build` passes with 52 jobs and no warnings. Every file is in the default target and checked by Lean's kernel, except `Principia/Axioms.lean`, which `scripts/check.sh` runs separately.
 
 | Quantity | Value |
 |---|---|
-| Total lines that build | **115,259** |
-| Lean files | 32 |
-| Theorems | 244,138 |
-| Definitions (incl. structures/inductives) | 40,202 |
-| Axioms | `propext`, `Quot.sound`; `Classical.choice` only in Part I's soundness theorem |
+| Lines of Lean | 616,869, of which 616,346 are built by `lake build` |
+| Written by hand | 7,489 |
+| Produced by the generators | 609,380 |
+| Lean files | 51 |
+| Theorems | 101,708 |
+| Definitions (including structures and inductives) | 100,714 |
+| `#print axioms` lines | 1,859 |
+| Axioms | `propext`, `Quot.sound`, and `Classical.choice` through Part I's soundness theorem |
 | Banned tokens (audit) | 0 |
-| `sorry` / `admit` / declared axioms | 0 |
-| Countdown size | 16,600 numerals, 16,599 chained lemmas, slowest module 11 s (well under 10 min) |
+| `sorry`, `admit`, declared axioms | 0 |
+| Unused theorems or definitions (checked in Lean) | 0, apart from `«✱54.46»` |
+| Pairs of theorems with the same statement (checked in Lean) | 0 |
+
+## Parts
+
+| Part | Lines |
+|---|---:|
+| PartI | 636 |
+| PartII | 671 |
+| PartIII | 800 |
+| PartIV | 1,120 |
+| PartV | 1,643 |
+| PartVI | 741 |
+| PartVII | 610,576 |
+| PartVIII | 158 |
 
 ## Files
 
 | File | Lines |
 |---|---:|
 | `Principia.lean` | 1 |
-| `Axioms.lean` | 22 |
-| `PartI/Expanded.lean` | 243 |
-| `PartI/Logic.lean` | 444 |
-| `PartII/Church.lean` | 96 |
-| `PartII/HFSets.lean` | 123 |
-| `PartII/Peano.lean` | 317 |
+| `Axioms.lean` | 523 |
+| `PartI/Expanded.lean` | 245 |
+| `PartI/Logic.lean` | 391 |
+| `PartII/Church.lean` | 93 |
+| `PartII/HFSets.lean` | 106 |
+| `PartII/Peano.lean` | 292 |
 | `PartII/PeanoOrder.lean` | 180 |
-| `PartIII/Ints.lean` | 590 |
-| `PartIII/IntsOrder.lean` | 235 |
-| `PartIV/Rats.lean` | 503 |
-| `PartIV/RatsMul.lean` | 492 |
-| `PartIV/RatsOrder.lean` | 217 |
+| `PartIII/Ints.lean` | 573 |
+| `PartIII/IntsOrder.lean` | 227 |
+| `PartIV/Rats.lean` | 484 |
+| `PartIV/RatsMul.lean` | 438 |
+| `PartIV/RatsOrder.lean` | 198 |
 | `PartV/Cauchy.lean` | 260 |
-| `PartV/CauchyMul.lean` | 710 |
-| `PartV/Nines.lean` | 745 |
-| `PartVI/CDMul.lean` | 799 |
-| `PartVI/CayleyDickson.lean` | 149 |
-| `PartVII/Binary.lean` | 435 |
+| `PartV/CauchyMul.lean` | 674 |
+| `PartV/Nines.lean` | 709 |
+| `PartVI/CDMul.lean` | 600 |
+| `PartVI/CayleyDickson.lean` | 141 |
+| `PartVII/Binary.lean` | 423 |
 | `PartVII/Countdown.lean` | 1 |
-| `PartVII/Countdown/Step0000.lean` | 24,926 |
-| `PartVII/Countdown/Step0001.lean` | 24,917 |
-| `PartVII/Countdown/Step0002.lean` | 24,917 |
-| `PartVII/Countdown/Step0003.lean` | 24,905 |
-| `PartVII/Countdown/Step0004.lean` | 24 |
-| `PartVII/Roman.lean` | 79 |
-| `PartVII/RomanSub.lean` | 952 |
-| `PartVII/Table.lean` | 906 |
-| `PartVII/Tables.lean` | 5 |
-| `PartVII/ZMod/ZMod.lean` | 354 |
-| `PartVII/ZMod/ZModTable.lean` | 6,596 |
-| `PartVIII/Main.lean` | 116 |
+| `PartVII/Countdown/Step0000.lean` to `Step0024.lean` (25 files) | 600,427 |
+| `PartVII/Roman.lean` | 74 |
+| `PartVII/RomanSub.lean` | 907 |
+| `PartVII/Table.lean` | 914 |
+| `PartVII/ZMod/ZMod.lean` | 315 |
+| `PartVII/ZMod/ZModTable.lean` | 7,515 |
+| `PartVIII/Main.lean` | 158 |
 
-## Not in the default target
+## Generated families
 
-`Principia/PartVII/Tables/` (926,066 lines, 81 modules, K = 300 in five number
-systems) is generated and present but does **not** check in this VM: a single
-181k-line module is OOM-killed, and the row-block split still fails in the last
-Peano blocks where entries near `a = 300` unfold a 300-deep chained numeral.
-It is excluded from every figure above and from the build.
+| Family | Generator | Size |
+|---|---|---|
+| Countdown | `gen_countdown_chain.py 100000 24` | 100,001 numerals `n0` to `n100000`, 99,999 chained lemmas `count_0` to `count_99998`, 26 modules of about ten seconds each |
+| Addition table | `gen_table.py 20` | numerals `t0` to `t20`, 210 entries, and `diagonal` |
+| Z/nZ table | `gen_zmodtable.py` | numerals `n3` to `n500`, 498 bounds, 498 entries, and `«✱54.43_zmod_table»` |
 
-## Generators (knobs)
-
-`scripts/gen_countdown.py`, `gen_countdown_chain.py M FILES`, `gen_table.py K`,
-`gen_tables.py K ROWS`, `gen_zmodtable.py`, and `audit.py` (banned-token sweep).
-All deterministic; generated files are committed.
-
-## Corrections
-
-See `CORRECTIONS.md`: the specified theorem `0.999… + 1.999… = 2` is false
-(it is 3); `nines_twos_ne_two` refutes it and `«✱54.43_nines»` states the true
-`0.999… + 0.999… = 2`. The expansion was also moved from base 2 to base 10.
+Each generator regenerates the committed files exactly when run with no arguments. The countdown takes the number of numerals and the number of modules on the command line.
