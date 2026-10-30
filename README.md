@@ -2,6 +2,8 @@
 
 **A proof in Lean 4 that 1 + 1 = 2. It is 616,873 lines long.**
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23805053.svg)](https://doi.org/10.5281/zenodo.23805053) Paper: [*Proof by exhaustion: one plus one is two, in 616,873 lines of Lean*](https://doi.org/10.5281/zenodo.23805053)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="figures/lines-dark.svg">
   <img alt="Lines of Lean on a logarithmic axis: example : 1 + 1 = 2 := rfl takes 1 line, this project 7,493 lines by hand and 616,873 in all, and Axiom's formalisation of the classification of finite simple groups about 43.1 million." src="figures/lines-light.svg" width="820">
