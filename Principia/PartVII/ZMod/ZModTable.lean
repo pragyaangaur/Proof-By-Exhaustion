@@ -18,7 +18,7 @@ checked by Lean; no entry is computed, each is an application of the general
 theorem.  Nothing below uses `rfl`, `simp`, `decide`, `omega`, `ring` or any
 other search or computation tactic.
 -/
-import ZMod
+import Principia.PartVII.ZMod.ZMod
 
 set_option autoImplicit false
 
