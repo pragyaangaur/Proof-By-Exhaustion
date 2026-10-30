@@ -1,5 +1,5 @@
 /-
-The rings `Z/nZ` for `n = 3, ..., 500`.
+The integers modulo `n`, with their addition.
 
 The residue of a natural modulo `n` is defined without any appeal to division or
 subtraction: `a` and `b` have the same residue when they differ by a multiple of
@@ -9,8 +9,7 @@ associativity, commutativity and distributivity laws of `N`), so it is a setoid
 and may be quotiented.  The quotient `ZMod n` carries the addition induced by
 `N.add`, together with the classes of `0` and `1`; the laws of a commutative
 monoid, the characteristic identity `1 + 1 = 2`, and the two decisive special
-cases `1 + 1 = 0` for `n = 2` (✱54.43 of the *Principia*, in the ring of two
-elements) and `1 + 1 ≠ 0` for `n ≥ 3` are proved here.  The companion file
+cases `1 + 1 = 0` for `n = 2` and `1 + 1 ≠ 0` for `n ≥ 3` are proved here.  The companion file
 `ZModTable` records the latter for every `n` from three to five hundred.
 
 Nothing below uses `rfl`, `simp`, `decide`, `omega`, `ring` or any other search
@@ -94,7 +93,8 @@ def setoid (n : N) : Setoid N := ⟨congr n, congr_refl n, congr_symm n, congr_t
 
 /-! ### The quotient type -/
 
-/-- The ring `Z/nZ` of residues modulo `n`, as a quotient of the naturals. -/
+/-- The residues modulo `n`, as a quotient of the naturals.  Only addition is
+defined on them. -/
 def ZMod (n : N) : Type := Quotient (setoid n)
 
 /-- The class of the natural `a` modulo `n`. -/
@@ -211,10 +211,9 @@ theorem two_ne_zero : N.two ≠ N.zero := N.succ_ne_zero N.one
 
 #print axioms two_ne_zero
 
-/-! ### The two-element ring: `1 + 1 = 0` -/
+/-! ### Two elements: `1 + 1 = 0` -/
 
-/-- ✱54.43 in the ring of two elements: the joke case, where one plus one is
-zero.  The witnesses are `k = 0` and `l = 1`: `(1 + 1) + 0*2 = 0 + 1*2`. -/
+/-- ✱54.43 modulo two, where one plus one is zero.  The witnesses are `k = 0` and `l = 1`: `(1 + 1) + 0*2 = 0 + 1*2`. -/
 theorem «✱54.43_char2» : add N.two (one N.two) (one N.two) = zero N.two := by
   apply mk_eq_of_congr
   refine ⟨N.zero, N.one, ?_⟩

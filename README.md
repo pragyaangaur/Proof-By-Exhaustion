@@ -4,7 +4,7 @@
 
 We formalise the proposition that one plus one is two. The development is written in Lean 4 with no library dependencies. It does not use Lean's built-in natural numbers, integers or rationals, and no numeric literal occurs in any of its definitions or theorems except the statement of the headline theorem, where `1` and `2` are notation for the development's own numbers. This is checked in Lean over every declaration.
 
-The route is deliberate. Part I is a deep embedding of a first-order calculus with a Hilbert-style proof system, a proved soundness theorem and a derivation of `1 + 1 = 2` written out step by step. Part II gives three constructions of the natural numbers: Peano numerals, von Neumann ordinals in hereditarily finite sets, and Church numerals, with injective embeddings into the last two. The hereditarily finite sets are represented as nested lists and are not quotiented by extensionality, which does not matter for the ordinals because each is built in one canonical order. Part III builds the integers as a quotient of pairs of naturals, and Part IV builds the rationals as a quotient of pairs of an integer and a nonzero natural, with order and multiplication. Part V builds the reals as Cauchy sequences of rationals modulo null difference, with multiplication, and identifies `0.999...` with one. Part VI builds the complex numbers, quaternions and octonions by the Cayley-Dickson doubling formula and proves that commutativity fails in the quaternions and associativity fails in the octonions. Part VII contains binary numerals with a proved ripple-carry adder, the rings of integers modulo `n` for `3 <= n <= 500`, two Roman notations, an addition table and a generated countdown. Part VIII states the theorem.
+The route is deliberate. Part I is a deep embedding of a Hilbert-style calculus with the connectives, quantifiers, equality and the Peano equations for successor and addition, a Tarski semantics, a proved soundness theorem and a derivation of `1 + 1 = 2` written out step by step. Its terms are closed numerals, so the quantifiers bind only propositional variables and the calculus is much weaker than first-order arithmetic. It is exactly strong enough for the derivation. Part II gives three constructions of the natural numbers: Peano numerals, von Neumann ordinals in hereditarily finite sets, and Church numerals, with injective embeddings into the last two. The hereditarily finite sets are represented as nested lists and are not quotiented by extensionality, which does not matter for the ordinals because each is built in one canonical order. Part III builds the integers as a quotient of pairs of naturals, and Part IV builds the rationals as a quotient of pairs of an integer and a nonzero natural, with order and multiplication. Part V builds the reals as Cauchy sequences of rationals modulo null difference, with multiplication, and identifies `0.999...` with one. Part VI builds the complex numbers, quaternions and octonions by the Cayley-Dickson doubling formula and proves that commutativity fails in the quaternions and associativity fails in the octonions. Part VII contains binary numerals with a proved ripple-carry adder, the integers modulo `n` with their addition for `2 <= n <= 500`, two Roman notations, an addition table and a generated countdown. Part VIII states the theorem.
 
 The proposition is occasionally useful.
 
@@ -26,16 +26,16 @@ theorem «✱54.43» : (1 : MyReal) + 1 = 2
 
 | Part | Content | Lines |
 |------|---------|------:|
-| I | Deep embedding, Hilbert system, soundness, the derivation of `add one one = two` written out step by step | 636 |
+| I | Deep embedding of a Hilbert calculus over closed numerals, soundness, the derivation of `add one one = two` written out step by step | 641 |
 | II | Peano naturals and their order, von Neumann ordinals in HF sets, Church numerals | 671 |
 | III | Integers as a quotient of pairs, ring laws, order, no zero divisors | 800 |
 | IV | Rationals as a quotient, order, totality, halving, multiplication | 1,120 |
 | V | Cauchy reals, addition, multiplication, the nines | 1,643 |
 | VI | Complex numbers, quaternions, octonions, conjugation and multiplication | 741 |
-| VII | Countdown, addition table, binary numerals, Z/nZ, Roman, Roman subtractive | 610,576 |
+| VII | Countdown, addition table, binary numerals, Z/nZ, Roman, Roman subtractive | 610,574 |
 | VIII | ✱54.43 to ✱54.46 | 159 |
 
-Total: 616,870 lines of Lean, of which 7,490 are written by hand and the rest are produced by the generators in `scripts/`. The tree has 101,708 theorems and 100,714 definitions. See [STATS.md](STATS.md).
+Total: 616,873 lines of Lean, of which 7,493 are written by hand and the rest are produced by the generators in `scripts/`. The tree has 101,708 theorems and 100,714 definitions. See [STATS.md](STATS.md).
 
 ## The Grand Unification
 
@@ -89,7 +89,7 @@ lake build
 
 Lean 4.33.1, Lake 5.0.0, no dependencies. A clean build and check take about five minutes on a ten-core Apple Silicon Mac. The countdown modules build one after another, about ten seconds each.
 
-The countdown, the addition table, the Z/nZ table and the axiom audit are produced by `scripts/gen_countdown_chain.py`, `scripts/gen_table.py`, `scripts/gen_zmodtable.py` and `scripts/gen_axioms.py`. With no arguments each one regenerates the committed files exactly. The countdown takes the number of numerals and the number of modules on the command line, and a reader may regenerate it at any size.
+The countdown, the addition table, the Z/nZ table and the axiom audit are produced by `scripts/gen_countdown_chain.py`, `scripts/gen_table.py`, `scripts/gen_zmodtable.py` and `scripts/gen_axioms.py`. With no arguments each one regenerates the committed files exactly, and `scripts/stats.py` regenerates STATS.md. The countdown takes the number of numerals and the number of modules on the command line, and a reader may regenerate it at any size.
 
 ## Use of AI
 

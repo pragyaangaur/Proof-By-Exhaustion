@@ -19,8 +19,7 @@ incoming carry `c`,
   `val (addAux x y c) = (val x + val y) + bitVal c`.
 
 The header `val_add` is the main theorem: binary addition adds values.  The file
-closes with the two required traces, which are end results and are used by
-nothing after them: `one_add_one_bin` records the numeral the adder produces for
+closes with two traces, which `«✱54.46»` cites: `one_add_one_bin` records the numeral the adder produces for
 one plus one, and `one_add_one_trace` its value, read off from `val_add`.
 -/
 import Principia.PartII.PeanoOrder

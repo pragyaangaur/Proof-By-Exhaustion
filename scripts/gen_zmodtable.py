@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate ZModTable.lean: the family of rings Z/nZ for n = 3, ..., 500.
+"""Generate ZModTable.lean: the integers modulo n for n = 3, ..., 500.
 
 For every n in that range the file records
 
@@ -39,7 +39,7 @@ def chain(k, per_line=10):
 def main(path):
     L = []
     L.append("""/-
-The table of the rings `Z/nZ` for `n = 3, ..., 500`.
+The table of the integers modulo `n` for `n = 3, ..., 500`.
 
 The general theorem of `ZMod` says that one plus one is not zero in `Z/nZ` as
 soon as three is at most `n`.  This file records the instance for every `n` of
@@ -88,7 +88,7 @@ theorem le%d : N.le N.three n%d := N.le_trans le%d (N.le_succ_self n%d)
 """)
     for k in range(LOW, HIGH + 1):
         L.append("""
-/-- In the ring of %d elements, one plus one is not zero. -/
+/-- Modulo %d, one plus one is not zero. -/
 theorem «✱54.43_zmod_%d» :
     ZMod.add n%d (ZMod.one n%d) (ZMod.one n%d) ≠ ZMod.zero n%d :=
   ZMod.two_ne_zero_of_three_le n%d le%d
@@ -98,7 +98,7 @@ theorem «✱54.43_zmod_%d» :
 /-! ### The whole table -/
 
 /-- The table as a proposition: for every `n` from 3 to 500, one plus one is
-not zero in the ring of `n` elements. -/
+not zero modulo `n`. -/
 def Statement : Prop :=
 """)
     L.append("    " + " ∧\n    ".join(

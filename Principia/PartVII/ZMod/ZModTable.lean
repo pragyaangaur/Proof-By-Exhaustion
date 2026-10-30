@@ -1,5 +1,5 @@
 /-
-The table of the rings `Z/nZ` for `n = 3, ..., 500`.
+The table of the integers modulo `n` for `n = 3, ..., 500`.
 
 The general theorem of `ZMod` says that one plus one is not zero in `Z/nZ` as
 soon as three is at most `n`.  This file records the instance for every `n` of
@@ -3517,2989 +3517,2989 @@ theorem le500 : N.le N.three n500 := N.le_trans le499 (N.le_succ_self n499)
 
 /-! ### The table: one plus one is not zero in `Z/nZ` -/
 
-/-- In the ring of 3 elements, one plus one is not zero. -/
+/-- Modulo 3, one plus one is not zero. -/
 theorem «✱54.43_zmod_3» :
     ZMod.add n3 (ZMod.one n3) (ZMod.one n3) ≠ ZMod.zero n3 :=
   ZMod.two_ne_zero_of_three_le n3 le3
 #print axioms «✱54.43_zmod_3»
 
-/-- In the ring of 4 elements, one plus one is not zero. -/
+/-- Modulo 4, one plus one is not zero. -/
 theorem «✱54.43_zmod_4» :
     ZMod.add n4 (ZMod.one n4) (ZMod.one n4) ≠ ZMod.zero n4 :=
   ZMod.two_ne_zero_of_three_le n4 le4
 #print axioms «✱54.43_zmod_4»
 
-/-- In the ring of 5 elements, one plus one is not zero. -/
+/-- Modulo 5, one plus one is not zero. -/
 theorem «✱54.43_zmod_5» :
     ZMod.add n5 (ZMod.one n5) (ZMod.one n5) ≠ ZMod.zero n5 :=
   ZMod.two_ne_zero_of_three_le n5 le5
 #print axioms «✱54.43_zmod_5»
 
-/-- In the ring of 6 elements, one plus one is not zero. -/
+/-- Modulo 6, one plus one is not zero. -/
 theorem «✱54.43_zmod_6» :
     ZMod.add n6 (ZMod.one n6) (ZMod.one n6) ≠ ZMod.zero n6 :=
   ZMod.two_ne_zero_of_three_le n6 le6
 #print axioms «✱54.43_zmod_6»
 
-/-- In the ring of 7 elements, one plus one is not zero. -/
+/-- Modulo 7, one plus one is not zero. -/
 theorem «✱54.43_zmod_7» :
     ZMod.add n7 (ZMod.one n7) (ZMod.one n7) ≠ ZMod.zero n7 :=
   ZMod.two_ne_zero_of_three_le n7 le7
 #print axioms «✱54.43_zmod_7»
 
-/-- In the ring of 8 elements, one plus one is not zero. -/
+/-- Modulo 8, one plus one is not zero. -/
 theorem «✱54.43_zmod_8» :
     ZMod.add n8 (ZMod.one n8) (ZMod.one n8) ≠ ZMod.zero n8 :=
   ZMod.two_ne_zero_of_three_le n8 le8
 #print axioms «✱54.43_zmod_8»
 
-/-- In the ring of 9 elements, one plus one is not zero. -/
+/-- Modulo 9, one plus one is not zero. -/
 theorem «✱54.43_zmod_9» :
     ZMod.add n9 (ZMod.one n9) (ZMod.one n9) ≠ ZMod.zero n9 :=
   ZMod.two_ne_zero_of_three_le n9 le9
 #print axioms «✱54.43_zmod_9»
 
-/-- In the ring of 10 elements, one plus one is not zero. -/
+/-- Modulo 10, one plus one is not zero. -/
 theorem «✱54.43_zmod_10» :
     ZMod.add n10 (ZMod.one n10) (ZMod.one n10) ≠ ZMod.zero n10 :=
   ZMod.two_ne_zero_of_three_le n10 le10
 #print axioms «✱54.43_zmod_10»
 
-/-- In the ring of 11 elements, one plus one is not zero. -/
+/-- Modulo 11, one plus one is not zero. -/
 theorem «✱54.43_zmod_11» :
     ZMod.add n11 (ZMod.one n11) (ZMod.one n11) ≠ ZMod.zero n11 :=
   ZMod.two_ne_zero_of_three_le n11 le11
 #print axioms «✱54.43_zmod_11»
 
-/-- In the ring of 12 elements, one plus one is not zero. -/
+/-- Modulo 12, one plus one is not zero. -/
 theorem «✱54.43_zmod_12» :
     ZMod.add n12 (ZMod.one n12) (ZMod.one n12) ≠ ZMod.zero n12 :=
   ZMod.two_ne_zero_of_three_le n12 le12
 #print axioms «✱54.43_zmod_12»
 
-/-- In the ring of 13 elements, one plus one is not zero. -/
+/-- Modulo 13, one plus one is not zero. -/
 theorem «✱54.43_zmod_13» :
     ZMod.add n13 (ZMod.one n13) (ZMod.one n13) ≠ ZMod.zero n13 :=
   ZMod.two_ne_zero_of_three_le n13 le13
 #print axioms «✱54.43_zmod_13»
 
-/-- In the ring of 14 elements, one plus one is not zero. -/
+/-- Modulo 14, one plus one is not zero. -/
 theorem «✱54.43_zmod_14» :
     ZMod.add n14 (ZMod.one n14) (ZMod.one n14) ≠ ZMod.zero n14 :=
   ZMod.two_ne_zero_of_three_le n14 le14
 #print axioms «✱54.43_zmod_14»
 
-/-- In the ring of 15 elements, one plus one is not zero. -/
+/-- Modulo 15, one plus one is not zero. -/
 theorem «✱54.43_zmod_15» :
     ZMod.add n15 (ZMod.one n15) (ZMod.one n15) ≠ ZMod.zero n15 :=
   ZMod.two_ne_zero_of_three_le n15 le15
 #print axioms «✱54.43_zmod_15»
 
-/-- In the ring of 16 elements, one plus one is not zero. -/
+/-- Modulo 16, one plus one is not zero. -/
 theorem «✱54.43_zmod_16» :
     ZMod.add n16 (ZMod.one n16) (ZMod.one n16) ≠ ZMod.zero n16 :=
   ZMod.two_ne_zero_of_three_le n16 le16
 #print axioms «✱54.43_zmod_16»
 
-/-- In the ring of 17 elements, one plus one is not zero. -/
+/-- Modulo 17, one plus one is not zero. -/
 theorem «✱54.43_zmod_17» :
     ZMod.add n17 (ZMod.one n17) (ZMod.one n17) ≠ ZMod.zero n17 :=
   ZMod.two_ne_zero_of_three_le n17 le17
 #print axioms «✱54.43_zmod_17»
 
-/-- In the ring of 18 elements, one plus one is not zero. -/
+/-- Modulo 18, one plus one is not zero. -/
 theorem «✱54.43_zmod_18» :
     ZMod.add n18 (ZMod.one n18) (ZMod.one n18) ≠ ZMod.zero n18 :=
   ZMod.two_ne_zero_of_three_le n18 le18
 #print axioms «✱54.43_zmod_18»
 
-/-- In the ring of 19 elements, one plus one is not zero. -/
+/-- Modulo 19, one plus one is not zero. -/
 theorem «✱54.43_zmod_19» :
     ZMod.add n19 (ZMod.one n19) (ZMod.one n19) ≠ ZMod.zero n19 :=
   ZMod.two_ne_zero_of_three_le n19 le19
 #print axioms «✱54.43_zmod_19»
 
-/-- In the ring of 20 elements, one plus one is not zero. -/
+/-- Modulo 20, one plus one is not zero. -/
 theorem «✱54.43_zmod_20» :
     ZMod.add n20 (ZMod.one n20) (ZMod.one n20) ≠ ZMod.zero n20 :=
   ZMod.two_ne_zero_of_three_le n20 le20
 #print axioms «✱54.43_zmod_20»
 
-/-- In the ring of 21 elements, one plus one is not zero. -/
+/-- Modulo 21, one plus one is not zero. -/
 theorem «✱54.43_zmod_21» :
     ZMod.add n21 (ZMod.one n21) (ZMod.one n21) ≠ ZMod.zero n21 :=
   ZMod.two_ne_zero_of_three_le n21 le21
 #print axioms «✱54.43_zmod_21»
 
-/-- In the ring of 22 elements, one plus one is not zero. -/
+/-- Modulo 22, one plus one is not zero. -/
 theorem «✱54.43_zmod_22» :
     ZMod.add n22 (ZMod.one n22) (ZMod.one n22) ≠ ZMod.zero n22 :=
   ZMod.two_ne_zero_of_three_le n22 le22
 #print axioms «✱54.43_zmod_22»
 
-/-- In the ring of 23 elements, one plus one is not zero. -/
+/-- Modulo 23, one plus one is not zero. -/
 theorem «✱54.43_zmod_23» :
     ZMod.add n23 (ZMod.one n23) (ZMod.one n23) ≠ ZMod.zero n23 :=
   ZMod.two_ne_zero_of_three_le n23 le23
 #print axioms «✱54.43_zmod_23»
 
-/-- In the ring of 24 elements, one plus one is not zero. -/
+/-- Modulo 24, one plus one is not zero. -/
 theorem «✱54.43_zmod_24» :
     ZMod.add n24 (ZMod.one n24) (ZMod.one n24) ≠ ZMod.zero n24 :=
   ZMod.two_ne_zero_of_three_le n24 le24
 #print axioms «✱54.43_zmod_24»
 
-/-- In the ring of 25 elements, one plus one is not zero. -/
+/-- Modulo 25, one plus one is not zero. -/
 theorem «✱54.43_zmod_25» :
     ZMod.add n25 (ZMod.one n25) (ZMod.one n25) ≠ ZMod.zero n25 :=
   ZMod.two_ne_zero_of_three_le n25 le25
 #print axioms «✱54.43_zmod_25»
 
-/-- In the ring of 26 elements, one plus one is not zero. -/
+/-- Modulo 26, one plus one is not zero. -/
 theorem «✱54.43_zmod_26» :
     ZMod.add n26 (ZMod.one n26) (ZMod.one n26) ≠ ZMod.zero n26 :=
   ZMod.two_ne_zero_of_three_le n26 le26
 #print axioms «✱54.43_zmod_26»
 
-/-- In the ring of 27 elements, one plus one is not zero. -/
+/-- Modulo 27, one plus one is not zero. -/
 theorem «✱54.43_zmod_27» :
     ZMod.add n27 (ZMod.one n27) (ZMod.one n27) ≠ ZMod.zero n27 :=
   ZMod.two_ne_zero_of_three_le n27 le27
 #print axioms «✱54.43_zmod_27»
 
-/-- In the ring of 28 elements, one plus one is not zero. -/
+/-- Modulo 28, one plus one is not zero. -/
 theorem «✱54.43_zmod_28» :
     ZMod.add n28 (ZMod.one n28) (ZMod.one n28) ≠ ZMod.zero n28 :=
   ZMod.two_ne_zero_of_three_le n28 le28
 #print axioms «✱54.43_zmod_28»
 
-/-- In the ring of 29 elements, one plus one is not zero. -/
+/-- Modulo 29, one plus one is not zero. -/
 theorem «✱54.43_zmod_29» :
     ZMod.add n29 (ZMod.one n29) (ZMod.one n29) ≠ ZMod.zero n29 :=
   ZMod.two_ne_zero_of_three_le n29 le29
 #print axioms «✱54.43_zmod_29»
 
-/-- In the ring of 30 elements, one plus one is not zero. -/
+/-- Modulo 30, one plus one is not zero. -/
 theorem «✱54.43_zmod_30» :
     ZMod.add n30 (ZMod.one n30) (ZMod.one n30) ≠ ZMod.zero n30 :=
   ZMod.two_ne_zero_of_three_le n30 le30
 #print axioms «✱54.43_zmod_30»
 
-/-- In the ring of 31 elements, one plus one is not zero. -/
+/-- Modulo 31, one plus one is not zero. -/
 theorem «✱54.43_zmod_31» :
     ZMod.add n31 (ZMod.one n31) (ZMod.one n31) ≠ ZMod.zero n31 :=
   ZMod.two_ne_zero_of_three_le n31 le31
 #print axioms «✱54.43_zmod_31»
 
-/-- In the ring of 32 elements, one plus one is not zero. -/
+/-- Modulo 32, one plus one is not zero. -/
 theorem «✱54.43_zmod_32» :
     ZMod.add n32 (ZMod.one n32) (ZMod.one n32) ≠ ZMod.zero n32 :=
   ZMod.two_ne_zero_of_three_le n32 le32
 #print axioms «✱54.43_zmod_32»
 
-/-- In the ring of 33 elements, one plus one is not zero. -/
+/-- Modulo 33, one plus one is not zero. -/
 theorem «✱54.43_zmod_33» :
     ZMod.add n33 (ZMod.one n33) (ZMod.one n33) ≠ ZMod.zero n33 :=
   ZMod.two_ne_zero_of_three_le n33 le33
 #print axioms «✱54.43_zmod_33»
 
-/-- In the ring of 34 elements, one plus one is not zero. -/
+/-- Modulo 34, one plus one is not zero. -/
 theorem «✱54.43_zmod_34» :
     ZMod.add n34 (ZMod.one n34) (ZMod.one n34) ≠ ZMod.zero n34 :=
   ZMod.two_ne_zero_of_three_le n34 le34
 #print axioms «✱54.43_zmod_34»
 
-/-- In the ring of 35 elements, one plus one is not zero. -/
+/-- Modulo 35, one plus one is not zero. -/
 theorem «✱54.43_zmod_35» :
     ZMod.add n35 (ZMod.one n35) (ZMod.one n35) ≠ ZMod.zero n35 :=
   ZMod.two_ne_zero_of_three_le n35 le35
 #print axioms «✱54.43_zmod_35»
 
-/-- In the ring of 36 elements, one plus one is not zero. -/
+/-- Modulo 36, one plus one is not zero. -/
 theorem «✱54.43_zmod_36» :
     ZMod.add n36 (ZMod.one n36) (ZMod.one n36) ≠ ZMod.zero n36 :=
   ZMod.two_ne_zero_of_three_le n36 le36
 #print axioms «✱54.43_zmod_36»
 
-/-- In the ring of 37 elements, one plus one is not zero. -/
+/-- Modulo 37, one plus one is not zero. -/
 theorem «✱54.43_zmod_37» :
     ZMod.add n37 (ZMod.one n37) (ZMod.one n37) ≠ ZMod.zero n37 :=
   ZMod.two_ne_zero_of_three_le n37 le37
 #print axioms «✱54.43_zmod_37»
 
-/-- In the ring of 38 elements, one plus one is not zero. -/
+/-- Modulo 38, one plus one is not zero. -/
 theorem «✱54.43_zmod_38» :
     ZMod.add n38 (ZMod.one n38) (ZMod.one n38) ≠ ZMod.zero n38 :=
   ZMod.two_ne_zero_of_three_le n38 le38
 #print axioms «✱54.43_zmod_38»
 
-/-- In the ring of 39 elements, one plus one is not zero. -/
+/-- Modulo 39, one plus one is not zero. -/
 theorem «✱54.43_zmod_39» :
     ZMod.add n39 (ZMod.one n39) (ZMod.one n39) ≠ ZMod.zero n39 :=
   ZMod.two_ne_zero_of_three_le n39 le39
 #print axioms «✱54.43_zmod_39»
 
-/-- In the ring of 40 elements, one plus one is not zero. -/
+/-- Modulo 40, one plus one is not zero. -/
 theorem «✱54.43_zmod_40» :
     ZMod.add n40 (ZMod.one n40) (ZMod.one n40) ≠ ZMod.zero n40 :=
   ZMod.two_ne_zero_of_three_le n40 le40
 #print axioms «✱54.43_zmod_40»
 
-/-- In the ring of 41 elements, one plus one is not zero. -/
+/-- Modulo 41, one plus one is not zero. -/
 theorem «✱54.43_zmod_41» :
     ZMod.add n41 (ZMod.one n41) (ZMod.one n41) ≠ ZMod.zero n41 :=
   ZMod.two_ne_zero_of_three_le n41 le41
 #print axioms «✱54.43_zmod_41»
 
-/-- In the ring of 42 elements, one plus one is not zero. -/
+/-- Modulo 42, one plus one is not zero. -/
 theorem «✱54.43_zmod_42» :
     ZMod.add n42 (ZMod.one n42) (ZMod.one n42) ≠ ZMod.zero n42 :=
   ZMod.two_ne_zero_of_three_le n42 le42
 #print axioms «✱54.43_zmod_42»
 
-/-- In the ring of 43 elements, one plus one is not zero. -/
+/-- Modulo 43, one plus one is not zero. -/
 theorem «✱54.43_zmod_43» :
     ZMod.add n43 (ZMod.one n43) (ZMod.one n43) ≠ ZMod.zero n43 :=
   ZMod.two_ne_zero_of_three_le n43 le43
 #print axioms «✱54.43_zmod_43»
 
-/-- In the ring of 44 elements, one plus one is not zero. -/
+/-- Modulo 44, one plus one is not zero. -/
 theorem «✱54.43_zmod_44» :
     ZMod.add n44 (ZMod.one n44) (ZMod.one n44) ≠ ZMod.zero n44 :=
   ZMod.two_ne_zero_of_three_le n44 le44
 #print axioms «✱54.43_zmod_44»
 
-/-- In the ring of 45 elements, one plus one is not zero. -/
+/-- Modulo 45, one plus one is not zero. -/
 theorem «✱54.43_zmod_45» :
     ZMod.add n45 (ZMod.one n45) (ZMod.one n45) ≠ ZMod.zero n45 :=
   ZMod.two_ne_zero_of_three_le n45 le45
 #print axioms «✱54.43_zmod_45»
 
-/-- In the ring of 46 elements, one plus one is not zero. -/
+/-- Modulo 46, one plus one is not zero. -/
 theorem «✱54.43_zmod_46» :
     ZMod.add n46 (ZMod.one n46) (ZMod.one n46) ≠ ZMod.zero n46 :=
   ZMod.two_ne_zero_of_three_le n46 le46
 #print axioms «✱54.43_zmod_46»
 
-/-- In the ring of 47 elements, one plus one is not zero. -/
+/-- Modulo 47, one plus one is not zero. -/
 theorem «✱54.43_zmod_47» :
     ZMod.add n47 (ZMod.one n47) (ZMod.one n47) ≠ ZMod.zero n47 :=
   ZMod.two_ne_zero_of_three_le n47 le47
 #print axioms «✱54.43_zmod_47»
 
-/-- In the ring of 48 elements, one plus one is not zero. -/
+/-- Modulo 48, one plus one is not zero. -/
 theorem «✱54.43_zmod_48» :
     ZMod.add n48 (ZMod.one n48) (ZMod.one n48) ≠ ZMod.zero n48 :=
   ZMod.two_ne_zero_of_three_le n48 le48
 #print axioms «✱54.43_zmod_48»
 
-/-- In the ring of 49 elements, one plus one is not zero. -/
+/-- Modulo 49, one plus one is not zero. -/
 theorem «✱54.43_zmod_49» :
     ZMod.add n49 (ZMod.one n49) (ZMod.one n49) ≠ ZMod.zero n49 :=
   ZMod.two_ne_zero_of_three_le n49 le49
 #print axioms «✱54.43_zmod_49»
 
-/-- In the ring of 50 elements, one plus one is not zero. -/
+/-- Modulo 50, one plus one is not zero. -/
 theorem «✱54.43_zmod_50» :
     ZMod.add n50 (ZMod.one n50) (ZMod.one n50) ≠ ZMod.zero n50 :=
   ZMod.two_ne_zero_of_three_le n50 le50
 #print axioms «✱54.43_zmod_50»
 
-/-- In the ring of 51 elements, one plus one is not zero. -/
+/-- Modulo 51, one plus one is not zero. -/
 theorem «✱54.43_zmod_51» :
     ZMod.add n51 (ZMod.one n51) (ZMod.one n51) ≠ ZMod.zero n51 :=
   ZMod.two_ne_zero_of_three_le n51 le51
 #print axioms «✱54.43_zmod_51»
 
-/-- In the ring of 52 elements, one plus one is not zero. -/
+/-- Modulo 52, one plus one is not zero. -/
 theorem «✱54.43_zmod_52» :
     ZMod.add n52 (ZMod.one n52) (ZMod.one n52) ≠ ZMod.zero n52 :=
   ZMod.two_ne_zero_of_three_le n52 le52
 #print axioms «✱54.43_zmod_52»
 
-/-- In the ring of 53 elements, one plus one is not zero. -/
+/-- Modulo 53, one plus one is not zero. -/
 theorem «✱54.43_zmod_53» :
     ZMod.add n53 (ZMod.one n53) (ZMod.one n53) ≠ ZMod.zero n53 :=
   ZMod.two_ne_zero_of_three_le n53 le53
 #print axioms «✱54.43_zmod_53»
 
-/-- In the ring of 54 elements, one plus one is not zero. -/
+/-- Modulo 54, one plus one is not zero. -/
 theorem «✱54.43_zmod_54» :
     ZMod.add n54 (ZMod.one n54) (ZMod.one n54) ≠ ZMod.zero n54 :=
   ZMod.two_ne_zero_of_three_le n54 le54
 #print axioms «✱54.43_zmod_54»
 
-/-- In the ring of 55 elements, one plus one is not zero. -/
+/-- Modulo 55, one plus one is not zero. -/
 theorem «✱54.43_zmod_55» :
     ZMod.add n55 (ZMod.one n55) (ZMod.one n55) ≠ ZMod.zero n55 :=
   ZMod.two_ne_zero_of_three_le n55 le55
 #print axioms «✱54.43_zmod_55»
 
-/-- In the ring of 56 elements, one plus one is not zero. -/
+/-- Modulo 56, one plus one is not zero. -/
 theorem «✱54.43_zmod_56» :
     ZMod.add n56 (ZMod.one n56) (ZMod.one n56) ≠ ZMod.zero n56 :=
   ZMod.two_ne_zero_of_three_le n56 le56
 #print axioms «✱54.43_zmod_56»
 
-/-- In the ring of 57 elements, one plus one is not zero. -/
+/-- Modulo 57, one plus one is not zero. -/
 theorem «✱54.43_zmod_57» :
     ZMod.add n57 (ZMod.one n57) (ZMod.one n57) ≠ ZMod.zero n57 :=
   ZMod.two_ne_zero_of_three_le n57 le57
 #print axioms «✱54.43_zmod_57»
 
-/-- In the ring of 58 elements, one plus one is not zero. -/
+/-- Modulo 58, one plus one is not zero. -/
 theorem «✱54.43_zmod_58» :
     ZMod.add n58 (ZMod.one n58) (ZMod.one n58) ≠ ZMod.zero n58 :=
   ZMod.two_ne_zero_of_three_le n58 le58
 #print axioms «✱54.43_zmod_58»
 
-/-- In the ring of 59 elements, one plus one is not zero. -/
+/-- Modulo 59, one plus one is not zero. -/
 theorem «✱54.43_zmod_59» :
     ZMod.add n59 (ZMod.one n59) (ZMod.one n59) ≠ ZMod.zero n59 :=
   ZMod.two_ne_zero_of_three_le n59 le59
 #print axioms «✱54.43_zmod_59»
 
-/-- In the ring of 60 elements, one plus one is not zero. -/
+/-- Modulo 60, one plus one is not zero. -/
 theorem «✱54.43_zmod_60» :
     ZMod.add n60 (ZMod.one n60) (ZMod.one n60) ≠ ZMod.zero n60 :=
   ZMod.two_ne_zero_of_three_le n60 le60
 #print axioms «✱54.43_zmod_60»
 
-/-- In the ring of 61 elements, one plus one is not zero. -/
+/-- Modulo 61, one plus one is not zero. -/
 theorem «✱54.43_zmod_61» :
     ZMod.add n61 (ZMod.one n61) (ZMod.one n61) ≠ ZMod.zero n61 :=
   ZMod.two_ne_zero_of_three_le n61 le61
 #print axioms «✱54.43_zmod_61»
 
-/-- In the ring of 62 elements, one plus one is not zero. -/
+/-- Modulo 62, one plus one is not zero. -/
 theorem «✱54.43_zmod_62» :
     ZMod.add n62 (ZMod.one n62) (ZMod.one n62) ≠ ZMod.zero n62 :=
   ZMod.two_ne_zero_of_three_le n62 le62
 #print axioms «✱54.43_zmod_62»
 
-/-- In the ring of 63 elements, one plus one is not zero. -/
+/-- Modulo 63, one plus one is not zero. -/
 theorem «✱54.43_zmod_63» :
     ZMod.add n63 (ZMod.one n63) (ZMod.one n63) ≠ ZMod.zero n63 :=
   ZMod.two_ne_zero_of_three_le n63 le63
 #print axioms «✱54.43_zmod_63»
 
-/-- In the ring of 64 elements, one plus one is not zero. -/
+/-- Modulo 64, one plus one is not zero. -/
 theorem «✱54.43_zmod_64» :
     ZMod.add n64 (ZMod.one n64) (ZMod.one n64) ≠ ZMod.zero n64 :=
   ZMod.two_ne_zero_of_three_le n64 le64
 #print axioms «✱54.43_zmod_64»
 
-/-- In the ring of 65 elements, one plus one is not zero. -/
+/-- Modulo 65, one plus one is not zero. -/
 theorem «✱54.43_zmod_65» :
     ZMod.add n65 (ZMod.one n65) (ZMod.one n65) ≠ ZMod.zero n65 :=
   ZMod.two_ne_zero_of_three_le n65 le65
 #print axioms «✱54.43_zmod_65»
 
-/-- In the ring of 66 elements, one plus one is not zero. -/
+/-- Modulo 66, one plus one is not zero. -/
 theorem «✱54.43_zmod_66» :
     ZMod.add n66 (ZMod.one n66) (ZMod.one n66) ≠ ZMod.zero n66 :=
   ZMod.two_ne_zero_of_three_le n66 le66
 #print axioms «✱54.43_zmod_66»
 
-/-- In the ring of 67 elements, one plus one is not zero. -/
+/-- Modulo 67, one plus one is not zero. -/
 theorem «✱54.43_zmod_67» :
     ZMod.add n67 (ZMod.one n67) (ZMod.one n67) ≠ ZMod.zero n67 :=
   ZMod.two_ne_zero_of_three_le n67 le67
 #print axioms «✱54.43_zmod_67»
 
-/-- In the ring of 68 elements, one plus one is not zero. -/
+/-- Modulo 68, one plus one is not zero. -/
 theorem «✱54.43_zmod_68» :
     ZMod.add n68 (ZMod.one n68) (ZMod.one n68) ≠ ZMod.zero n68 :=
   ZMod.two_ne_zero_of_three_le n68 le68
 #print axioms «✱54.43_zmod_68»
 
-/-- In the ring of 69 elements, one plus one is not zero. -/
+/-- Modulo 69, one plus one is not zero. -/
 theorem «✱54.43_zmod_69» :
     ZMod.add n69 (ZMod.one n69) (ZMod.one n69) ≠ ZMod.zero n69 :=
   ZMod.two_ne_zero_of_three_le n69 le69
 #print axioms «✱54.43_zmod_69»
 
-/-- In the ring of 70 elements, one plus one is not zero. -/
+/-- Modulo 70, one plus one is not zero. -/
 theorem «✱54.43_zmod_70» :
     ZMod.add n70 (ZMod.one n70) (ZMod.one n70) ≠ ZMod.zero n70 :=
   ZMod.two_ne_zero_of_three_le n70 le70
 #print axioms «✱54.43_zmod_70»
 
-/-- In the ring of 71 elements, one plus one is not zero. -/
+/-- Modulo 71, one plus one is not zero. -/
 theorem «✱54.43_zmod_71» :
     ZMod.add n71 (ZMod.one n71) (ZMod.one n71) ≠ ZMod.zero n71 :=
   ZMod.two_ne_zero_of_three_le n71 le71
 #print axioms «✱54.43_zmod_71»
 
-/-- In the ring of 72 elements, one plus one is not zero. -/
+/-- Modulo 72, one plus one is not zero. -/
 theorem «✱54.43_zmod_72» :
     ZMod.add n72 (ZMod.one n72) (ZMod.one n72) ≠ ZMod.zero n72 :=
   ZMod.two_ne_zero_of_three_le n72 le72
 #print axioms «✱54.43_zmod_72»
 
-/-- In the ring of 73 elements, one plus one is not zero. -/
+/-- Modulo 73, one plus one is not zero. -/
 theorem «✱54.43_zmod_73» :
     ZMod.add n73 (ZMod.one n73) (ZMod.one n73) ≠ ZMod.zero n73 :=
   ZMod.two_ne_zero_of_three_le n73 le73
 #print axioms «✱54.43_zmod_73»
 
-/-- In the ring of 74 elements, one plus one is not zero. -/
+/-- Modulo 74, one plus one is not zero. -/
 theorem «✱54.43_zmod_74» :
     ZMod.add n74 (ZMod.one n74) (ZMod.one n74) ≠ ZMod.zero n74 :=
   ZMod.two_ne_zero_of_three_le n74 le74
 #print axioms «✱54.43_zmod_74»
 
-/-- In the ring of 75 elements, one plus one is not zero. -/
+/-- Modulo 75, one plus one is not zero. -/
 theorem «✱54.43_zmod_75» :
     ZMod.add n75 (ZMod.one n75) (ZMod.one n75) ≠ ZMod.zero n75 :=
   ZMod.two_ne_zero_of_three_le n75 le75
 #print axioms «✱54.43_zmod_75»
 
-/-- In the ring of 76 elements, one plus one is not zero. -/
+/-- Modulo 76, one plus one is not zero. -/
 theorem «✱54.43_zmod_76» :
     ZMod.add n76 (ZMod.one n76) (ZMod.one n76) ≠ ZMod.zero n76 :=
   ZMod.two_ne_zero_of_three_le n76 le76
 #print axioms «✱54.43_zmod_76»
 
-/-- In the ring of 77 elements, one plus one is not zero. -/
+/-- Modulo 77, one plus one is not zero. -/
 theorem «✱54.43_zmod_77» :
     ZMod.add n77 (ZMod.one n77) (ZMod.one n77) ≠ ZMod.zero n77 :=
   ZMod.two_ne_zero_of_three_le n77 le77
 #print axioms «✱54.43_zmod_77»
 
-/-- In the ring of 78 elements, one plus one is not zero. -/
+/-- Modulo 78, one plus one is not zero. -/
 theorem «✱54.43_zmod_78» :
     ZMod.add n78 (ZMod.one n78) (ZMod.one n78) ≠ ZMod.zero n78 :=
   ZMod.two_ne_zero_of_three_le n78 le78
 #print axioms «✱54.43_zmod_78»
 
-/-- In the ring of 79 elements, one plus one is not zero. -/
+/-- Modulo 79, one plus one is not zero. -/
 theorem «✱54.43_zmod_79» :
     ZMod.add n79 (ZMod.one n79) (ZMod.one n79) ≠ ZMod.zero n79 :=
   ZMod.two_ne_zero_of_three_le n79 le79
 #print axioms «✱54.43_zmod_79»
 
-/-- In the ring of 80 elements, one plus one is not zero. -/
+/-- Modulo 80, one plus one is not zero. -/
 theorem «✱54.43_zmod_80» :
     ZMod.add n80 (ZMod.one n80) (ZMod.one n80) ≠ ZMod.zero n80 :=
   ZMod.two_ne_zero_of_three_le n80 le80
 #print axioms «✱54.43_zmod_80»
 
-/-- In the ring of 81 elements, one plus one is not zero. -/
+/-- Modulo 81, one plus one is not zero. -/
 theorem «✱54.43_zmod_81» :
     ZMod.add n81 (ZMod.one n81) (ZMod.one n81) ≠ ZMod.zero n81 :=
   ZMod.two_ne_zero_of_three_le n81 le81
 #print axioms «✱54.43_zmod_81»
 
-/-- In the ring of 82 elements, one plus one is not zero. -/
+/-- Modulo 82, one plus one is not zero. -/
 theorem «✱54.43_zmod_82» :
     ZMod.add n82 (ZMod.one n82) (ZMod.one n82) ≠ ZMod.zero n82 :=
   ZMod.two_ne_zero_of_three_le n82 le82
 #print axioms «✱54.43_zmod_82»
 
-/-- In the ring of 83 elements, one plus one is not zero. -/
+/-- Modulo 83, one plus one is not zero. -/
 theorem «✱54.43_zmod_83» :
     ZMod.add n83 (ZMod.one n83) (ZMod.one n83) ≠ ZMod.zero n83 :=
   ZMod.two_ne_zero_of_three_le n83 le83
 #print axioms «✱54.43_zmod_83»
 
-/-- In the ring of 84 elements, one plus one is not zero. -/
+/-- Modulo 84, one plus one is not zero. -/
 theorem «✱54.43_zmod_84» :
     ZMod.add n84 (ZMod.one n84) (ZMod.one n84) ≠ ZMod.zero n84 :=
   ZMod.two_ne_zero_of_three_le n84 le84
 #print axioms «✱54.43_zmod_84»
 
-/-- In the ring of 85 elements, one plus one is not zero. -/
+/-- Modulo 85, one plus one is not zero. -/
 theorem «✱54.43_zmod_85» :
     ZMod.add n85 (ZMod.one n85) (ZMod.one n85) ≠ ZMod.zero n85 :=
   ZMod.two_ne_zero_of_three_le n85 le85
 #print axioms «✱54.43_zmod_85»
 
-/-- In the ring of 86 elements, one plus one is not zero. -/
+/-- Modulo 86, one plus one is not zero. -/
 theorem «✱54.43_zmod_86» :
     ZMod.add n86 (ZMod.one n86) (ZMod.one n86) ≠ ZMod.zero n86 :=
   ZMod.two_ne_zero_of_three_le n86 le86
 #print axioms «✱54.43_zmod_86»
 
-/-- In the ring of 87 elements, one plus one is not zero. -/
+/-- Modulo 87, one plus one is not zero. -/
 theorem «✱54.43_zmod_87» :
     ZMod.add n87 (ZMod.one n87) (ZMod.one n87) ≠ ZMod.zero n87 :=
   ZMod.two_ne_zero_of_three_le n87 le87
 #print axioms «✱54.43_zmod_87»
 
-/-- In the ring of 88 elements, one plus one is not zero. -/
+/-- Modulo 88, one plus one is not zero. -/
 theorem «✱54.43_zmod_88» :
     ZMod.add n88 (ZMod.one n88) (ZMod.one n88) ≠ ZMod.zero n88 :=
   ZMod.two_ne_zero_of_three_le n88 le88
 #print axioms «✱54.43_zmod_88»
 
-/-- In the ring of 89 elements, one plus one is not zero. -/
+/-- Modulo 89, one plus one is not zero. -/
 theorem «✱54.43_zmod_89» :
     ZMod.add n89 (ZMod.one n89) (ZMod.one n89) ≠ ZMod.zero n89 :=
   ZMod.two_ne_zero_of_three_le n89 le89
 #print axioms «✱54.43_zmod_89»
 
-/-- In the ring of 90 elements, one plus one is not zero. -/
+/-- Modulo 90, one plus one is not zero. -/
 theorem «✱54.43_zmod_90» :
     ZMod.add n90 (ZMod.one n90) (ZMod.one n90) ≠ ZMod.zero n90 :=
   ZMod.two_ne_zero_of_three_le n90 le90
 #print axioms «✱54.43_zmod_90»
 
-/-- In the ring of 91 elements, one plus one is not zero. -/
+/-- Modulo 91, one plus one is not zero. -/
 theorem «✱54.43_zmod_91» :
     ZMod.add n91 (ZMod.one n91) (ZMod.one n91) ≠ ZMod.zero n91 :=
   ZMod.two_ne_zero_of_three_le n91 le91
 #print axioms «✱54.43_zmod_91»
 
-/-- In the ring of 92 elements, one plus one is not zero. -/
+/-- Modulo 92, one plus one is not zero. -/
 theorem «✱54.43_zmod_92» :
     ZMod.add n92 (ZMod.one n92) (ZMod.one n92) ≠ ZMod.zero n92 :=
   ZMod.two_ne_zero_of_three_le n92 le92
 #print axioms «✱54.43_zmod_92»
 
-/-- In the ring of 93 elements, one plus one is not zero. -/
+/-- Modulo 93, one plus one is not zero. -/
 theorem «✱54.43_zmod_93» :
     ZMod.add n93 (ZMod.one n93) (ZMod.one n93) ≠ ZMod.zero n93 :=
   ZMod.two_ne_zero_of_three_le n93 le93
 #print axioms «✱54.43_zmod_93»
 
-/-- In the ring of 94 elements, one plus one is not zero. -/
+/-- Modulo 94, one plus one is not zero. -/
 theorem «✱54.43_zmod_94» :
     ZMod.add n94 (ZMod.one n94) (ZMod.one n94) ≠ ZMod.zero n94 :=
   ZMod.two_ne_zero_of_three_le n94 le94
 #print axioms «✱54.43_zmod_94»
 
-/-- In the ring of 95 elements, one plus one is not zero. -/
+/-- Modulo 95, one plus one is not zero. -/
 theorem «✱54.43_zmod_95» :
     ZMod.add n95 (ZMod.one n95) (ZMod.one n95) ≠ ZMod.zero n95 :=
   ZMod.two_ne_zero_of_three_le n95 le95
 #print axioms «✱54.43_zmod_95»
 
-/-- In the ring of 96 elements, one plus one is not zero. -/
+/-- Modulo 96, one plus one is not zero. -/
 theorem «✱54.43_zmod_96» :
     ZMod.add n96 (ZMod.one n96) (ZMod.one n96) ≠ ZMod.zero n96 :=
   ZMod.two_ne_zero_of_three_le n96 le96
 #print axioms «✱54.43_zmod_96»
 
-/-- In the ring of 97 elements, one plus one is not zero. -/
+/-- Modulo 97, one plus one is not zero. -/
 theorem «✱54.43_zmod_97» :
     ZMod.add n97 (ZMod.one n97) (ZMod.one n97) ≠ ZMod.zero n97 :=
   ZMod.two_ne_zero_of_three_le n97 le97
 #print axioms «✱54.43_zmod_97»
 
-/-- In the ring of 98 elements, one plus one is not zero. -/
+/-- Modulo 98, one plus one is not zero. -/
 theorem «✱54.43_zmod_98» :
     ZMod.add n98 (ZMod.one n98) (ZMod.one n98) ≠ ZMod.zero n98 :=
   ZMod.two_ne_zero_of_three_le n98 le98
 #print axioms «✱54.43_zmod_98»
 
-/-- In the ring of 99 elements, one plus one is not zero. -/
+/-- Modulo 99, one plus one is not zero. -/
 theorem «✱54.43_zmod_99» :
     ZMod.add n99 (ZMod.one n99) (ZMod.one n99) ≠ ZMod.zero n99 :=
   ZMod.two_ne_zero_of_three_le n99 le99
 #print axioms «✱54.43_zmod_99»
 
-/-- In the ring of 100 elements, one plus one is not zero. -/
+/-- Modulo 100, one plus one is not zero. -/
 theorem «✱54.43_zmod_100» :
     ZMod.add n100 (ZMod.one n100) (ZMod.one n100) ≠ ZMod.zero n100 :=
   ZMod.two_ne_zero_of_three_le n100 le100
 #print axioms «✱54.43_zmod_100»
 
-/-- In the ring of 101 elements, one plus one is not zero. -/
+/-- Modulo 101, one plus one is not zero. -/
 theorem «✱54.43_zmod_101» :
     ZMod.add n101 (ZMod.one n101) (ZMod.one n101) ≠ ZMod.zero n101 :=
   ZMod.two_ne_zero_of_three_le n101 le101
 #print axioms «✱54.43_zmod_101»
 
-/-- In the ring of 102 elements, one plus one is not zero. -/
+/-- Modulo 102, one plus one is not zero. -/
 theorem «✱54.43_zmod_102» :
     ZMod.add n102 (ZMod.one n102) (ZMod.one n102) ≠ ZMod.zero n102 :=
   ZMod.two_ne_zero_of_three_le n102 le102
 #print axioms «✱54.43_zmod_102»
 
-/-- In the ring of 103 elements, one plus one is not zero. -/
+/-- Modulo 103, one plus one is not zero. -/
 theorem «✱54.43_zmod_103» :
     ZMod.add n103 (ZMod.one n103) (ZMod.one n103) ≠ ZMod.zero n103 :=
   ZMod.two_ne_zero_of_three_le n103 le103
 #print axioms «✱54.43_zmod_103»
 
-/-- In the ring of 104 elements, one plus one is not zero. -/
+/-- Modulo 104, one plus one is not zero. -/
 theorem «✱54.43_zmod_104» :
     ZMod.add n104 (ZMod.one n104) (ZMod.one n104) ≠ ZMod.zero n104 :=
   ZMod.two_ne_zero_of_three_le n104 le104
 #print axioms «✱54.43_zmod_104»
 
-/-- In the ring of 105 elements, one plus one is not zero. -/
+/-- Modulo 105, one plus one is not zero. -/
 theorem «✱54.43_zmod_105» :
     ZMod.add n105 (ZMod.one n105) (ZMod.one n105) ≠ ZMod.zero n105 :=
   ZMod.two_ne_zero_of_three_le n105 le105
 #print axioms «✱54.43_zmod_105»
 
-/-- In the ring of 106 elements, one plus one is not zero. -/
+/-- Modulo 106, one plus one is not zero. -/
 theorem «✱54.43_zmod_106» :
     ZMod.add n106 (ZMod.one n106) (ZMod.one n106) ≠ ZMod.zero n106 :=
   ZMod.two_ne_zero_of_three_le n106 le106
 #print axioms «✱54.43_zmod_106»
 
-/-- In the ring of 107 elements, one plus one is not zero. -/
+/-- Modulo 107, one plus one is not zero. -/
 theorem «✱54.43_zmod_107» :
     ZMod.add n107 (ZMod.one n107) (ZMod.one n107) ≠ ZMod.zero n107 :=
   ZMod.two_ne_zero_of_three_le n107 le107
 #print axioms «✱54.43_zmod_107»
 
-/-- In the ring of 108 elements, one plus one is not zero. -/
+/-- Modulo 108, one plus one is not zero. -/
 theorem «✱54.43_zmod_108» :
     ZMod.add n108 (ZMod.one n108) (ZMod.one n108) ≠ ZMod.zero n108 :=
   ZMod.two_ne_zero_of_three_le n108 le108
 #print axioms «✱54.43_zmod_108»
 
-/-- In the ring of 109 elements, one plus one is not zero. -/
+/-- Modulo 109, one plus one is not zero. -/
 theorem «✱54.43_zmod_109» :
     ZMod.add n109 (ZMod.one n109) (ZMod.one n109) ≠ ZMod.zero n109 :=
   ZMod.two_ne_zero_of_three_le n109 le109
 #print axioms «✱54.43_zmod_109»
 
-/-- In the ring of 110 elements, one plus one is not zero. -/
+/-- Modulo 110, one plus one is not zero. -/
 theorem «✱54.43_zmod_110» :
     ZMod.add n110 (ZMod.one n110) (ZMod.one n110) ≠ ZMod.zero n110 :=
   ZMod.two_ne_zero_of_three_le n110 le110
 #print axioms «✱54.43_zmod_110»
 
-/-- In the ring of 111 elements, one plus one is not zero. -/
+/-- Modulo 111, one plus one is not zero. -/
 theorem «✱54.43_zmod_111» :
     ZMod.add n111 (ZMod.one n111) (ZMod.one n111) ≠ ZMod.zero n111 :=
   ZMod.two_ne_zero_of_three_le n111 le111
 #print axioms «✱54.43_zmod_111»
 
-/-- In the ring of 112 elements, one plus one is not zero. -/
+/-- Modulo 112, one plus one is not zero. -/
 theorem «✱54.43_zmod_112» :
     ZMod.add n112 (ZMod.one n112) (ZMod.one n112) ≠ ZMod.zero n112 :=
   ZMod.two_ne_zero_of_three_le n112 le112
 #print axioms «✱54.43_zmod_112»
 
-/-- In the ring of 113 elements, one plus one is not zero. -/
+/-- Modulo 113, one plus one is not zero. -/
 theorem «✱54.43_zmod_113» :
     ZMod.add n113 (ZMod.one n113) (ZMod.one n113) ≠ ZMod.zero n113 :=
   ZMod.two_ne_zero_of_three_le n113 le113
 #print axioms «✱54.43_zmod_113»
 
-/-- In the ring of 114 elements, one plus one is not zero. -/
+/-- Modulo 114, one plus one is not zero. -/
 theorem «✱54.43_zmod_114» :
     ZMod.add n114 (ZMod.one n114) (ZMod.one n114) ≠ ZMod.zero n114 :=
   ZMod.two_ne_zero_of_three_le n114 le114
 #print axioms «✱54.43_zmod_114»
 
-/-- In the ring of 115 elements, one plus one is not zero. -/
+/-- Modulo 115, one plus one is not zero. -/
 theorem «✱54.43_zmod_115» :
     ZMod.add n115 (ZMod.one n115) (ZMod.one n115) ≠ ZMod.zero n115 :=
   ZMod.two_ne_zero_of_three_le n115 le115
 #print axioms «✱54.43_zmod_115»
 
-/-- In the ring of 116 elements, one plus one is not zero. -/
+/-- Modulo 116, one plus one is not zero. -/
 theorem «✱54.43_zmod_116» :
     ZMod.add n116 (ZMod.one n116) (ZMod.one n116) ≠ ZMod.zero n116 :=
   ZMod.two_ne_zero_of_three_le n116 le116
 #print axioms «✱54.43_zmod_116»
 
-/-- In the ring of 117 elements, one plus one is not zero. -/
+/-- Modulo 117, one plus one is not zero. -/
 theorem «✱54.43_zmod_117» :
     ZMod.add n117 (ZMod.one n117) (ZMod.one n117) ≠ ZMod.zero n117 :=
   ZMod.two_ne_zero_of_three_le n117 le117
 #print axioms «✱54.43_zmod_117»
 
-/-- In the ring of 118 elements, one plus one is not zero. -/
+/-- Modulo 118, one plus one is not zero. -/
 theorem «✱54.43_zmod_118» :
     ZMod.add n118 (ZMod.one n118) (ZMod.one n118) ≠ ZMod.zero n118 :=
   ZMod.two_ne_zero_of_three_le n118 le118
 #print axioms «✱54.43_zmod_118»
 
-/-- In the ring of 119 elements, one plus one is not zero. -/
+/-- Modulo 119, one plus one is not zero. -/
 theorem «✱54.43_zmod_119» :
     ZMod.add n119 (ZMod.one n119) (ZMod.one n119) ≠ ZMod.zero n119 :=
   ZMod.two_ne_zero_of_three_le n119 le119
 #print axioms «✱54.43_zmod_119»
 
-/-- In the ring of 120 elements, one plus one is not zero. -/
+/-- Modulo 120, one plus one is not zero. -/
 theorem «✱54.43_zmod_120» :
     ZMod.add n120 (ZMod.one n120) (ZMod.one n120) ≠ ZMod.zero n120 :=
   ZMod.two_ne_zero_of_three_le n120 le120
 #print axioms «✱54.43_zmod_120»
 
-/-- In the ring of 121 elements, one plus one is not zero. -/
+/-- Modulo 121, one plus one is not zero. -/
 theorem «✱54.43_zmod_121» :
     ZMod.add n121 (ZMod.one n121) (ZMod.one n121) ≠ ZMod.zero n121 :=
   ZMod.two_ne_zero_of_three_le n121 le121
 #print axioms «✱54.43_zmod_121»
 
-/-- In the ring of 122 elements, one plus one is not zero. -/
+/-- Modulo 122, one plus one is not zero. -/
 theorem «✱54.43_zmod_122» :
     ZMod.add n122 (ZMod.one n122) (ZMod.one n122) ≠ ZMod.zero n122 :=
   ZMod.two_ne_zero_of_three_le n122 le122
 #print axioms «✱54.43_zmod_122»
 
-/-- In the ring of 123 elements, one plus one is not zero. -/
+/-- Modulo 123, one plus one is not zero. -/
 theorem «✱54.43_zmod_123» :
     ZMod.add n123 (ZMod.one n123) (ZMod.one n123) ≠ ZMod.zero n123 :=
   ZMod.two_ne_zero_of_three_le n123 le123
 #print axioms «✱54.43_zmod_123»
 
-/-- In the ring of 124 elements, one plus one is not zero. -/
+/-- Modulo 124, one plus one is not zero. -/
 theorem «✱54.43_zmod_124» :
     ZMod.add n124 (ZMod.one n124) (ZMod.one n124) ≠ ZMod.zero n124 :=
   ZMod.two_ne_zero_of_three_le n124 le124
 #print axioms «✱54.43_zmod_124»
 
-/-- In the ring of 125 elements, one plus one is not zero. -/
+/-- Modulo 125, one plus one is not zero. -/
 theorem «✱54.43_zmod_125» :
     ZMod.add n125 (ZMod.one n125) (ZMod.one n125) ≠ ZMod.zero n125 :=
   ZMod.two_ne_zero_of_three_le n125 le125
 #print axioms «✱54.43_zmod_125»
 
-/-- In the ring of 126 elements, one plus one is not zero. -/
+/-- Modulo 126, one plus one is not zero. -/
 theorem «✱54.43_zmod_126» :
     ZMod.add n126 (ZMod.one n126) (ZMod.one n126) ≠ ZMod.zero n126 :=
   ZMod.two_ne_zero_of_three_le n126 le126
 #print axioms «✱54.43_zmod_126»
 
-/-- In the ring of 127 elements, one plus one is not zero. -/
+/-- Modulo 127, one plus one is not zero. -/
 theorem «✱54.43_zmod_127» :
     ZMod.add n127 (ZMod.one n127) (ZMod.one n127) ≠ ZMod.zero n127 :=
   ZMod.two_ne_zero_of_three_le n127 le127
 #print axioms «✱54.43_zmod_127»
 
-/-- In the ring of 128 elements, one plus one is not zero. -/
+/-- Modulo 128, one plus one is not zero. -/
 theorem «✱54.43_zmod_128» :
     ZMod.add n128 (ZMod.one n128) (ZMod.one n128) ≠ ZMod.zero n128 :=
   ZMod.two_ne_zero_of_three_le n128 le128
 #print axioms «✱54.43_zmod_128»
 
-/-- In the ring of 129 elements, one plus one is not zero. -/
+/-- Modulo 129, one plus one is not zero. -/
 theorem «✱54.43_zmod_129» :
     ZMod.add n129 (ZMod.one n129) (ZMod.one n129) ≠ ZMod.zero n129 :=
   ZMod.two_ne_zero_of_three_le n129 le129
 #print axioms «✱54.43_zmod_129»
 
-/-- In the ring of 130 elements, one plus one is not zero. -/
+/-- Modulo 130, one plus one is not zero. -/
 theorem «✱54.43_zmod_130» :
     ZMod.add n130 (ZMod.one n130) (ZMod.one n130) ≠ ZMod.zero n130 :=
   ZMod.two_ne_zero_of_three_le n130 le130
 #print axioms «✱54.43_zmod_130»
 
-/-- In the ring of 131 elements, one plus one is not zero. -/
+/-- Modulo 131, one plus one is not zero. -/
 theorem «✱54.43_zmod_131» :
     ZMod.add n131 (ZMod.one n131) (ZMod.one n131) ≠ ZMod.zero n131 :=
   ZMod.two_ne_zero_of_three_le n131 le131
 #print axioms «✱54.43_zmod_131»
 
-/-- In the ring of 132 elements, one plus one is not zero. -/
+/-- Modulo 132, one plus one is not zero. -/
 theorem «✱54.43_zmod_132» :
     ZMod.add n132 (ZMod.one n132) (ZMod.one n132) ≠ ZMod.zero n132 :=
   ZMod.two_ne_zero_of_three_le n132 le132
 #print axioms «✱54.43_zmod_132»
 
-/-- In the ring of 133 elements, one plus one is not zero. -/
+/-- Modulo 133, one plus one is not zero. -/
 theorem «✱54.43_zmod_133» :
     ZMod.add n133 (ZMod.one n133) (ZMod.one n133) ≠ ZMod.zero n133 :=
   ZMod.two_ne_zero_of_three_le n133 le133
 #print axioms «✱54.43_zmod_133»
 
-/-- In the ring of 134 elements, one plus one is not zero. -/
+/-- Modulo 134, one plus one is not zero. -/
 theorem «✱54.43_zmod_134» :
     ZMod.add n134 (ZMod.one n134) (ZMod.one n134) ≠ ZMod.zero n134 :=
   ZMod.two_ne_zero_of_three_le n134 le134
 #print axioms «✱54.43_zmod_134»
 
-/-- In the ring of 135 elements, one plus one is not zero. -/
+/-- Modulo 135, one plus one is not zero. -/
 theorem «✱54.43_zmod_135» :
     ZMod.add n135 (ZMod.one n135) (ZMod.one n135) ≠ ZMod.zero n135 :=
   ZMod.two_ne_zero_of_three_le n135 le135
 #print axioms «✱54.43_zmod_135»
 
-/-- In the ring of 136 elements, one plus one is not zero. -/
+/-- Modulo 136, one plus one is not zero. -/
 theorem «✱54.43_zmod_136» :
     ZMod.add n136 (ZMod.one n136) (ZMod.one n136) ≠ ZMod.zero n136 :=
   ZMod.two_ne_zero_of_three_le n136 le136
 #print axioms «✱54.43_zmod_136»
 
-/-- In the ring of 137 elements, one plus one is not zero. -/
+/-- Modulo 137, one plus one is not zero. -/
 theorem «✱54.43_zmod_137» :
     ZMod.add n137 (ZMod.one n137) (ZMod.one n137) ≠ ZMod.zero n137 :=
   ZMod.two_ne_zero_of_three_le n137 le137
 #print axioms «✱54.43_zmod_137»
 
-/-- In the ring of 138 elements, one plus one is not zero. -/
+/-- Modulo 138, one plus one is not zero. -/
 theorem «✱54.43_zmod_138» :
     ZMod.add n138 (ZMod.one n138) (ZMod.one n138) ≠ ZMod.zero n138 :=
   ZMod.two_ne_zero_of_three_le n138 le138
 #print axioms «✱54.43_zmod_138»
 
-/-- In the ring of 139 elements, one plus one is not zero. -/
+/-- Modulo 139, one plus one is not zero. -/
 theorem «✱54.43_zmod_139» :
     ZMod.add n139 (ZMod.one n139) (ZMod.one n139) ≠ ZMod.zero n139 :=
   ZMod.two_ne_zero_of_three_le n139 le139
 #print axioms «✱54.43_zmod_139»
 
-/-- In the ring of 140 elements, one plus one is not zero. -/
+/-- Modulo 140, one plus one is not zero. -/
 theorem «✱54.43_zmod_140» :
     ZMod.add n140 (ZMod.one n140) (ZMod.one n140) ≠ ZMod.zero n140 :=
   ZMod.two_ne_zero_of_three_le n140 le140
 #print axioms «✱54.43_zmod_140»
 
-/-- In the ring of 141 elements, one plus one is not zero. -/
+/-- Modulo 141, one plus one is not zero. -/
 theorem «✱54.43_zmod_141» :
     ZMod.add n141 (ZMod.one n141) (ZMod.one n141) ≠ ZMod.zero n141 :=
   ZMod.two_ne_zero_of_three_le n141 le141
 #print axioms «✱54.43_zmod_141»
 
-/-- In the ring of 142 elements, one plus one is not zero. -/
+/-- Modulo 142, one plus one is not zero. -/
 theorem «✱54.43_zmod_142» :
     ZMod.add n142 (ZMod.one n142) (ZMod.one n142) ≠ ZMod.zero n142 :=
   ZMod.two_ne_zero_of_three_le n142 le142
 #print axioms «✱54.43_zmod_142»
 
-/-- In the ring of 143 elements, one plus one is not zero. -/
+/-- Modulo 143, one plus one is not zero. -/
 theorem «✱54.43_zmod_143» :
     ZMod.add n143 (ZMod.one n143) (ZMod.one n143) ≠ ZMod.zero n143 :=
   ZMod.two_ne_zero_of_three_le n143 le143
 #print axioms «✱54.43_zmod_143»
 
-/-- In the ring of 144 elements, one plus one is not zero. -/
+/-- Modulo 144, one plus one is not zero. -/
 theorem «✱54.43_zmod_144» :
     ZMod.add n144 (ZMod.one n144) (ZMod.one n144) ≠ ZMod.zero n144 :=
   ZMod.two_ne_zero_of_three_le n144 le144
 #print axioms «✱54.43_zmod_144»
 
-/-- In the ring of 145 elements, one plus one is not zero. -/
+/-- Modulo 145, one plus one is not zero. -/
 theorem «✱54.43_zmod_145» :
     ZMod.add n145 (ZMod.one n145) (ZMod.one n145) ≠ ZMod.zero n145 :=
   ZMod.two_ne_zero_of_three_le n145 le145
 #print axioms «✱54.43_zmod_145»
 
-/-- In the ring of 146 elements, one plus one is not zero. -/
+/-- Modulo 146, one plus one is not zero. -/
 theorem «✱54.43_zmod_146» :
     ZMod.add n146 (ZMod.one n146) (ZMod.one n146) ≠ ZMod.zero n146 :=
   ZMod.two_ne_zero_of_three_le n146 le146
 #print axioms «✱54.43_zmod_146»
 
-/-- In the ring of 147 elements, one plus one is not zero. -/
+/-- Modulo 147, one plus one is not zero. -/
 theorem «✱54.43_zmod_147» :
     ZMod.add n147 (ZMod.one n147) (ZMod.one n147) ≠ ZMod.zero n147 :=
   ZMod.two_ne_zero_of_three_le n147 le147
 #print axioms «✱54.43_zmod_147»
 
-/-- In the ring of 148 elements, one plus one is not zero. -/
+/-- Modulo 148, one plus one is not zero. -/
 theorem «✱54.43_zmod_148» :
     ZMod.add n148 (ZMod.one n148) (ZMod.one n148) ≠ ZMod.zero n148 :=
   ZMod.two_ne_zero_of_three_le n148 le148
 #print axioms «✱54.43_zmod_148»
 
-/-- In the ring of 149 elements, one plus one is not zero. -/
+/-- Modulo 149, one plus one is not zero. -/
 theorem «✱54.43_zmod_149» :
     ZMod.add n149 (ZMod.one n149) (ZMod.one n149) ≠ ZMod.zero n149 :=
   ZMod.two_ne_zero_of_three_le n149 le149
 #print axioms «✱54.43_zmod_149»
 
-/-- In the ring of 150 elements, one plus one is not zero. -/
+/-- Modulo 150, one plus one is not zero. -/
 theorem «✱54.43_zmod_150» :
     ZMod.add n150 (ZMod.one n150) (ZMod.one n150) ≠ ZMod.zero n150 :=
   ZMod.two_ne_zero_of_three_le n150 le150
 #print axioms «✱54.43_zmod_150»
 
-/-- In the ring of 151 elements, one plus one is not zero. -/
+/-- Modulo 151, one plus one is not zero. -/
 theorem «✱54.43_zmod_151» :
     ZMod.add n151 (ZMod.one n151) (ZMod.one n151) ≠ ZMod.zero n151 :=
   ZMod.two_ne_zero_of_three_le n151 le151
 #print axioms «✱54.43_zmod_151»
 
-/-- In the ring of 152 elements, one plus one is not zero. -/
+/-- Modulo 152, one plus one is not zero. -/
 theorem «✱54.43_zmod_152» :
     ZMod.add n152 (ZMod.one n152) (ZMod.one n152) ≠ ZMod.zero n152 :=
   ZMod.two_ne_zero_of_three_le n152 le152
 #print axioms «✱54.43_zmod_152»
 
-/-- In the ring of 153 elements, one plus one is not zero. -/
+/-- Modulo 153, one plus one is not zero. -/
 theorem «✱54.43_zmod_153» :
     ZMod.add n153 (ZMod.one n153) (ZMod.one n153) ≠ ZMod.zero n153 :=
   ZMod.two_ne_zero_of_three_le n153 le153
 #print axioms «✱54.43_zmod_153»
 
-/-- In the ring of 154 elements, one plus one is not zero. -/
+/-- Modulo 154, one plus one is not zero. -/
 theorem «✱54.43_zmod_154» :
     ZMod.add n154 (ZMod.one n154) (ZMod.one n154) ≠ ZMod.zero n154 :=
   ZMod.two_ne_zero_of_three_le n154 le154
 #print axioms «✱54.43_zmod_154»
 
-/-- In the ring of 155 elements, one plus one is not zero. -/
+/-- Modulo 155, one plus one is not zero. -/
 theorem «✱54.43_zmod_155» :
     ZMod.add n155 (ZMod.one n155) (ZMod.one n155) ≠ ZMod.zero n155 :=
   ZMod.two_ne_zero_of_three_le n155 le155
 #print axioms «✱54.43_zmod_155»
 
-/-- In the ring of 156 elements, one plus one is not zero. -/
+/-- Modulo 156, one plus one is not zero. -/
 theorem «✱54.43_zmod_156» :
     ZMod.add n156 (ZMod.one n156) (ZMod.one n156) ≠ ZMod.zero n156 :=
   ZMod.two_ne_zero_of_three_le n156 le156
 #print axioms «✱54.43_zmod_156»
 
-/-- In the ring of 157 elements, one plus one is not zero. -/
+/-- Modulo 157, one plus one is not zero. -/
 theorem «✱54.43_zmod_157» :
     ZMod.add n157 (ZMod.one n157) (ZMod.one n157) ≠ ZMod.zero n157 :=
   ZMod.two_ne_zero_of_three_le n157 le157
 #print axioms «✱54.43_zmod_157»
 
-/-- In the ring of 158 elements, one plus one is not zero. -/
+/-- Modulo 158, one plus one is not zero. -/
 theorem «✱54.43_zmod_158» :
     ZMod.add n158 (ZMod.one n158) (ZMod.one n158) ≠ ZMod.zero n158 :=
   ZMod.two_ne_zero_of_three_le n158 le158
 #print axioms «✱54.43_zmod_158»
 
-/-- In the ring of 159 elements, one plus one is not zero. -/
+/-- Modulo 159, one plus one is not zero. -/
 theorem «✱54.43_zmod_159» :
     ZMod.add n159 (ZMod.one n159) (ZMod.one n159) ≠ ZMod.zero n159 :=
   ZMod.two_ne_zero_of_three_le n159 le159
 #print axioms «✱54.43_zmod_159»
 
-/-- In the ring of 160 elements, one plus one is not zero. -/
+/-- Modulo 160, one plus one is not zero. -/
 theorem «✱54.43_zmod_160» :
     ZMod.add n160 (ZMod.one n160) (ZMod.one n160) ≠ ZMod.zero n160 :=
   ZMod.two_ne_zero_of_three_le n160 le160
 #print axioms «✱54.43_zmod_160»
 
-/-- In the ring of 161 elements, one plus one is not zero. -/
+/-- Modulo 161, one plus one is not zero. -/
 theorem «✱54.43_zmod_161» :
     ZMod.add n161 (ZMod.one n161) (ZMod.one n161) ≠ ZMod.zero n161 :=
   ZMod.two_ne_zero_of_three_le n161 le161
 #print axioms «✱54.43_zmod_161»
 
-/-- In the ring of 162 elements, one plus one is not zero. -/
+/-- Modulo 162, one plus one is not zero. -/
 theorem «✱54.43_zmod_162» :
     ZMod.add n162 (ZMod.one n162) (ZMod.one n162) ≠ ZMod.zero n162 :=
   ZMod.two_ne_zero_of_three_le n162 le162
 #print axioms «✱54.43_zmod_162»
 
-/-- In the ring of 163 elements, one plus one is not zero. -/
+/-- Modulo 163, one plus one is not zero. -/
 theorem «✱54.43_zmod_163» :
     ZMod.add n163 (ZMod.one n163) (ZMod.one n163) ≠ ZMod.zero n163 :=
   ZMod.two_ne_zero_of_three_le n163 le163
 #print axioms «✱54.43_zmod_163»
 
-/-- In the ring of 164 elements, one plus one is not zero. -/
+/-- Modulo 164, one plus one is not zero. -/
 theorem «✱54.43_zmod_164» :
     ZMod.add n164 (ZMod.one n164) (ZMod.one n164) ≠ ZMod.zero n164 :=
   ZMod.two_ne_zero_of_three_le n164 le164
 #print axioms «✱54.43_zmod_164»
 
-/-- In the ring of 165 elements, one plus one is not zero. -/
+/-- Modulo 165, one plus one is not zero. -/
 theorem «✱54.43_zmod_165» :
     ZMod.add n165 (ZMod.one n165) (ZMod.one n165) ≠ ZMod.zero n165 :=
   ZMod.two_ne_zero_of_three_le n165 le165
 #print axioms «✱54.43_zmod_165»
 
-/-- In the ring of 166 elements, one plus one is not zero. -/
+/-- Modulo 166, one plus one is not zero. -/
 theorem «✱54.43_zmod_166» :
     ZMod.add n166 (ZMod.one n166) (ZMod.one n166) ≠ ZMod.zero n166 :=
   ZMod.two_ne_zero_of_three_le n166 le166
 #print axioms «✱54.43_zmod_166»
 
-/-- In the ring of 167 elements, one plus one is not zero. -/
+/-- Modulo 167, one plus one is not zero. -/
 theorem «✱54.43_zmod_167» :
     ZMod.add n167 (ZMod.one n167) (ZMod.one n167) ≠ ZMod.zero n167 :=
   ZMod.two_ne_zero_of_three_le n167 le167
 #print axioms «✱54.43_zmod_167»
 
-/-- In the ring of 168 elements, one plus one is not zero. -/
+/-- Modulo 168, one plus one is not zero. -/
 theorem «✱54.43_zmod_168» :
     ZMod.add n168 (ZMod.one n168) (ZMod.one n168) ≠ ZMod.zero n168 :=
   ZMod.two_ne_zero_of_three_le n168 le168
 #print axioms «✱54.43_zmod_168»
 
-/-- In the ring of 169 elements, one plus one is not zero. -/
+/-- Modulo 169, one plus one is not zero. -/
 theorem «✱54.43_zmod_169» :
     ZMod.add n169 (ZMod.one n169) (ZMod.one n169) ≠ ZMod.zero n169 :=
   ZMod.two_ne_zero_of_three_le n169 le169
 #print axioms «✱54.43_zmod_169»
 
-/-- In the ring of 170 elements, one plus one is not zero. -/
+/-- Modulo 170, one plus one is not zero. -/
 theorem «✱54.43_zmod_170» :
     ZMod.add n170 (ZMod.one n170) (ZMod.one n170) ≠ ZMod.zero n170 :=
   ZMod.two_ne_zero_of_three_le n170 le170
 #print axioms «✱54.43_zmod_170»
 
-/-- In the ring of 171 elements, one plus one is not zero. -/
+/-- Modulo 171, one plus one is not zero. -/
 theorem «✱54.43_zmod_171» :
     ZMod.add n171 (ZMod.one n171) (ZMod.one n171) ≠ ZMod.zero n171 :=
   ZMod.two_ne_zero_of_three_le n171 le171
 #print axioms «✱54.43_zmod_171»
 
-/-- In the ring of 172 elements, one plus one is not zero. -/
+/-- Modulo 172, one plus one is not zero. -/
 theorem «✱54.43_zmod_172» :
     ZMod.add n172 (ZMod.one n172) (ZMod.one n172) ≠ ZMod.zero n172 :=
   ZMod.two_ne_zero_of_three_le n172 le172
 #print axioms «✱54.43_zmod_172»
 
-/-- In the ring of 173 elements, one plus one is not zero. -/
+/-- Modulo 173, one plus one is not zero. -/
 theorem «✱54.43_zmod_173» :
     ZMod.add n173 (ZMod.one n173) (ZMod.one n173) ≠ ZMod.zero n173 :=
   ZMod.two_ne_zero_of_three_le n173 le173
 #print axioms «✱54.43_zmod_173»
 
-/-- In the ring of 174 elements, one plus one is not zero. -/
+/-- Modulo 174, one plus one is not zero. -/
 theorem «✱54.43_zmod_174» :
     ZMod.add n174 (ZMod.one n174) (ZMod.one n174) ≠ ZMod.zero n174 :=
   ZMod.two_ne_zero_of_three_le n174 le174
 #print axioms «✱54.43_zmod_174»
 
-/-- In the ring of 175 elements, one plus one is not zero. -/
+/-- Modulo 175, one plus one is not zero. -/
 theorem «✱54.43_zmod_175» :
     ZMod.add n175 (ZMod.one n175) (ZMod.one n175) ≠ ZMod.zero n175 :=
   ZMod.two_ne_zero_of_three_le n175 le175
 #print axioms «✱54.43_zmod_175»
 
-/-- In the ring of 176 elements, one plus one is not zero. -/
+/-- Modulo 176, one plus one is not zero. -/
 theorem «✱54.43_zmod_176» :
     ZMod.add n176 (ZMod.one n176) (ZMod.one n176) ≠ ZMod.zero n176 :=
   ZMod.two_ne_zero_of_three_le n176 le176
 #print axioms «✱54.43_zmod_176»
 
-/-- In the ring of 177 elements, one plus one is not zero. -/
+/-- Modulo 177, one plus one is not zero. -/
 theorem «✱54.43_zmod_177» :
     ZMod.add n177 (ZMod.one n177) (ZMod.one n177) ≠ ZMod.zero n177 :=
   ZMod.two_ne_zero_of_three_le n177 le177
 #print axioms «✱54.43_zmod_177»
 
-/-- In the ring of 178 elements, one plus one is not zero. -/
+/-- Modulo 178, one plus one is not zero. -/
 theorem «✱54.43_zmod_178» :
     ZMod.add n178 (ZMod.one n178) (ZMod.one n178) ≠ ZMod.zero n178 :=
   ZMod.two_ne_zero_of_three_le n178 le178
 #print axioms «✱54.43_zmod_178»
 
-/-- In the ring of 179 elements, one plus one is not zero. -/
+/-- Modulo 179, one plus one is not zero. -/
 theorem «✱54.43_zmod_179» :
     ZMod.add n179 (ZMod.one n179) (ZMod.one n179) ≠ ZMod.zero n179 :=
   ZMod.two_ne_zero_of_three_le n179 le179
 #print axioms «✱54.43_zmod_179»
 
-/-- In the ring of 180 elements, one plus one is not zero. -/
+/-- Modulo 180, one plus one is not zero. -/
 theorem «✱54.43_zmod_180» :
     ZMod.add n180 (ZMod.one n180) (ZMod.one n180) ≠ ZMod.zero n180 :=
   ZMod.two_ne_zero_of_three_le n180 le180
 #print axioms «✱54.43_zmod_180»
 
-/-- In the ring of 181 elements, one plus one is not zero. -/
+/-- Modulo 181, one plus one is not zero. -/
 theorem «✱54.43_zmod_181» :
     ZMod.add n181 (ZMod.one n181) (ZMod.one n181) ≠ ZMod.zero n181 :=
   ZMod.two_ne_zero_of_three_le n181 le181
 #print axioms «✱54.43_zmod_181»
 
-/-- In the ring of 182 elements, one plus one is not zero. -/
+/-- Modulo 182, one plus one is not zero. -/
 theorem «✱54.43_zmod_182» :
     ZMod.add n182 (ZMod.one n182) (ZMod.one n182) ≠ ZMod.zero n182 :=
   ZMod.two_ne_zero_of_three_le n182 le182
 #print axioms «✱54.43_zmod_182»
 
-/-- In the ring of 183 elements, one plus one is not zero. -/
+/-- Modulo 183, one plus one is not zero. -/
 theorem «✱54.43_zmod_183» :
     ZMod.add n183 (ZMod.one n183) (ZMod.one n183) ≠ ZMod.zero n183 :=
   ZMod.two_ne_zero_of_three_le n183 le183
 #print axioms «✱54.43_zmod_183»
 
-/-- In the ring of 184 elements, one plus one is not zero. -/
+/-- Modulo 184, one plus one is not zero. -/
 theorem «✱54.43_zmod_184» :
     ZMod.add n184 (ZMod.one n184) (ZMod.one n184) ≠ ZMod.zero n184 :=
   ZMod.two_ne_zero_of_three_le n184 le184
 #print axioms «✱54.43_zmod_184»
 
-/-- In the ring of 185 elements, one plus one is not zero. -/
+/-- Modulo 185, one plus one is not zero. -/
 theorem «✱54.43_zmod_185» :
     ZMod.add n185 (ZMod.one n185) (ZMod.one n185) ≠ ZMod.zero n185 :=
   ZMod.two_ne_zero_of_three_le n185 le185
 #print axioms «✱54.43_zmod_185»
 
-/-- In the ring of 186 elements, one plus one is not zero. -/
+/-- Modulo 186, one plus one is not zero. -/
 theorem «✱54.43_zmod_186» :
     ZMod.add n186 (ZMod.one n186) (ZMod.one n186) ≠ ZMod.zero n186 :=
   ZMod.two_ne_zero_of_three_le n186 le186
 #print axioms «✱54.43_zmod_186»
 
-/-- In the ring of 187 elements, one plus one is not zero. -/
+/-- Modulo 187, one plus one is not zero. -/
 theorem «✱54.43_zmod_187» :
     ZMod.add n187 (ZMod.one n187) (ZMod.one n187) ≠ ZMod.zero n187 :=
   ZMod.two_ne_zero_of_three_le n187 le187
 #print axioms «✱54.43_zmod_187»
 
-/-- In the ring of 188 elements, one plus one is not zero. -/
+/-- Modulo 188, one plus one is not zero. -/
 theorem «✱54.43_zmod_188» :
     ZMod.add n188 (ZMod.one n188) (ZMod.one n188) ≠ ZMod.zero n188 :=
   ZMod.two_ne_zero_of_three_le n188 le188
 #print axioms «✱54.43_zmod_188»
 
-/-- In the ring of 189 elements, one plus one is not zero. -/
+/-- Modulo 189, one plus one is not zero. -/
 theorem «✱54.43_zmod_189» :
     ZMod.add n189 (ZMod.one n189) (ZMod.one n189) ≠ ZMod.zero n189 :=
   ZMod.two_ne_zero_of_three_le n189 le189
 #print axioms «✱54.43_zmod_189»
 
-/-- In the ring of 190 elements, one plus one is not zero. -/
+/-- Modulo 190, one plus one is not zero. -/
 theorem «✱54.43_zmod_190» :
     ZMod.add n190 (ZMod.one n190) (ZMod.one n190) ≠ ZMod.zero n190 :=
   ZMod.two_ne_zero_of_three_le n190 le190
 #print axioms «✱54.43_zmod_190»
 
-/-- In the ring of 191 elements, one plus one is not zero. -/
+/-- Modulo 191, one plus one is not zero. -/
 theorem «✱54.43_zmod_191» :
     ZMod.add n191 (ZMod.one n191) (ZMod.one n191) ≠ ZMod.zero n191 :=
   ZMod.two_ne_zero_of_three_le n191 le191
 #print axioms «✱54.43_zmod_191»
 
-/-- In the ring of 192 elements, one plus one is not zero. -/
+/-- Modulo 192, one plus one is not zero. -/
 theorem «✱54.43_zmod_192» :
     ZMod.add n192 (ZMod.one n192) (ZMod.one n192) ≠ ZMod.zero n192 :=
   ZMod.two_ne_zero_of_three_le n192 le192
 #print axioms «✱54.43_zmod_192»
 
-/-- In the ring of 193 elements, one plus one is not zero. -/
+/-- Modulo 193, one plus one is not zero. -/
 theorem «✱54.43_zmod_193» :
     ZMod.add n193 (ZMod.one n193) (ZMod.one n193) ≠ ZMod.zero n193 :=
   ZMod.two_ne_zero_of_three_le n193 le193
 #print axioms «✱54.43_zmod_193»
 
-/-- In the ring of 194 elements, one plus one is not zero. -/
+/-- Modulo 194, one plus one is not zero. -/
 theorem «✱54.43_zmod_194» :
     ZMod.add n194 (ZMod.one n194) (ZMod.one n194) ≠ ZMod.zero n194 :=
   ZMod.two_ne_zero_of_three_le n194 le194
 #print axioms «✱54.43_zmod_194»
 
-/-- In the ring of 195 elements, one plus one is not zero. -/
+/-- Modulo 195, one plus one is not zero. -/
 theorem «✱54.43_zmod_195» :
     ZMod.add n195 (ZMod.one n195) (ZMod.one n195) ≠ ZMod.zero n195 :=
   ZMod.two_ne_zero_of_three_le n195 le195
 #print axioms «✱54.43_zmod_195»
 
-/-- In the ring of 196 elements, one plus one is not zero. -/
+/-- Modulo 196, one plus one is not zero. -/
 theorem «✱54.43_zmod_196» :
     ZMod.add n196 (ZMod.one n196) (ZMod.one n196) ≠ ZMod.zero n196 :=
   ZMod.two_ne_zero_of_three_le n196 le196
 #print axioms «✱54.43_zmod_196»
 
-/-- In the ring of 197 elements, one plus one is not zero. -/
+/-- Modulo 197, one plus one is not zero. -/
 theorem «✱54.43_zmod_197» :
     ZMod.add n197 (ZMod.one n197) (ZMod.one n197) ≠ ZMod.zero n197 :=
   ZMod.two_ne_zero_of_three_le n197 le197
 #print axioms «✱54.43_zmod_197»
 
-/-- In the ring of 198 elements, one plus one is not zero. -/
+/-- Modulo 198, one plus one is not zero. -/
 theorem «✱54.43_zmod_198» :
     ZMod.add n198 (ZMod.one n198) (ZMod.one n198) ≠ ZMod.zero n198 :=
   ZMod.two_ne_zero_of_three_le n198 le198
 #print axioms «✱54.43_zmod_198»
 
-/-- In the ring of 199 elements, one plus one is not zero. -/
+/-- Modulo 199, one plus one is not zero. -/
 theorem «✱54.43_zmod_199» :
     ZMod.add n199 (ZMod.one n199) (ZMod.one n199) ≠ ZMod.zero n199 :=
   ZMod.two_ne_zero_of_three_le n199 le199
 #print axioms «✱54.43_zmod_199»
 
-/-- In the ring of 200 elements, one plus one is not zero. -/
+/-- Modulo 200, one plus one is not zero. -/
 theorem «✱54.43_zmod_200» :
     ZMod.add n200 (ZMod.one n200) (ZMod.one n200) ≠ ZMod.zero n200 :=
   ZMod.two_ne_zero_of_three_le n200 le200
 #print axioms «✱54.43_zmod_200»
 
-/-- In the ring of 201 elements, one plus one is not zero. -/
+/-- Modulo 201, one plus one is not zero. -/
 theorem «✱54.43_zmod_201» :
     ZMod.add n201 (ZMod.one n201) (ZMod.one n201) ≠ ZMod.zero n201 :=
   ZMod.two_ne_zero_of_three_le n201 le201
 #print axioms «✱54.43_zmod_201»
 
-/-- In the ring of 202 elements, one plus one is not zero. -/
+/-- Modulo 202, one plus one is not zero. -/
 theorem «✱54.43_zmod_202» :
     ZMod.add n202 (ZMod.one n202) (ZMod.one n202) ≠ ZMod.zero n202 :=
   ZMod.two_ne_zero_of_three_le n202 le202
 #print axioms «✱54.43_zmod_202»
 
-/-- In the ring of 203 elements, one plus one is not zero. -/
+/-- Modulo 203, one plus one is not zero. -/
 theorem «✱54.43_zmod_203» :
     ZMod.add n203 (ZMod.one n203) (ZMod.one n203) ≠ ZMod.zero n203 :=
   ZMod.two_ne_zero_of_three_le n203 le203
 #print axioms «✱54.43_zmod_203»
 
-/-- In the ring of 204 elements, one plus one is not zero. -/
+/-- Modulo 204, one plus one is not zero. -/
 theorem «✱54.43_zmod_204» :
     ZMod.add n204 (ZMod.one n204) (ZMod.one n204) ≠ ZMod.zero n204 :=
   ZMod.two_ne_zero_of_three_le n204 le204
 #print axioms «✱54.43_zmod_204»
 
-/-- In the ring of 205 elements, one plus one is not zero. -/
+/-- Modulo 205, one plus one is not zero. -/
 theorem «✱54.43_zmod_205» :
     ZMod.add n205 (ZMod.one n205) (ZMod.one n205) ≠ ZMod.zero n205 :=
   ZMod.two_ne_zero_of_three_le n205 le205
 #print axioms «✱54.43_zmod_205»
 
-/-- In the ring of 206 elements, one plus one is not zero. -/
+/-- Modulo 206, one plus one is not zero. -/
 theorem «✱54.43_zmod_206» :
     ZMod.add n206 (ZMod.one n206) (ZMod.one n206) ≠ ZMod.zero n206 :=
   ZMod.two_ne_zero_of_three_le n206 le206
 #print axioms «✱54.43_zmod_206»
 
-/-- In the ring of 207 elements, one plus one is not zero. -/
+/-- Modulo 207, one plus one is not zero. -/
 theorem «✱54.43_zmod_207» :
     ZMod.add n207 (ZMod.one n207) (ZMod.one n207) ≠ ZMod.zero n207 :=
   ZMod.two_ne_zero_of_three_le n207 le207
 #print axioms «✱54.43_zmod_207»
 
-/-- In the ring of 208 elements, one plus one is not zero. -/
+/-- Modulo 208, one plus one is not zero. -/
 theorem «✱54.43_zmod_208» :
     ZMod.add n208 (ZMod.one n208) (ZMod.one n208) ≠ ZMod.zero n208 :=
   ZMod.two_ne_zero_of_three_le n208 le208
 #print axioms «✱54.43_zmod_208»
 
-/-- In the ring of 209 elements, one plus one is not zero. -/
+/-- Modulo 209, one plus one is not zero. -/
 theorem «✱54.43_zmod_209» :
     ZMod.add n209 (ZMod.one n209) (ZMod.one n209) ≠ ZMod.zero n209 :=
   ZMod.two_ne_zero_of_three_le n209 le209
 #print axioms «✱54.43_zmod_209»
 
-/-- In the ring of 210 elements, one plus one is not zero. -/
+/-- Modulo 210, one plus one is not zero. -/
 theorem «✱54.43_zmod_210» :
     ZMod.add n210 (ZMod.one n210) (ZMod.one n210) ≠ ZMod.zero n210 :=
   ZMod.two_ne_zero_of_three_le n210 le210
 #print axioms «✱54.43_zmod_210»
 
-/-- In the ring of 211 elements, one plus one is not zero. -/
+/-- Modulo 211, one plus one is not zero. -/
 theorem «✱54.43_zmod_211» :
     ZMod.add n211 (ZMod.one n211) (ZMod.one n211) ≠ ZMod.zero n211 :=
   ZMod.two_ne_zero_of_three_le n211 le211
 #print axioms «✱54.43_zmod_211»
 
-/-- In the ring of 212 elements, one plus one is not zero. -/
+/-- Modulo 212, one plus one is not zero. -/
 theorem «✱54.43_zmod_212» :
     ZMod.add n212 (ZMod.one n212) (ZMod.one n212) ≠ ZMod.zero n212 :=
   ZMod.two_ne_zero_of_three_le n212 le212
 #print axioms «✱54.43_zmod_212»
 
-/-- In the ring of 213 elements, one plus one is not zero. -/
+/-- Modulo 213, one plus one is not zero. -/
 theorem «✱54.43_zmod_213» :
     ZMod.add n213 (ZMod.one n213) (ZMod.one n213) ≠ ZMod.zero n213 :=
   ZMod.two_ne_zero_of_three_le n213 le213
 #print axioms «✱54.43_zmod_213»
 
-/-- In the ring of 214 elements, one plus one is not zero. -/
+/-- Modulo 214, one plus one is not zero. -/
 theorem «✱54.43_zmod_214» :
     ZMod.add n214 (ZMod.one n214) (ZMod.one n214) ≠ ZMod.zero n214 :=
   ZMod.two_ne_zero_of_three_le n214 le214
 #print axioms «✱54.43_zmod_214»
 
-/-- In the ring of 215 elements, one plus one is not zero. -/
+/-- Modulo 215, one plus one is not zero. -/
 theorem «✱54.43_zmod_215» :
     ZMod.add n215 (ZMod.one n215) (ZMod.one n215) ≠ ZMod.zero n215 :=
   ZMod.two_ne_zero_of_three_le n215 le215
 #print axioms «✱54.43_zmod_215»
 
-/-- In the ring of 216 elements, one plus one is not zero. -/
+/-- Modulo 216, one plus one is not zero. -/
 theorem «✱54.43_zmod_216» :
     ZMod.add n216 (ZMod.one n216) (ZMod.one n216) ≠ ZMod.zero n216 :=
   ZMod.two_ne_zero_of_three_le n216 le216
 #print axioms «✱54.43_zmod_216»
 
-/-- In the ring of 217 elements, one plus one is not zero. -/
+/-- Modulo 217, one plus one is not zero. -/
 theorem «✱54.43_zmod_217» :
     ZMod.add n217 (ZMod.one n217) (ZMod.one n217) ≠ ZMod.zero n217 :=
   ZMod.two_ne_zero_of_three_le n217 le217
 #print axioms «✱54.43_zmod_217»
 
-/-- In the ring of 218 elements, one plus one is not zero. -/
+/-- Modulo 218, one plus one is not zero. -/
 theorem «✱54.43_zmod_218» :
     ZMod.add n218 (ZMod.one n218) (ZMod.one n218) ≠ ZMod.zero n218 :=
   ZMod.two_ne_zero_of_three_le n218 le218
 #print axioms «✱54.43_zmod_218»
 
-/-- In the ring of 219 elements, one plus one is not zero. -/
+/-- Modulo 219, one plus one is not zero. -/
 theorem «✱54.43_zmod_219» :
     ZMod.add n219 (ZMod.one n219) (ZMod.one n219) ≠ ZMod.zero n219 :=
   ZMod.two_ne_zero_of_three_le n219 le219
 #print axioms «✱54.43_zmod_219»
 
-/-- In the ring of 220 elements, one plus one is not zero. -/
+/-- Modulo 220, one plus one is not zero. -/
 theorem «✱54.43_zmod_220» :
     ZMod.add n220 (ZMod.one n220) (ZMod.one n220) ≠ ZMod.zero n220 :=
   ZMod.two_ne_zero_of_three_le n220 le220
 #print axioms «✱54.43_zmod_220»
 
-/-- In the ring of 221 elements, one plus one is not zero. -/
+/-- Modulo 221, one plus one is not zero. -/
 theorem «✱54.43_zmod_221» :
     ZMod.add n221 (ZMod.one n221) (ZMod.one n221) ≠ ZMod.zero n221 :=
   ZMod.two_ne_zero_of_three_le n221 le221
 #print axioms «✱54.43_zmod_221»
 
-/-- In the ring of 222 elements, one plus one is not zero. -/
+/-- Modulo 222, one plus one is not zero. -/
 theorem «✱54.43_zmod_222» :
     ZMod.add n222 (ZMod.one n222) (ZMod.one n222) ≠ ZMod.zero n222 :=
   ZMod.two_ne_zero_of_three_le n222 le222
 #print axioms «✱54.43_zmod_222»
 
-/-- In the ring of 223 elements, one plus one is not zero. -/
+/-- Modulo 223, one plus one is not zero. -/
 theorem «✱54.43_zmod_223» :
     ZMod.add n223 (ZMod.one n223) (ZMod.one n223) ≠ ZMod.zero n223 :=
   ZMod.two_ne_zero_of_three_le n223 le223
 #print axioms «✱54.43_zmod_223»
 
-/-- In the ring of 224 elements, one plus one is not zero. -/
+/-- Modulo 224, one plus one is not zero. -/
 theorem «✱54.43_zmod_224» :
     ZMod.add n224 (ZMod.one n224) (ZMod.one n224) ≠ ZMod.zero n224 :=
   ZMod.two_ne_zero_of_three_le n224 le224
 #print axioms «✱54.43_zmod_224»
 
-/-- In the ring of 225 elements, one plus one is not zero. -/
+/-- Modulo 225, one plus one is not zero. -/
 theorem «✱54.43_zmod_225» :
     ZMod.add n225 (ZMod.one n225) (ZMod.one n225) ≠ ZMod.zero n225 :=
   ZMod.two_ne_zero_of_three_le n225 le225
 #print axioms «✱54.43_zmod_225»
 
-/-- In the ring of 226 elements, one plus one is not zero. -/
+/-- Modulo 226, one plus one is not zero. -/
 theorem «✱54.43_zmod_226» :
     ZMod.add n226 (ZMod.one n226) (ZMod.one n226) ≠ ZMod.zero n226 :=
   ZMod.two_ne_zero_of_three_le n226 le226
 #print axioms «✱54.43_zmod_226»
 
-/-- In the ring of 227 elements, one plus one is not zero. -/
+/-- Modulo 227, one plus one is not zero. -/
 theorem «✱54.43_zmod_227» :
     ZMod.add n227 (ZMod.one n227) (ZMod.one n227) ≠ ZMod.zero n227 :=
   ZMod.two_ne_zero_of_three_le n227 le227
 #print axioms «✱54.43_zmod_227»
 
-/-- In the ring of 228 elements, one plus one is not zero. -/
+/-- Modulo 228, one plus one is not zero. -/
 theorem «✱54.43_zmod_228» :
     ZMod.add n228 (ZMod.one n228) (ZMod.one n228) ≠ ZMod.zero n228 :=
   ZMod.two_ne_zero_of_three_le n228 le228
 #print axioms «✱54.43_zmod_228»
 
-/-- In the ring of 229 elements, one plus one is not zero. -/
+/-- Modulo 229, one plus one is not zero. -/
 theorem «✱54.43_zmod_229» :
     ZMod.add n229 (ZMod.one n229) (ZMod.one n229) ≠ ZMod.zero n229 :=
   ZMod.two_ne_zero_of_three_le n229 le229
 #print axioms «✱54.43_zmod_229»
 
-/-- In the ring of 230 elements, one plus one is not zero. -/
+/-- Modulo 230, one plus one is not zero. -/
 theorem «✱54.43_zmod_230» :
     ZMod.add n230 (ZMod.one n230) (ZMod.one n230) ≠ ZMod.zero n230 :=
   ZMod.two_ne_zero_of_three_le n230 le230
 #print axioms «✱54.43_zmod_230»
 
-/-- In the ring of 231 elements, one plus one is not zero. -/
+/-- Modulo 231, one plus one is not zero. -/
 theorem «✱54.43_zmod_231» :
     ZMod.add n231 (ZMod.one n231) (ZMod.one n231) ≠ ZMod.zero n231 :=
   ZMod.two_ne_zero_of_three_le n231 le231
 #print axioms «✱54.43_zmod_231»
 
-/-- In the ring of 232 elements, one plus one is not zero. -/
+/-- Modulo 232, one plus one is not zero. -/
 theorem «✱54.43_zmod_232» :
     ZMod.add n232 (ZMod.one n232) (ZMod.one n232) ≠ ZMod.zero n232 :=
   ZMod.two_ne_zero_of_three_le n232 le232
 #print axioms «✱54.43_zmod_232»
 
-/-- In the ring of 233 elements, one plus one is not zero. -/
+/-- Modulo 233, one plus one is not zero. -/
 theorem «✱54.43_zmod_233» :
     ZMod.add n233 (ZMod.one n233) (ZMod.one n233) ≠ ZMod.zero n233 :=
   ZMod.two_ne_zero_of_three_le n233 le233
 #print axioms «✱54.43_zmod_233»
 
-/-- In the ring of 234 elements, one plus one is not zero. -/
+/-- Modulo 234, one plus one is not zero. -/
 theorem «✱54.43_zmod_234» :
     ZMod.add n234 (ZMod.one n234) (ZMod.one n234) ≠ ZMod.zero n234 :=
   ZMod.two_ne_zero_of_three_le n234 le234
 #print axioms «✱54.43_zmod_234»
 
-/-- In the ring of 235 elements, one plus one is not zero. -/
+/-- Modulo 235, one plus one is not zero. -/
 theorem «✱54.43_zmod_235» :
     ZMod.add n235 (ZMod.one n235) (ZMod.one n235) ≠ ZMod.zero n235 :=
   ZMod.two_ne_zero_of_three_le n235 le235
 #print axioms «✱54.43_zmod_235»
 
-/-- In the ring of 236 elements, one plus one is not zero. -/
+/-- Modulo 236, one plus one is not zero. -/
 theorem «✱54.43_zmod_236» :
     ZMod.add n236 (ZMod.one n236) (ZMod.one n236) ≠ ZMod.zero n236 :=
   ZMod.two_ne_zero_of_three_le n236 le236
 #print axioms «✱54.43_zmod_236»
 
-/-- In the ring of 237 elements, one plus one is not zero. -/
+/-- Modulo 237, one plus one is not zero. -/
 theorem «✱54.43_zmod_237» :
     ZMod.add n237 (ZMod.one n237) (ZMod.one n237) ≠ ZMod.zero n237 :=
   ZMod.two_ne_zero_of_three_le n237 le237
 #print axioms «✱54.43_zmod_237»
 
-/-- In the ring of 238 elements, one plus one is not zero. -/
+/-- Modulo 238, one plus one is not zero. -/
 theorem «✱54.43_zmod_238» :
     ZMod.add n238 (ZMod.one n238) (ZMod.one n238) ≠ ZMod.zero n238 :=
   ZMod.two_ne_zero_of_three_le n238 le238
 #print axioms «✱54.43_zmod_238»
 
-/-- In the ring of 239 elements, one plus one is not zero. -/
+/-- Modulo 239, one plus one is not zero. -/
 theorem «✱54.43_zmod_239» :
     ZMod.add n239 (ZMod.one n239) (ZMod.one n239) ≠ ZMod.zero n239 :=
   ZMod.two_ne_zero_of_three_le n239 le239
 #print axioms «✱54.43_zmod_239»
 
-/-- In the ring of 240 elements, one plus one is not zero. -/
+/-- Modulo 240, one plus one is not zero. -/
 theorem «✱54.43_zmod_240» :
     ZMod.add n240 (ZMod.one n240) (ZMod.one n240) ≠ ZMod.zero n240 :=
   ZMod.two_ne_zero_of_three_le n240 le240
 #print axioms «✱54.43_zmod_240»
 
-/-- In the ring of 241 elements, one plus one is not zero. -/
+/-- Modulo 241, one plus one is not zero. -/
 theorem «✱54.43_zmod_241» :
     ZMod.add n241 (ZMod.one n241) (ZMod.one n241) ≠ ZMod.zero n241 :=
   ZMod.two_ne_zero_of_three_le n241 le241
 #print axioms «✱54.43_zmod_241»
 
-/-- In the ring of 242 elements, one plus one is not zero. -/
+/-- Modulo 242, one plus one is not zero. -/
 theorem «✱54.43_zmod_242» :
     ZMod.add n242 (ZMod.one n242) (ZMod.one n242) ≠ ZMod.zero n242 :=
   ZMod.two_ne_zero_of_three_le n242 le242
 #print axioms «✱54.43_zmod_242»
 
-/-- In the ring of 243 elements, one plus one is not zero. -/
+/-- Modulo 243, one plus one is not zero. -/
 theorem «✱54.43_zmod_243» :
     ZMod.add n243 (ZMod.one n243) (ZMod.one n243) ≠ ZMod.zero n243 :=
   ZMod.two_ne_zero_of_three_le n243 le243
 #print axioms «✱54.43_zmod_243»
 
-/-- In the ring of 244 elements, one plus one is not zero. -/
+/-- Modulo 244, one plus one is not zero. -/
 theorem «✱54.43_zmod_244» :
     ZMod.add n244 (ZMod.one n244) (ZMod.one n244) ≠ ZMod.zero n244 :=
   ZMod.two_ne_zero_of_three_le n244 le244
 #print axioms «✱54.43_zmod_244»
 
-/-- In the ring of 245 elements, one plus one is not zero. -/
+/-- Modulo 245, one plus one is not zero. -/
 theorem «✱54.43_zmod_245» :
     ZMod.add n245 (ZMod.one n245) (ZMod.one n245) ≠ ZMod.zero n245 :=
   ZMod.two_ne_zero_of_three_le n245 le245
 #print axioms «✱54.43_zmod_245»
 
-/-- In the ring of 246 elements, one plus one is not zero. -/
+/-- Modulo 246, one plus one is not zero. -/
 theorem «✱54.43_zmod_246» :
     ZMod.add n246 (ZMod.one n246) (ZMod.one n246) ≠ ZMod.zero n246 :=
   ZMod.two_ne_zero_of_three_le n246 le246
 #print axioms «✱54.43_zmod_246»
 
-/-- In the ring of 247 elements, one plus one is not zero. -/
+/-- Modulo 247, one plus one is not zero. -/
 theorem «✱54.43_zmod_247» :
     ZMod.add n247 (ZMod.one n247) (ZMod.one n247) ≠ ZMod.zero n247 :=
   ZMod.two_ne_zero_of_three_le n247 le247
 #print axioms «✱54.43_zmod_247»
 
-/-- In the ring of 248 elements, one plus one is not zero. -/
+/-- Modulo 248, one plus one is not zero. -/
 theorem «✱54.43_zmod_248» :
     ZMod.add n248 (ZMod.one n248) (ZMod.one n248) ≠ ZMod.zero n248 :=
   ZMod.two_ne_zero_of_three_le n248 le248
 #print axioms «✱54.43_zmod_248»
 
-/-- In the ring of 249 elements, one plus one is not zero. -/
+/-- Modulo 249, one plus one is not zero. -/
 theorem «✱54.43_zmod_249» :
     ZMod.add n249 (ZMod.one n249) (ZMod.one n249) ≠ ZMod.zero n249 :=
   ZMod.two_ne_zero_of_three_le n249 le249
 #print axioms «✱54.43_zmod_249»
 
-/-- In the ring of 250 elements, one plus one is not zero. -/
+/-- Modulo 250, one plus one is not zero. -/
 theorem «✱54.43_zmod_250» :
     ZMod.add n250 (ZMod.one n250) (ZMod.one n250) ≠ ZMod.zero n250 :=
   ZMod.two_ne_zero_of_three_le n250 le250
 #print axioms «✱54.43_zmod_250»
 
-/-- In the ring of 251 elements, one plus one is not zero. -/
+/-- Modulo 251, one plus one is not zero. -/
 theorem «✱54.43_zmod_251» :
     ZMod.add n251 (ZMod.one n251) (ZMod.one n251) ≠ ZMod.zero n251 :=
   ZMod.two_ne_zero_of_three_le n251 le251
 #print axioms «✱54.43_zmod_251»
 
-/-- In the ring of 252 elements, one plus one is not zero. -/
+/-- Modulo 252, one plus one is not zero. -/
 theorem «✱54.43_zmod_252» :
     ZMod.add n252 (ZMod.one n252) (ZMod.one n252) ≠ ZMod.zero n252 :=
   ZMod.two_ne_zero_of_three_le n252 le252
 #print axioms «✱54.43_zmod_252»
 
-/-- In the ring of 253 elements, one plus one is not zero. -/
+/-- Modulo 253, one plus one is not zero. -/
 theorem «✱54.43_zmod_253» :
     ZMod.add n253 (ZMod.one n253) (ZMod.one n253) ≠ ZMod.zero n253 :=
   ZMod.two_ne_zero_of_three_le n253 le253
 #print axioms «✱54.43_zmod_253»
 
-/-- In the ring of 254 elements, one plus one is not zero. -/
+/-- Modulo 254, one plus one is not zero. -/
 theorem «✱54.43_zmod_254» :
     ZMod.add n254 (ZMod.one n254) (ZMod.one n254) ≠ ZMod.zero n254 :=
   ZMod.two_ne_zero_of_three_le n254 le254
 #print axioms «✱54.43_zmod_254»
 
-/-- In the ring of 255 elements, one plus one is not zero. -/
+/-- Modulo 255, one plus one is not zero. -/
 theorem «✱54.43_zmod_255» :
     ZMod.add n255 (ZMod.one n255) (ZMod.one n255) ≠ ZMod.zero n255 :=
   ZMod.two_ne_zero_of_three_le n255 le255
 #print axioms «✱54.43_zmod_255»
 
-/-- In the ring of 256 elements, one plus one is not zero. -/
+/-- Modulo 256, one plus one is not zero. -/
 theorem «✱54.43_zmod_256» :
     ZMod.add n256 (ZMod.one n256) (ZMod.one n256) ≠ ZMod.zero n256 :=
   ZMod.two_ne_zero_of_three_le n256 le256
 #print axioms «✱54.43_zmod_256»
 
-/-- In the ring of 257 elements, one plus one is not zero. -/
+/-- Modulo 257, one plus one is not zero. -/
 theorem «✱54.43_zmod_257» :
     ZMod.add n257 (ZMod.one n257) (ZMod.one n257) ≠ ZMod.zero n257 :=
   ZMod.two_ne_zero_of_three_le n257 le257
 #print axioms «✱54.43_zmod_257»
 
-/-- In the ring of 258 elements, one plus one is not zero. -/
+/-- Modulo 258, one plus one is not zero. -/
 theorem «✱54.43_zmod_258» :
     ZMod.add n258 (ZMod.one n258) (ZMod.one n258) ≠ ZMod.zero n258 :=
   ZMod.two_ne_zero_of_three_le n258 le258
 #print axioms «✱54.43_zmod_258»
 
-/-- In the ring of 259 elements, one plus one is not zero. -/
+/-- Modulo 259, one plus one is not zero. -/
 theorem «✱54.43_zmod_259» :
     ZMod.add n259 (ZMod.one n259) (ZMod.one n259) ≠ ZMod.zero n259 :=
   ZMod.two_ne_zero_of_three_le n259 le259
 #print axioms «✱54.43_zmod_259»
 
-/-- In the ring of 260 elements, one plus one is not zero. -/
+/-- Modulo 260, one plus one is not zero. -/
 theorem «✱54.43_zmod_260» :
     ZMod.add n260 (ZMod.one n260) (ZMod.one n260) ≠ ZMod.zero n260 :=
   ZMod.two_ne_zero_of_three_le n260 le260
 #print axioms «✱54.43_zmod_260»
 
-/-- In the ring of 261 elements, one plus one is not zero. -/
+/-- Modulo 261, one plus one is not zero. -/
 theorem «✱54.43_zmod_261» :
     ZMod.add n261 (ZMod.one n261) (ZMod.one n261) ≠ ZMod.zero n261 :=
   ZMod.two_ne_zero_of_three_le n261 le261
 #print axioms «✱54.43_zmod_261»
 
-/-- In the ring of 262 elements, one plus one is not zero. -/
+/-- Modulo 262, one plus one is not zero. -/
 theorem «✱54.43_zmod_262» :
     ZMod.add n262 (ZMod.one n262) (ZMod.one n262) ≠ ZMod.zero n262 :=
   ZMod.two_ne_zero_of_three_le n262 le262
 #print axioms «✱54.43_zmod_262»
 
-/-- In the ring of 263 elements, one plus one is not zero. -/
+/-- Modulo 263, one plus one is not zero. -/
 theorem «✱54.43_zmod_263» :
     ZMod.add n263 (ZMod.one n263) (ZMod.one n263) ≠ ZMod.zero n263 :=
   ZMod.two_ne_zero_of_three_le n263 le263
 #print axioms «✱54.43_zmod_263»
 
-/-- In the ring of 264 elements, one plus one is not zero. -/
+/-- Modulo 264, one plus one is not zero. -/
 theorem «✱54.43_zmod_264» :
     ZMod.add n264 (ZMod.one n264) (ZMod.one n264) ≠ ZMod.zero n264 :=
   ZMod.two_ne_zero_of_three_le n264 le264
 #print axioms «✱54.43_zmod_264»
 
-/-- In the ring of 265 elements, one plus one is not zero. -/
+/-- Modulo 265, one plus one is not zero. -/
 theorem «✱54.43_zmod_265» :
     ZMod.add n265 (ZMod.one n265) (ZMod.one n265) ≠ ZMod.zero n265 :=
   ZMod.two_ne_zero_of_three_le n265 le265
 #print axioms «✱54.43_zmod_265»
 
-/-- In the ring of 266 elements, one plus one is not zero. -/
+/-- Modulo 266, one plus one is not zero. -/
 theorem «✱54.43_zmod_266» :
     ZMod.add n266 (ZMod.one n266) (ZMod.one n266) ≠ ZMod.zero n266 :=
   ZMod.two_ne_zero_of_three_le n266 le266
 #print axioms «✱54.43_zmod_266»
 
-/-- In the ring of 267 elements, one plus one is not zero. -/
+/-- Modulo 267, one plus one is not zero. -/
 theorem «✱54.43_zmod_267» :
     ZMod.add n267 (ZMod.one n267) (ZMod.one n267) ≠ ZMod.zero n267 :=
   ZMod.two_ne_zero_of_three_le n267 le267
 #print axioms «✱54.43_zmod_267»
 
-/-- In the ring of 268 elements, one plus one is not zero. -/
+/-- Modulo 268, one plus one is not zero. -/
 theorem «✱54.43_zmod_268» :
     ZMod.add n268 (ZMod.one n268) (ZMod.one n268) ≠ ZMod.zero n268 :=
   ZMod.two_ne_zero_of_three_le n268 le268
 #print axioms «✱54.43_zmod_268»
 
-/-- In the ring of 269 elements, one plus one is not zero. -/
+/-- Modulo 269, one plus one is not zero. -/
 theorem «✱54.43_zmod_269» :
     ZMod.add n269 (ZMod.one n269) (ZMod.one n269) ≠ ZMod.zero n269 :=
   ZMod.two_ne_zero_of_three_le n269 le269
 #print axioms «✱54.43_zmod_269»
 
-/-- In the ring of 270 elements, one plus one is not zero. -/
+/-- Modulo 270, one plus one is not zero. -/
 theorem «✱54.43_zmod_270» :
     ZMod.add n270 (ZMod.one n270) (ZMod.one n270) ≠ ZMod.zero n270 :=
   ZMod.two_ne_zero_of_three_le n270 le270
 #print axioms «✱54.43_zmod_270»
 
-/-- In the ring of 271 elements, one plus one is not zero. -/
+/-- Modulo 271, one plus one is not zero. -/
 theorem «✱54.43_zmod_271» :
     ZMod.add n271 (ZMod.one n271) (ZMod.one n271) ≠ ZMod.zero n271 :=
   ZMod.two_ne_zero_of_three_le n271 le271
 #print axioms «✱54.43_zmod_271»
 
-/-- In the ring of 272 elements, one plus one is not zero. -/
+/-- Modulo 272, one plus one is not zero. -/
 theorem «✱54.43_zmod_272» :
     ZMod.add n272 (ZMod.one n272) (ZMod.one n272) ≠ ZMod.zero n272 :=
   ZMod.two_ne_zero_of_three_le n272 le272
 #print axioms «✱54.43_zmod_272»
 
-/-- In the ring of 273 elements, one plus one is not zero. -/
+/-- Modulo 273, one plus one is not zero. -/
 theorem «✱54.43_zmod_273» :
     ZMod.add n273 (ZMod.one n273) (ZMod.one n273) ≠ ZMod.zero n273 :=
   ZMod.two_ne_zero_of_three_le n273 le273
 #print axioms «✱54.43_zmod_273»
 
-/-- In the ring of 274 elements, one plus one is not zero. -/
+/-- Modulo 274, one plus one is not zero. -/
 theorem «✱54.43_zmod_274» :
     ZMod.add n274 (ZMod.one n274) (ZMod.one n274) ≠ ZMod.zero n274 :=
   ZMod.two_ne_zero_of_three_le n274 le274
 #print axioms «✱54.43_zmod_274»
 
-/-- In the ring of 275 elements, one plus one is not zero. -/
+/-- Modulo 275, one plus one is not zero. -/
 theorem «✱54.43_zmod_275» :
     ZMod.add n275 (ZMod.one n275) (ZMod.one n275) ≠ ZMod.zero n275 :=
   ZMod.two_ne_zero_of_three_le n275 le275
 #print axioms «✱54.43_zmod_275»
 
-/-- In the ring of 276 elements, one plus one is not zero. -/
+/-- Modulo 276, one plus one is not zero. -/
 theorem «✱54.43_zmod_276» :
     ZMod.add n276 (ZMod.one n276) (ZMod.one n276) ≠ ZMod.zero n276 :=
   ZMod.two_ne_zero_of_three_le n276 le276
 #print axioms «✱54.43_zmod_276»
 
-/-- In the ring of 277 elements, one plus one is not zero. -/
+/-- Modulo 277, one plus one is not zero. -/
 theorem «✱54.43_zmod_277» :
     ZMod.add n277 (ZMod.one n277) (ZMod.one n277) ≠ ZMod.zero n277 :=
   ZMod.two_ne_zero_of_three_le n277 le277
 #print axioms «✱54.43_zmod_277»
 
-/-- In the ring of 278 elements, one plus one is not zero. -/
+/-- Modulo 278, one plus one is not zero. -/
 theorem «✱54.43_zmod_278» :
     ZMod.add n278 (ZMod.one n278) (ZMod.one n278) ≠ ZMod.zero n278 :=
   ZMod.two_ne_zero_of_three_le n278 le278
 #print axioms «✱54.43_zmod_278»
 
-/-- In the ring of 279 elements, one plus one is not zero. -/
+/-- Modulo 279, one plus one is not zero. -/
 theorem «✱54.43_zmod_279» :
     ZMod.add n279 (ZMod.one n279) (ZMod.one n279) ≠ ZMod.zero n279 :=
   ZMod.two_ne_zero_of_three_le n279 le279
 #print axioms «✱54.43_zmod_279»
 
-/-- In the ring of 280 elements, one plus one is not zero. -/
+/-- Modulo 280, one plus one is not zero. -/
 theorem «✱54.43_zmod_280» :
     ZMod.add n280 (ZMod.one n280) (ZMod.one n280) ≠ ZMod.zero n280 :=
   ZMod.two_ne_zero_of_three_le n280 le280
 #print axioms «✱54.43_zmod_280»
 
-/-- In the ring of 281 elements, one plus one is not zero. -/
+/-- Modulo 281, one plus one is not zero. -/
 theorem «✱54.43_zmod_281» :
     ZMod.add n281 (ZMod.one n281) (ZMod.one n281) ≠ ZMod.zero n281 :=
   ZMod.two_ne_zero_of_three_le n281 le281
 #print axioms «✱54.43_zmod_281»
 
-/-- In the ring of 282 elements, one plus one is not zero. -/
+/-- Modulo 282, one plus one is not zero. -/
 theorem «✱54.43_zmod_282» :
     ZMod.add n282 (ZMod.one n282) (ZMod.one n282) ≠ ZMod.zero n282 :=
   ZMod.two_ne_zero_of_three_le n282 le282
 #print axioms «✱54.43_zmod_282»
 
-/-- In the ring of 283 elements, one plus one is not zero. -/
+/-- Modulo 283, one plus one is not zero. -/
 theorem «✱54.43_zmod_283» :
     ZMod.add n283 (ZMod.one n283) (ZMod.one n283) ≠ ZMod.zero n283 :=
   ZMod.two_ne_zero_of_three_le n283 le283
 #print axioms «✱54.43_zmod_283»
 
-/-- In the ring of 284 elements, one plus one is not zero. -/
+/-- Modulo 284, one plus one is not zero. -/
 theorem «✱54.43_zmod_284» :
     ZMod.add n284 (ZMod.one n284) (ZMod.one n284) ≠ ZMod.zero n284 :=
   ZMod.two_ne_zero_of_three_le n284 le284
 #print axioms «✱54.43_zmod_284»
 
-/-- In the ring of 285 elements, one plus one is not zero. -/
+/-- Modulo 285, one plus one is not zero. -/
 theorem «✱54.43_zmod_285» :
     ZMod.add n285 (ZMod.one n285) (ZMod.one n285) ≠ ZMod.zero n285 :=
   ZMod.two_ne_zero_of_three_le n285 le285
 #print axioms «✱54.43_zmod_285»
 
-/-- In the ring of 286 elements, one plus one is not zero. -/
+/-- Modulo 286, one plus one is not zero. -/
 theorem «✱54.43_zmod_286» :
     ZMod.add n286 (ZMod.one n286) (ZMod.one n286) ≠ ZMod.zero n286 :=
   ZMod.two_ne_zero_of_three_le n286 le286
 #print axioms «✱54.43_zmod_286»
 
-/-- In the ring of 287 elements, one plus one is not zero. -/
+/-- Modulo 287, one plus one is not zero. -/
 theorem «✱54.43_zmod_287» :
     ZMod.add n287 (ZMod.one n287) (ZMod.one n287) ≠ ZMod.zero n287 :=
   ZMod.two_ne_zero_of_three_le n287 le287
 #print axioms «✱54.43_zmod_287»
 
-/-- In the ring of 288 elements, one plus one is not zero. -/
+/-- Modulo 288, one plus one is not zero. -/
 theorem «✱54.43_zmod_288» :
     ZMod.add n288 (ZMod.one n288) (ZMod.one n288) ≠ ZMod.zero n288 :=
   ZMod.two_ne_zero_of_three_le n288 le288
 #print axioms «✱54.43_zmod_288»
 
-/-- In the ring of 289 elements, one plus one is not zero. -/
+/-- Modulo 289, one plus one is not zero. -/
 theorem «✱54.43_zmod_289» :
     ZMod.add n289 (ZMod.one n289) (ZMod.one n289) ≠ ZMod.zero n289 :=
   ZMod.two_ne_zero_of_three_le n289 le289
 #print axioms «✱54.43_zmod_289»
 
-/-- In the ring of 290 elements, one plus one is not zero. -/
+/-- Modulo 290, one plus one is not zero. -/
 theorem «✱54.43_zmod_290» :
     ZMod.add n290 (ZMod.one n290) (ZMod.one n290) ≠ ZMod.zero n290 :=
   ZMod.two_ne_zero_of_three_le n290 le290
 #print axioms «✱54.43_zmod_290»
 
-/-- In the ring of 291 elements, one plus one is not zero. -/
+/-- Modulo 291, one plus one is not zero. -/
 theorem «✱54.43_zmod_291» :
     ZMod.add n291 (ZMod.one n291) (ZMod.one n291) ≠ ZMod.zero n291 :=
   ZMod.two_ne_zero_of_three_le n291 le291
 #print axioms «✱54.43_zmod_291»
 
-/-- In the ring of 292 elements, one plus one is not zero. -/
+/-- Modulo 292, one plus one is not zero. -/
 theorem «✱54.43_zmod_292» :
     ZMod.add n292 (ZMod.one n292) (ZMod.one n292) ≠ ZMod.zero n292 :=
   ZMod.two_ne_zero_of_three_le n292 le292
 #print axioms «✱54.43_zmod_292»
 
-/-- In the ring of 293 elements, one plus one is not zero. -/
+/-- Modulo 293, one plus one is not zero. -/
 theorem «✱54.43_zmod_293» :
     ZMod.add n293 (ZMod.one n293) (ZMod.one n293) ≠ ZMod.zero n293 :=
   ZMod.two_ne_zero_of_three_le n293 le293
 #print axioms «✱54.43_zmod_293»
 
-/-- In the ring of 294 elements, one plus one is not zero. -/
+/-- Modulo 294, one plus one is not zero. -/
 theorem «✱54.43_zmod_294» :
     ZMod.add n294 (ZMod.one n294) (ZMod.one n294) ≠ ZMod.zero n294 :=
   ZMod.two_ne_zero_of_three_le n294 le294
 #print axioms «✱54.43_zmod_294»
 
-/-- In the ring of 295 elements, one plus one is not zero. -/
+/-- Modulo 295, one plus one is not zero. -/
 theorem «✱54.43_zmod_295» :
     ZMod.add n295 (ZMod.one n295) (ZMod.one n295) ≠ ZMod.zero n295 :=
   ZMod.two_ne_zero_of_three_le n295 le295
 #print axioms «✱54.43_zmod_295»
 
-/-- In the ring of 296 elements, one plus one is not zero. -/
+/-- Modulo 296, one plus one is not zero. -/
 theorem «✱54.43_zmod_296» :
     ZMod.add n296 (ZMod.one n296) (ZMod.one n296) ≠ ZMod.zero n296 :=
   ZMod.two_ne_zero_of_three_le n296 le296
 #print axioms «✱54.43_zmod_296»
 
-/-- In the ring of 297 elements, one plus one is not zero. -/
+/-- Modulo 297, one plus one is not zero. -/
 theorem «✱54.43_zmod_297» :
     ZMod.add n297 (ZMod.one n297) (ZMod.one n297) ≠ ZMod.zero n297 :=
   ZMod.two_ne_zero_of_three_le n297 le297
 #print axioms «✱54.43_zmod_297»
 
-/-- In the ring of 298 elements, one plus one is not zero. -/
+/-- Modulo 298, one plus one is not zero. -/
 theorem «✱54.43_zmod_298» :
     ZMod.add n298 (ZMod.one n298) (ZMod.one n298) ≠ ZMod.zero n298 :=
   ZMod.two_ne_zero_of_three_le n298 le298
 #print axioms «✱54.43_zmod_298»
 
-/-- In the ring of 299 elements, one plus one is not zero. -/
+/-- Modulo 299, one plus one is not zero. -/
 theorem «✱54.43_zmod_299» :
     ZMod.add n299 (ZMod.one n299) (ZMod.one n299) ≠ ZMod.zero n299 :=
   ZMod.two_ne_zero_of_three_le n299 le299
 #print axioms «✱54.43_zmod_299»
 
-/-- In the ring of 300 elements, one plus one is not zero. -/
+/-- Modulo 300, one plus one is not zero. -/
 theorem «✱54.43_zmod_300» :
     ZMod.add n300 (ZMod.one n300) (ZMod.one n300) ≠ ZMod.zero n300 :=
   ZMod.two_ne_zero_of_three_le n300 le300
 #print axioms «✱54.43_zmod_300»
 
-/-- In the ring of 301 elements, one plus one is not zero. -/
+/-- Modulo 301, one plus one is not zero. -/
 theorem «✱54.43_zmod_301» :
     ZMod.add n301 (ZMod.one n301) (ZMod.one n301) ≠ ZMod.zero n301 :=
   ZMod.two_ne_zero_of_three_le n301 le301
 #print axioms «✱54.43_zmod_301»
 
-/-- In the ring of 302 elements, one plus one is not zero. -/
+/-- Modulo 302, one plus one is not zero. -/
 theorem «✱54.43_zmod_302» :
     ZMod.add n302 (ZMod.one n302) (ZMod.one n302) ≠ ZMod.zero n302 :=
   ZMod.two_ne_zero_of_three_le n302 le302
 #print axioms «✱54.43_zmod_302»
 
-/-- In the ring of 303 elements, one plus one is not zero. -/
+/-- Modulo 303, one plus one is not zero. -/
 theorem «✱54.43_zmod_303» :
     ZMod.add n303 (ZMod.one n303) (ZMod.one n303) ≠ ZMod.zero n303 :=
   ZMod.two_ne_zero_of_three_le n303 le303
 #print axioms «✱54.43_zmod_303»
 
-/-- In the ring of 304 elements, one plus one is not zero. -/
+/-- Modulo 304, one plus one is not zero. -/
 theorem «✱54.43_zmod_304» :
     ZMod.add n304 (ZMod.one n304) (ZMod.one n304) ≠ ZMod.zero n304 :=
   ZMod.two_ne_zero_of_three_le n304 le304
 #print axioms «✱54.43_zmod_304»
 
-/-- In the ring of 305 elements, one plus one is not zero. -/
+/-- Modulo 305, one plus one is not zero. -/
 theorem «✱54.43_zmod_305» :
     ZMod.add n305 (ZMod.one n305) (ZMod.one n305) ≠ ZMod.zero n305 :=
   ZMod.two_ne_zero_of_three_le n305 le305
 #print axioms «✱54.43_zmod_305»
 
-/-- In the ring of 306 elements, one plus one is not zero. -/
+/-- Modulo 306, one plus one is not zero. -/
 theorem «✱54.43_zmod_306» :
     ZMod.add n306 (ZMod.one n306) (ZMod.one n306) ≠ ZMod.zero n306 :=
   ZMod.two_ne_zero_of_three_le n306 le306
 #print axioms «✱54.43_zmod_306»
 
-/-- In the ring of 307 elements, one plus one is not zero. -/
+/-- Modulo 307, one plus one is not zero. -/
 theorem «✱54.43_zmod_307» :
     ZMod.add n307 (ZMod.one n307) (ZMod.one n307) ≠ ZMod.zero n307 :=
   ZMod.two_ne_zero_of_three_le n307 le307
 #print axioms «✱54.43_zmod_307»
 
-/-- In the ring of 308 elements, one plus one is not zero. -/
+/-- Modulo 308, one plus one is not zero. -/
 theorem «✱54.43_zmod_308» :
     ZMod.add n308 (ZMod.one n308) (ZMod.one n308) ≠ ZMod.zero n308 :=
   ZMod.two_ne_zero_of_three_le n308 le308
 #print axioms «✱54.43_zmod_308»
 
-/-- In the ring of 309 elements, one plus one is not zero. -/
+/-- Modulo 309, one plus one is not zero. -/
 theorem «✱54.43_zmod_309» :
     ZMod.add n309 (ZMod.one n309) (ZMod.one n309) ≠ ZMod.zero n309 :=
   ZMod.two_ne_zero_of_three_le n309 le309
 #print axioms «✱54.43_zmod_309»
 
-/-- In the ring of 310 elements, one plus one is not zero. -/
+/-- Modulo 310, one plus one is not zero. -/
 theorem «✱54.43_zmod_310» :
     ZMod.add n310 (ZMod.one n310) (ZMod.one n310) ≠ ZMod.zero n310 :=
   ZMod.two_ne_zero_of_three_le n310 le310
 #print axioms «✱54.43_zmod_310»
 
-/-- In the ring of 311 elements, one plus one is not zero. -/
+/-- Modulo 311, one plus one is not zero. -/
 theorem «✱54.43_zmod_311» :
     ZMod.add n311 (ZMod.one n311) (ZMod.one n311) ≠ ZMod.zero n311 :=
   ZMod.two_ne_zero_of_three_le n311 le311
 #print axioms «✱54.43_zmod_311»
 
-/-- In the ring of 312 elements, one plus one is not zero. -/
+/-- Modulo 312, one plus one is not zero. -/
 theorem «✱54.43_zmod_312» :
     ZMod.add n312 (ZMod.one n312) (ZMod.one n312) ≠ ZMod.zero n312 :=
   ZMod.two_ne_zero_of_three_le n312 le312
 #print axioms «✱54.43_zmod_312»
 
-/-- In the ring of 313 elements, one plus one is not zero. -/
+/-- Modulo 313, one plus one is not zero. -/
 theorem «✱54.43_zmod_313» :
     ZMod.add n313 (ZMod.one n313) (ZMod.one n313) ≠ ZMod.zero n313 :=
   ZMod.two_ne_zero_of_three_le n313 le313
 #print axioms «✱54.43_zmod_313»
 
-/-- In the ring of 314 elements, one plus one is not zero. -/
+/-- Modulo 314, one plus one is not zero. -/
 theorem «✱54.43_zmod_314» :
     ZMod.add n314 (ZMod.one n314) (ZMod.one n314) ≠ ZMod.zero n314 :=
   ZMod.two_ne_zero_of_three_le n314 le314
 #print axioms «✱54.43_zmod_314»
 
-/-- In the ring of 315 elements, one plus one is not zero. -/
+/-- Modulo 315, one plus one is not zero. -/
 theorem «✱54.43_zmod_315» :
     ZMod.add n315 (ZMod.one n315) (ZMod.one n315) ≠ ZMod.zero n315 :=
   ZMod.two_ne_zero_of_three_le n315 le315
 #print axioms «✱54.43_zmod_315»
 
-/-- In the ring of 316 elements, one plus one is not zero. -/
+/-- Modulo 316, one plus one is not zero. -/
 theorem «✱54.43_zmod_316» :
     ZMod.add n316 (ZMod.one n316) (ZMod.one n316) ≠ ZMod.zero n316 :=
   ZMod.two_ne_zero_of_three_le n316 le316
 #print axioms «✱54.43_zmod_316»
 
-/-- In the ring of 317 elements, one plus one is not zero. -/
+/-- Modulo 317, one plus one is not zero. -/
 theorem «✱54.43_zmod_317» :
     ZMod.add n317 (ZMod.one n317) (ZMod.one n317) ≠ ZMod.zero n317 :=
   ZMod.two_ne_zero_of_three_le n317 le317
 #print axioms «✱54.43_zmod_317»
 
-/-- In the ring of 318 elements, one plus one is not zero. -/
+/-- Modulo 318, one plus one is not zero. -/
 theorem «✱54.43_zmod_318» :
     ZMod.add n318 (ZMod.one n318) (ZMod.one n318) ≠ ZMod.zero n318 :=
   ZMod.two_ne_zero_of_three_le n318 le318
 #print axioms «✱54.43_zmod_318»
 
-/-- In the ring of 319 elements, one plus one is not zero. -/
+/-- Modulo 319, one plus one is not zero. -/
 theorem «✱54.43_zmod_319» :
     ZMod.add n319 (ZMod.one n319) (ZMod.one n319) ≠ ZMod.zero n319 :=
   ZMod.two_ne_zero_of_three_le n319 le319
 #print axioms «✱54.43_zmod_319»
 
-/-- In the ring of 320 elements, one plus one is not zero. -/
+/-- Modulo 320, one plus one is not zero. -/
 theorem «✱54.43_zmod_320» :
     ZMod.add n320 (ZMod.one n320) (ZMod.one n320) ≠ ZMod.zero n320 :=
   ZMod.two_ne_zero_of_three_le n320 le320
 #print axioms «✱54.43_zmod_320»
 
-/-- In the ring of 321 elements, one plus one is not zero. -/
+/-- Modulo 321, one plus one is not zero. -/
 theorem «✱54.43_zmod_321» :
     ZMod.add n321 (ZMod.one n321) (ZMod.one n321) ≠ ZMod.zero n321 :=
   ZMod.two_ne_zero_of_three_le n321 le321
 #print axioms «✱54.43_zmod_321»
 
-/-- In the ring of 322 elements, one plus one is not zero. -/
+/-- Modulo 322, one plus one is not zero. -/
 theorem «✱54.43_zmod_322» :
     ZMod.add n322 (ZMod.one n322) (ZMod.one n322) ≠ ZMod.zero n322 :=
   ZMod.two_ne_zero_of_three_le n322 le322
 #print axioms «✱54.43_zmod_322»
 
-/-- In the ring of 323 elements, one plus one is not zero. -/
+/-- Modulo 323, one plus one is not zero. -/
 theorem «✱54.43_zmod_323» :
     ZMod.add n323 (ZMod.one n323) (ZMod.one n323) ≠ ZMod.zero n323 :=
   ZMod.two_ne_zero_of_three_le n323 le323
 #print axioms «✱54.43_zmod_323»
 
-/-- In the ring of 324 elements, one plus one is not zero. -/
+/-- Modulo 324, one plus one is not zero. -/
 theorem «✱54.43_zmod_324» :
     ZMod.add n324 (ZMod.one n324) (ZMod.one n324) ≠ ZMod.zero n324 :=
   ZMod.two_ne_zero_of_three_le n324 le324
 #print axioms «✱54.43_zmod_324»
 
-/-- In the ring of 325 elements, one plus one is not zero. -/
+/-- Modulo 325, one plus one is not zero. -/
 theorem «✱54.43_zmod_325» :
     ZMod.add n325 (ZMod.one n325) (ZMod.one n325) ≠ ZMod.zero n325 :=
   ZMod.two_ne_zero_of_three_le n325 le325
 #print axioms «✱54.43_zmod_325»
 
-/-- In the ring of 326 elements, one plus one is not zero. -/
+/-- Modulo 326, one plus one is not zero. -/
 theorem «✱54.43_zmod_326» :
     ZMod.add n326 (ZMod.one n326) (ZMod.one n326) ≠ ZMod.zero n326 :=
   ZMod.two_ne_zero_of_three_le n326 le326
 #print axioms «✱54.43_zmod_326»
 
-/-- In the ring of 327 elements, one plus one is not zero. -/
+/-- Modulo 327, one plus one is not zero. -/
 theorem «✱54.43_zmod_327» :
     ZMod.add n327 (ZMod.one n327) (ZMod.one n327) ≠ ZMod.zero n327 :=
   ZMod.two_ne_zero_of_three_le n327 le327
 #print axioms «✱54.43_zmod_327»
 
-/-- In the ring of 328 elements, one plus one is not zero. -/
+/-- Modulo 328, one plus one is not zero. -/
 theorem «✱54.43_zmod_328» :
     ZMod.add n328 (ZMod.one n328) (ZMod.one n328) ≠ ZMod.zero n328 :=
   ZMod.two_ne_zero_of_three_le n328 le328
 #print axioms «✱54.43_zmod_328»
 
-/-- In the ring of 329 elements, one plus one is not zero. -/
+/-- Modulo 329, one plus one is not zero. -/
 theorem «✱54.43_zmod_329» :
     ZMod.add n329 (ZMod.one n329) (ZMod.one n329) ≠ ZMod.zero n329 :=
   ZMod.two_ne_zero_of_three_le n329 le329
 #print axioms «✱54.43_zmod_329»
 
-/-- In the ring of 330 elements, one plus one is not zero. -/
+/-- Modulo 330, one plus one is not zero. -/
 theorem «✱54.43_zmod_330» :
     ZMod.add n330 (ZMod.one n330) (ZMod.one n330) ≠ ZMod.zero n330 :=
   ZMod.two_ne_zero_of_three_le n330 le330
 #print axioms «✱54.43_zmod_330»
 
-/-- In the ring of 331 elements, one plus one is not zero. -/
+/-- Modulo 331, one plus one is not zero. -/
 theorem «✱54.43_zmod_331» :
     ZMod.add n331 (ZMod.one n331) (ZMod.one n331) ≠ ZMod.zero n331 :=
   ZMod.two_ne_zero_of_three_le n331 le331
 #print axioms «✱54.43_zmod_331»
 
-/-- In the ring of 332 elements, one plus one is not zero. -/
+/-- Modulo 332, one plus one is not zero. -/
 theorem «✱54.43_zmod_332» :
     ZMod.add n332 (ZMod.one n332) (ZMod.one n332) ≠ ZMod.zero n332 :=
   ZMod.two_ne_zero_of_three_le n332 le332
 #print axioms «✱54.43_zmod_332»
 
-/-- In the ring of 333 elements, one plus one is not zero. -/
+/-- Modulo 333, one plus one is not zero. -/
 theorem «✱54.43_zmod_333» :
     ZMod.add n333 (ZMod.one n333) (ZMod.one n333) ≠ ZMod.zero n333 :=
   ZMod.two_ne_zero_of_three_le n333 le333
 #print axioms «✱54.43_zmod_333»
 
-/-- In the ring of 334 elements, one plus one is not zero. -/
+/-- Modulo 334, one plus one is not zero. -/
 theorem «✱54.43_zmod_334» :
     ZMod.add n334 (ZMod.one n334) (ZMod.one n334) ≠ ZMod.zero n334 :=
   ZMod.two_ne_zero_of_three_le n334 le334
 #print axioms «✱54.43_zmod_334»
 
-/-- In the ring of 335 elements, one plus one is not zero. -/
+/-- Modulo 335, one plus one is not zero. -/
 theorem «✱54.43_zmod_335» :
     ZMod.add n335 (ZMod.one n335) (ZMod.one n335) ≠ ZMod.zero n335 :=
   ZMod.two_ne_zero_of_three_le n335 le335
 #print axioms «✱54.43_zmod_335»
 
-/-- In the ring of 336 elements, one plus one is not zero. -/
+/-- Modulo 336, one plus one is not zero. -/
 theorem «✱54.43_zmod_336» :
     ZMod.add n336 (ZMod.one n336) (ZMod.one n336) ≠ ZMod.zero n336 :=
   ZMod.two_ne_zero_of_three_le n336 le336
 #print axioms «✱54.43_zmod_336»
 
-/-- In the ring of 337 elements, one plus one is not zero. -/
+/-- Modulo 337, one plus one is not zero. -/
 theorem «✱54.43_zmod_337» :
     ZMod.add n337 (ZMod.one n337) (ZMod.one n337) ≠ ZMod.zero n337 :=
   ZMod.two_ne_zero_of_three_le n337 le337
 #print axioms «✱54.43_zmod_337»
 
-/-- In the ring of 338 elements, one plus one is not zero. -/
+/-- Modulo 338, one plus one is not zero. -/
 theorem «✱54.43_zmod_338» :
     ZMod.add n338 (ZMod.one n338) (ZMod.one n338) ≠ ZMod.zero n338 :=
   ZMod.two_ne_zero_of_three_le n338 le338
 #print axioms «✱54.43_zmod_338»
 
-/-- In the ring of 339 elements, one plus one is not zero. -/
+/-- Modulo 339, one plus one is not zero. -/
 theorem «✱54.43_zmod_339» :
     ZMod.add n339 (ZMod.one n339) (ZMod.one n339) ≠ ZMod.zero n339 :=
   ZMod.two_ne_zero_of_three_le n339 le339
 #print axioms «✱54.43_zmod_339»
 
-/-- In the ring of 340 elements, one plus one is not zero. -/
+/-- Modulo 340, one plus one is not zero. -/
 theorem «✱54.43_zmod_340» :
     ZMod.add n340 (ZMod.one n340) (ZMod.one n340) ≠ ZMod.zero n340 :=
   ZMod.two_ne_zero_of_three_le n340 le340
 #print axioms «✱54.43_zmod_340»
 
-/-- In the ring of 341 elements, one plus one is not zero. -/
+/-- Modulo 341, one plus one is not zero. -/
 theorem «✱54.43_zmod_341» :
     ZMod.add n341 (ZMod.one n341) (ZMod.one n341) ≠ ZMod.zero n341 :=
   ZMod.two_ne_zero_of_three_le n341 le341
 #print axioms «✱54.43_zmod_341»
 
-/-- In the ring of 342 elements, one plus one is not zero. -/
+/-- Modulo 342, one plus one is not zero. -/
 theorem «✱54.43_zmod_342» :
     ZMod.add n342 (ZMod.one n342) (ZMod.one n342) ≠ ZMod.zero n342 :=
   ZMod.two_ne_zero_of_three_le n342 le342
 #print axioms «✱54.43_zmod_342»
 
-/-- In the ring of 343 elements, one plus one is not zero. -/
+/-- Modulo 343, one plus one is not zero. -/
 theorem «✱54.43_zmod_343» :
     ZMod.add n343 (ZMod.one n343) (ZMod.one n343) ≠ ZMod.zero n343 :=
   ZMod.two_ne_zero_of_three_le n343 le343
 #print axioms «✱54.43_zmod_343»
 
-/-- In the ring of 344 elements, one plus one is not zero. -/
+/-- Modulo 344, one plus one is not zero. -/
 theorem «✱54.43_zmod_344» :
     ZMod.add n344 (ZMod.one n344) (ZMod.one n344) ≠ ZMod.zero n344 :=
   ZMod.two_ne_zero_of_three_le n344 le344
 #print axioms «✱54.43_zmod_344»
 
-/-- In the ring of 345 elements, one plus one is not zero. -/
+/-- Modulo 345, one plus one is not zero. -/
 theorem «✱54.43_zmod_345» :
     ZMod.add n345 (ZMod.one n345) (ZMod.one n345) ≠ ZMod.zero n345 :=
   ZMod.two_ne_zero_of_three_le n345 le345
 #print axioms «✱54.43_zmod_345»
 
-/-- In the ring of 346 elements, one plus one is not zero. -/
+/-- Modulo 346, one plus one is not zero. -/
 theorem «✱54.43_zmod_346» :
     ZMod.add n346 (ZMod.one n346) (ZMod.one n346) ≠ ZMod.zero n346 :=
   ZMod.two_ne_zero_of_three_le n346 le346
 #print axioms «✱54.43_zmod_346»
 
-/-- In the ring of 347 elements, one plus one is not zero. -/
+/-- Modulo 347, one plus one is not zero. -/
 theorem «✱54.43_zmod_347» :
     ZMod.add n347 (ZMod.one n347) (ZMod.one n347) ≠ ZMod.zero n347 :=
   ZMod.two_ne_zero_of_three_le n347 le347
 #print axioms «✱54.43_zmod_347»
 
-/-- In the ring of 348 elements, one plus one is not zero. -/
+/-- Modulo 348, one plus one is not zero. -/
 theorem «✱54.43_zmod_348» :
     ZMod.add n348 (ZMod.one n348) (ZMod.one n348) ≠ ZMod.zero n348 :=
   ZMod.two_ne_zero_of_three_le n348 le348
 #print axioms «✱54.43_zmod_348»
 
-/-- In the ring of 349 elements, one plus one is not zero. -/
+/-- Modulo 349, one plus one is not zero. -/
 theorem «✱54.43_zmod_349» :
     ZMod.add n349 (ZMod.one n349) (ZMod.one n349) ≠ ZMod.zero n349 :=
   ZMod.two_ne_zero_of_three_le n349 le349
 #print axioms «✱54.43_zmod_349»
 
-/-- In the ring of 350 elements, one plus one is not zero. -/
+/-- Modulo 350, one plus one is not zero. -/
 theorem «✱54.43_zmod_350» :
     ZMod.add n350 (ZMod.one n350) (ZMod.one n350) ≠ ZMod.zero n350 :=
   ZMod.two_ne_zero_of_three_le n350 le350
 #print axioms «✱54.43_zmod_350»
 
-/-- In the ring of 351 elements, one plus one is not zero. -/
+/-- Modulo 351, one plus one is not zero. -/
 theorem «✱54.43_zmod_351» :
     ZMod.add n351 (ZMod.one n351) (ZMod.one n351) ≠ ZMod.zero n351 :=
   ZMod.two_ne_zero_of_three_le n351 le351
 #print axioms «✱54.43_zmod_351»
 
-/-- In the ring of 352 elements, one plus one is not zero. -/
+/-- Modulo 352, one plus one is not zero. -/
 theorem «✱54.43_zmod_352» :
     ZMod.add n352 (ZMod.one n352) (ZMod.one n352) ≠ ZMod.zero n352 :=
   ZMod.two_ne_zero_of_three_le n352 le352
 #print axioms «✱54.43_zmod_352»
 
-/-- In the ring of 353 elements, one plus one is not zero. -/
+/-- Modulo 353, one plus one is not zero. -/
 theorem «✱54.43_zmod_353» :
     ZMod.add n353 (ZMod.one n353) (ZMod.one n353) ≠ ZMod.zero n353 :=
   ZMod.two_ne_zero_of_three_le n353 le353
 #print axioms «✱54.43_zmod_353»
 
-/-- In the ring of 354 elements, one plus one is not zero. -/
+/-- Modulo 354, one plus one is not zero. -/
 theorem «✱54.43_zmod_354» :
     ZMod.add n354 (ZMod.one n354) (ZMod.one n354) ≠ ZMod.zero n354 :=
   ZMod.two_ne_zero_of_three_le n354 le354
 #print axioms «✱54.43_zmod_354»
 
-/-- In the ring of 355 elements, one plus one is not zero. -/
+/-- Modulo 355, one plus one is not zero. -/
 theorem «✱54.43_zmod_355» :
     ZMod.add n355 (ZMod.one n355) (ZMod.one n355) ≠ ZMod.zero n355 :=
   ZMod.two_ne_zero_of_three_le n355 le355
 #print axioms «✱54.43_zmod_355»
 
-/-- In the ring of 356 elements, one plus one is not zero. -/
+/-- Modulo 356, one plus one is not zero. -/
 theorem «✱54.43_zmod_356» :
     ZMod.add n356 (ZMod.one n356) (ZMod.one n356) ≠ ZMod.zero n356 :=
   ZMod.two_ne_zero_of_three_le n356 le356
 #print axioms «✱54.43_zmod_356»
 
-/-- In the ring of 357 elements, one plus one is not zero. -/
+/-- Modulo 357, one plus one is not zero. -/
 theorem «✱54.43_zmod_357» :
     ZMod.add n357 (ZMod.one n357) (ZMod.one n357) ≠ ZMod.zero n357 :=
   ZMod.two_ne_zero_of_three_le n357 le357
 #print axioms «✱54.43_zmod_357»
 
-/-- In the ring of 358 elements, one plus one is not zero. -/
+/-- Modulo 358, one plus one is not zero. -/
 theorem «✱54.43_zmod_358» :
     ZMod.add n358 (ZMod.one n358) (ZMod.one n358) ≠ ZMod.zero n358 :=
   ZMod.two_ne_zero_of_three_le n358 le358
 #print axioms «✱54.43_zmod_358»
 
-/-- In the ring of 359 elements, one plus one is not zero. -/
+/-- Modulo 359, one plus one is not zero. -/
 theorem «✱54.43_zmod_359» :
     ZMod.add n359 (ZMod.one n359) (ZMod.one n359) ≠ ZMod.zero n359 :=
   ZMod.two_ne_zero_of_three_le n359 le359
 #print axioms «✱54.43_zmod_359»
 
-/-- In the ring of 360 elements, one plus one is not zero. -/
+/-- Modulo 360, one plus one is not zero. -/
 theorem «✱54.43_zmod_360» :
     ZMod.add n360 (ZMod.one n360) (ZMod.one n360) ≠ ZMod.zero n360 :=
   ZMod.two_ne_zero_of_three_le n360 le360
 #print axioms «✱54.43_zmod_360»
 
-/-- In the ring of 361 elements, one plus one is not zero. -/
+/-- Modulo 361, one plus one is not zero. -/
 theorem «✱54.43_zmod_361» :
     ZMod.add n361 (ZMod.one n361) (ZMod.one n361) ≠ ZMod.zero n361 :=
   ZMod.two_ne_zero_of_three_le n361 le361
 #print axioms «✱54.43_zmod_361»
 
-/-- In the ring of 362 elements, one plus one is not zero. -/
+/-- Modulo 362, one plus one is not zero. -/
 theorem «✱54.43_zmod_362» :
     ZMod.add n362 (ZMod.one n362) (ZMod.one n362) ≠ ZMod.zero n362 :=
   ZMod.two_ne_zero_of_three_le n362 le362
 #print axioms «✱54.43_zmod_362»
 
-/-- In the ring of 363 elements, one plus one is not zero. -/
+/-- Modulo 363, one plus one is not zero. -/
 theorem «✱54.43_zmod_363» :
     ZMod.add n363 (ZMod.one n363) (ZMod.one n363) ≠ ZMod.zero n363 :=
   ZMod.two_ne_zero_of_three_le n363 le363
 #print axioms «✱54.43_zmod_363»
 
-/-- In the ring of 364 elements, one plus one is not zero. -/
+/-- Modulo 364, one plus one is not zero. -/
 theorem «✱54.43_zmod_364» :
     ZMod.add n364 (ZMod.one n364) (ZMod.one n364) ≠ ZMod.zero n364 :=
   ZMod.two_ne_zero_of_three_le n364 le364
 #print axioms «✱54.43_zmod_364»
 
-/-- In the ring of 365 elements, one plus one is not zero. -/
+/-- Modulo 365, one plus one is not zero. -/
 theorem «✱54.43_zmod_365» :
     ZMod.add n365 (ZMod.one n365) (ZMod.one n365) ≠ ZMod.zero n365 :=
   ZMod.two_ne_zero_of_three_le n365 le365
 #print axioms «✱54.43_zmod_365»
 
-/-- In the ring of 366 elements, one plus one is not zero. -/
+/-- Modulo 366, one plus one is not zero. -/
 theorem «✱54.43_zmod_366» :
     ZMod.add n366 (ZMod.one n366) (ZMod.one n366) ≠ ZMod.zero n366 :=
   ZMod.two_ne_zero_of_three_le n366 le366
 #print axioms «✱54.43_zmod_366»
 
-/-- In the ring of 367 elements, one plus one is not zero. -/
+/-- Modulo 367, one plus one is not zero. -/
 theorem «✱54.43_zmod_367» :
     ZMod.add n367 (ZMod.one n367) (ZMod.one n367) ≠ ZMod.zero n367 :=
   ZMod.two_ne_zero_of_three_le n367 le367
 #print axioms «✱54.43_zmod_367»
 
-/-- In the ring of 368 elements, one plus one is not zero. -/
+/-- Modulo 368, one plus one is not zero. -/
 theorem «✱54.43_zmod_368» :
     ZMod.add n368 (ZMod.one n368) (ZMod.one n368) ≠ ZMod.zero n368 :=
   ZMod.two_ne_zero_of_three_le n368 le368
 #print axioms «✱54.43_zmod_368»
 
-/-- In the ring of 369 elements, one plus one is not zero. -/
+/-- Modulo 369, one plus one is not zero. -/
 theorem «✱54.43_zmod_369» :
     ZMod.add n369 (ZMod.one n369) (ZMod.one n369) ≠ ZMod.zero n369 :=
   ZMod.two_ne_zero_of_three_le n369 le369
 #print axioms «✱54.43_zmod_369»
 
-/-- In the ring of 370 elements, one plus one is not zero. -/
+/-- Modulo 370, one plus one is not zero. -/
 theorem «✱54.43_zmod_370» :
     ZMod.add n370 (ZMod.one n370) (ZMod.one n370) ≠ ZMod.zero n370 :=
   ZMod.two_ne_zero_of_three_le n370 le370
 #print axioms «✱54.43_zmod_370»
 
-/-- In the ring of 371 elements, one plus one is not zero. -/
+/-- Modulo 371, one plus one is not zero. -/
 theorem «✱54.43_zmod_371» :
     ZMod.add n371 (ZMod.one n371) (ZMod.one n371) ≠ ZMod.zero n371 :=
   ZMod.two_ne_zero_of_three_le n371 le371
 #print axioms «✱54.43_zmod_371»
 
-/-- In the ring of 372 elements, one plus one is not zero. -/
+/-- Modulo 372, one plus one is not zero. -/
 theorem «✱54.43_zmod_372» :
     ZMod.add n372 (ZMod.one n372) (ZMod.one n372) ≠ ZMod.zero n372 :=
   ZMod.two_ne_zero_of_three_le n372 le372
 #print axioms «✱54.43_zmod_372»
 
-/-- In the ring of 373 elements, one plus one is not zero. -/
+/-- Modulo 373, one plus one is not zero. -/
 theorem «✱54.43_zmod_373» :
     ZMod.add n373 (ZMod.one n373) (ZMod.one n373) ≠ ZMod.zero n373 :=
   ZMod.two_ne_zero_of_three_le n373 le373
 #print axioms «✱54.43_zmod_373»
 
-/-- In the ring of 374 elements, one plus one is not zero. -/
+/-- Modulo 374, one plus one is not zero. -/
 theorem «✱54.43_zmod_374» :
     ZMod.add n374 (ZMod.one n374) (ZMod.one n374) ≠ ZMod.zero n374 :=
   ZMod.two_ne_zero_of_three_le n374 le374
 #print axioms «✱54.43_zmod_374»
 
-/-- In the ring of 375 elements, one plus one is not zero. -/
+/-- Modulo 375, one plus one is not zero. -/
 theorem «✱54.43_zmod_375» :
     ZMod.add n375 (ZMod.one n375) (ZMod.one n375) ≠ ZMod.zero n375 :=
   ZMod.two_ne_zero_of_three_le n375 le375
 #print axioms «✱54.43_zmod_375»
 
-/-- In the ring of 376 elements, one plus one is not zero. -/
+/-- Modulo 376, one plus one is not zero. -/
 theorem «✱54.43_zmod_376» :
     ZMod.add n376 (ZMod.one n376) (ZMod.one n376) ≠ ZMod.zero n376 :=
   ZMod.two_ne_zero_of_three_le n376 le376
 #print axioms «✱54.43_zmod_376»
 
-/-- In the ring of 377 elements, one plus one is not zero. -/
+/-- Modulo 377, one plus one is not zero. -/
 theorem «✱54.43_zmod_377» :
     ZMod.add n377 (ZMod.one n377) (ZMod.one n377) ≠ ZMod.zero n377 :=
   ZMod.two_ne_zero_of_three_le n377 le377
 #print axioms «✱54.43_zmod_377»
 
-/-- In the ring of 378 elements, one plus one is not zero. -/
+/-- Modulo 378, one plus one is not zero. -/
 theorem «✱54.43_zmod_378» :
     ZMod.add n378 (ZMod.one n378) (ZMod.one n378) ≠ ZMod.zero n378 :=
   ZMod.two_ne_zero_of_three_le n378 le378
 #print axioms «✱54.43_zmod_378»
 
-/-- In the ring of 379 elements, one plus one is not zero. -/
+/-- Modulo 379, one plus one is not zero. -/
 theorem «✱54.43_zmod_379» :
     ZMod.add n379 (ZMod.one n379) (ZMod.one n379) ≠ ZMod.zero n379 :=
   ZMod.two_ne_zero_of_three_le n379 le379
 #print axioms «✱54.43_zmod_379»
 
-/-- In the ring of 380 elements, one plus one is not zero. -/
+/-- Modulo 380, one plus one is not zero. -/
 theorem «✱54.43_zmod_380» :
     ZMod.add n380 (ZMod.one n380) (ZMod.one n380) ≠ ZMod.zero n380 :=
   ZMod.two_ne_zero_of_three_le n380 le380
 #print axioms «✱54.43_zmod_380»
 
-/-- In the ring of 381 elements, one plus one is not zero. -/
+/-- Modulo 381, one plus one is not zero. -/
 theorem «✱54.43_zmod_381» :
     ZMod.add n381 (ZMod.one n381) (ZMod.one n381) ≠ ZMod.zero n381 :=
   ZMod.two_ne_zero_of_three_le n381 le381
 #print axioms «✱54.43_zmod_381»
 
-/-- In the ring of 382 elements, one plus one is not zero. -/
+/-- Modulo 382, one plus one is not zero. -/
 theorem «✱54.43_zmod_382» :
     ZMod.add n382 (ZMod.one n382) (ZMod.one n382) ≠ ZMod.zero n382 :=
   ZMod.two_ne_zero_of_three_le n382 le382
 #print axioms «✱54.43_zmod_382»
 
-/-- In the ring of 383 elements, one plus one is not zero. -/
+/-- Modulo 383, one plus one is not zero. -/
 theorem «✱54.43_zmod_383» :
     ZMod.add n383 (ZMod.one n383) (ZMod.one n383) ≠ ZMod.zero n383 :=
   ZMod.two_ne_zero_of_three_le n383 le383
 #print axioms «✱54.43_zmod_383»
 
-/-- In the ring of 384 elements, one plus one is not zero. -/
+/-- Modulo 384, one plus one is not zero. -/
 theorem «✱54.43_zmod_384» :
     ZMod.add n384 (ZMod.one n384) (ZMod.one n384) ≠ ZMod.zero n384 :=
   ZMod.two_ne_zero_of_three_le n384 le384
 #print axioms «✱54.43_zmod_384»
 
-/-- In the ring of 385 elements, one plus one is not zero. -/
+/-- Modulo 385, one plus one is not zero. -/
 theorem «✱54.43_zmod_385» :
     ZMod.add n385 (ZMod.one n385) (ZMod.one n385) ≠ ZMod.zero n385 :=
   ZMod.two_ne_zero_of_three_le n385 le385
 #print axioms «✱54.43_zmod_385»
 
-/-- In the ring of 386 elements, one plus one is not zero. -/
+/-- Modulo 386, one plus one is not zero. -/
 theorem «✱54.43_zmod_386» :
     ZMod.add n386 (ZMod.one n386) (ZMod.one n386) ≠ ZMod.zero n386 :=
   ZMod.two_ne_zero_of_three_le n386 le386
 #print axioms «✱54.43_zmod_386»
 
-/-- In the ring of 387 elements, one plus one is not zero. -/
+/-- Modulo 387, one plus one is not zero. -/
 theorem «✱54.43_zmod_387» :
     ZMod.add n387 (ZMod.one n387) (ZMod.one n387) ≠ ZMod.zero n387 :=
   ZMod.two_ne_zero_of_three_le n387 le387
 #print axioms «✱54.43_zmod_387»
 
-/-- In the ring of 388 elements, one plus one is not zero. -/
+/-- Modulo 388, one plus one is not zero. -/
 theorem «✱54.43_zmod_388» :
     ZMod.add n388 (ZMod.one n388) (ZMod.one n388) ≠ ZMod.zero n388 :=
   ZMod.two_ne_zero_of_three_le n388 le388
 #print axioms «✱54.43_zmod_388»
 
-/-- In the ring of 389 elements, one plus one is not zero. -/
+/-- Modulo 389, one plus one is not zero. -/
 theorem «✱54.43_zmod_389» :
     ZMod.add n389 (ZMod.one n389) (ZMod.one n389) ≠ ZMod.zero n389 :=
   ZMod.two_ne_zero_of_three_le n389 le389
 #print axioms «✱54.43_zmod_389»
 
-/-- In the ring of 390 elements, one plus one is not zero. -/
+/-- Modulo 390, one plus one is not zero. -/
 theorem «✱54.43_zmod_390» :
     ZMod.add n390 (ZMod.one n390) (ZMod.one n390) ≠ ZMod.zero n390 :=
   ZMod.two_ne_zero_of_three_le n390 le390
 #print axioms «✱54.43_zmod_390»
 
-/-- In the ring of 391 elements, one plus one is not zero. -/
+/-- Modulo 391, one plus one is not zero. -/
 theorem «✱54.43_zmod_391» :
     ZMod.add n391 (ZMod.one n391) (ZMod.one n391) ≠ ZMod.zero n391 :=
   ZMod.two_ne_zero_of_three_le n391 le391
 #print axioms «✱54.43_zmod_391»
 
-/-- In the ring of 392 elements, one plus one is not zero. -/
+/-- Modulo 392, one plus one is not zero. -/
 theorem «✱54.43_zmod_392» :
     ZMod.add n392 (ZMod.one n392) (ZMod.one n392) ≠ ZMod.zero n392 :=
   ZMod.two_ne_zero_of_three_le n392 le392
 #print axioms «✱54.43_zmod_392»
 
-/-- In the ring of 393 elements, one plus one is not zero. -/
+/-- Modulo 393, one plus one is not zero. -/
 theorem «✱54.43_zmod_393» :
     ZMod.add n393 (ZMod.one n393) (ZMod.one n393) ≠ ZMod.zero n393 :=
   ZMod.two_ne_zero_of_three_le n393 le393
 #print axioms «✱54.43_zmod_393»
 
-/-- In the ring of 394 elements, one plus one is not zero. -/
+/-- Modulo 394, one plus one is not zero. -/
 theorem «✱54.43_zmod_394» :
     ZMod.add n394 (ZMod.one n394) (ZMod.one n394) ≠ ZMod.zero n394 :=
   ZMod.two_ne_zero_of_three_le n394 le394
 #print axioms «✱54.43_zmod_394»
 
-/-- In the ring of 395 elements, one plus one is not zero. -/
+/-- Modulo 395, one plus one is not zero. -/
 theorem «✱54.43_zmod_395» :
     ZMod.add n395 (ZMod.one n395) (ZMod.one n395) ≠ ZMod.zero n395 :=
   ZMod.two_ne_zero_of_three_le n395 le395
 #print axioms «✱54.43_zmod_395»
 
-/-- In the ring of 396 elements, one plus one is not zero. -/
+/-- Modulo 396, one plus one is not zero. -/
 theorem «✱54.43_zmod_396» :
     ZMod.add n396 (ZMod.one n396) (ZMod.one n396) ≠ ZMod.zero n396 :=
   ZMod.two_ne_zero_of_three_le n396 le396
 #print axioms «✱54.43_zmod_396»
 
-/-- In the ring of 397 elements, one plus one is not zero. -/
+/-- Modulo 397, one plus one is not zero. -/
 theorem «✱54.43_zmod_397» :
     ZMod.add n397 (ZMod.one n397) (ZMod.one n397) ≠ ZMod.zero n397 :=
   ZMod.two_ne_zero_of_three_le n397 le397
 #print axioms «✱54.43_zmod_397»
 
-/-- In the ring of 398 elements, one plus one is not zero. -/
+/-- Modulo 398, one plus one is not zero. -/
 theorem «✱54.43_zmod_398» :
     ZMod.add n398 (ZMod.one n398) (ZMod.one n398) ≠ ZMod.zero n398 :=
   ZMod.two_ne_zero_of_three_le n398 le398
 #print axioms «✱54.43_zmod_398»
 
-/-- In the ring of 399 elements, one plus one is not zero. -/
+/-- Modulo 399, one plus one is not zero. -/
 theorem «✱54.43_zmod_399» :
     ZMod.add n399 (ZMod.one n399) (ZMod.one n399) ≠ ZMod.zero n399 :=
   ZMod.two_ne_zero_of_three_le n399 le399
 #print axioms «✱54.43_zmod_399»
 
-/-- In the ring of 400 elements, one plus one is not zero. -/
+/-- Modulo 400, one plus one is not zero. -/
 theorem «✱54.43_zmod_400» :
     ZMod.add n400 (ZMod.one n400) (ZMod.one n400) ≠ ZMod.zero n400 :=
   ZMod.two_ne_zero_of_three_le n400 le400
 #print axioms «✱54.43_zmod_400»
 
-/-- In the ring of 401 elements, one plus one is not zero. -/
+/-- Modulo 401, one plus one is not zero. -/
 theorem «✱54.43_zmod_401» :
     ZMod.add n401 (ZMod.one n401) (ZMod.one n401) ≠ ZMod.zero n401 :=
   ZMod.two_ne_zero_of_three_le n401 le401
 #print axioms «✱54.43_zmod_401»
 
-/-- In the ring of 402 elements, one plus one is not zero. -/
+/-- Modulo 402, one plus one is not zero. -/
 theorem «✱54.43_zmod_402» :
     ZMod.add n402 (ZMod.one n402) (ZMod.one n402) ≠ ZMod.zero n402 :=
   ZMod.two_ne_zero_of_three_le n402 le402
 #print axioms «✱54.43_zmod_402»
 
-/-- In the ring of 403 elements, one plus one is not zero. -/
+/-- Modulo 403, one plus one is not zero. -/
 theorem «✱54.43_zmod_403» :
     ZMod.add n403 (ZMod.one n403) (ZMod.one n403) ≠ ZMod.zero n403 :=
   ZMod.two_ne_zero_of_three_le n403 le403
 #print axioms «✱54.43_zmod_403»
 
-/-- In the ring of 404 elements, one plus one is not zero. -/
+/-- Modulo 404, one plus one is not zero. -/
 theorem «✱54.43_zmod_404» :
     ZMod.add n404 (ZMod.one n404) (ZMod.one n404) ≠ ZMod.zero n404 :=
   ZMod.two_ne_zero_of_three_le n404 le404
 #print axioms «✱54.43_zmod_404»
 
-/-- In the ring of 405 elements, one plus one is not zero. -/
+/-- Modulo 405, one plus one is not zero. -/
 theorem «✱54.43_zmod_405» :
     ZMod.add n405 (ZMod.one n405) (ZMod.one n405) ≠ ZMod.zero n405 :=
   ZMod.two_ne_zero_of_three_le n405 le405
 #print axioms «✱54.43_zmod_405»
 
-/-- In the ring of 406 elements, one plus one is not zero. -/
+/-- Modulo 406, one plus one is not zero. -/
 theorem «✱54.43_zmod_406» :
     ZMod.add n406 (ZMod.one n406) (ZMod.one n406) ≠ ZMod.zero n406 :=
   ZMod.two_ne_zero_of_three_le n406 le406
 #print axioms «✱54.43_zmod_406»
 
-/-- In the ring of 407 elements, one plus one is not zero. -/
+/-- Modulo 407, one plus one is not zero. -/
 theorem «✱54.43_zmod_407» :
     ZMod.add n407 (ZMod.one n407) (ZMod.one n407) ≠ ZMod.zero n407 :=
   ZMod.two_ne_zero_of_three_le n407 le407
 #print axioms «✱54.43_zmod_407»
 
-/-- In the ring of 408 elements, one plus one is not zero. -/
+/-- Modulo 408, one plus one is not zero. -/
 theorem «✱54.43_zmod_408» :
     ZMod.add n408 (ZMod.one n408) (ZMod.one n408) ≠ ZMod.zero n408 :=
   ZMod.two_ne_zero_of_three_le n408 le408
 #print axioms «✱54.43_zmod_408»
 
-/-- In the ring of 409 elements, one plus one is not zero. -/
+/-- Modulo 409, one plus one is not zero. -/
 theorem «✱54.43_zmod_409» :
     ZMod.add n409 (ZMod.one n409) (ZMod.one n409) ≠ ZMod.zero n409 :=
   ZMod.two_ne_zero_of_three_le n409 le409
 #print axioms «✱54.43_zmod_409»
 
-/-- In the ring of 410 elements, one plus one is not zero. -/
+/-- Modulo 410, one plus one is not zero. -/
 theorem «✱54.43_zmod_410» :
     ZMod.add n410 (ZMod.one n410) (ZMod.one n410) ≠ ZMod.zero n410 :=
   ZMod.two_ne_zero_of_three_le n410 le410
 #print axioms «✱54.43_zmod_410»
 
-/-- In the ring of 411 elements, one plus one is not zero. -/
+/-- Modulo 411, one plus one is not zero. -/
 theorem «✱54.43_zmod_411» :
     ZMod.add n411 (ZMod.one n411) (ZMod.one n411) ≠ ZMod.zero n411 :=
   ZMod.two_ne_zero_of_three_le n411 le411
 #print axioms «✱54.43_zmod_411»
 
-/-- In the ring of 412 elements, one plus one is not zero. -/
+/-- Modulo 412, one plus one is not zero. -/
 theorem «✱54.43_zmod_412» :
     ZMod.add n412 (ZMod.one n412) (ZMod.one n412) ≠ ZMod.zero n412 :=
   ZMod.two_ne_zero_of_three_le n412 le412
 #print axioms «✱54.43_zmod_412»
 
-/-- In the ring of 413 elements, one plus one is not zero. -/
+/-- Modulo 413, one plus one is not zero. -/
 theorem «✱54.43_zmod_413» :
     ZMod.add n413 (ZMod.one n413) (ZMod.one n413) ≠ ZMod.zero n413 :=
   ZMod.two_ne_zero_of_three_le n413 le413
 #print axioms «✱54.43_zmod_413»
 
-/-- In the ring of 414 elements, one plus one is not zero. -/
+/-- Modulo 414, one plus one is not zero. -/
 theorem «✱54.43_zmod_414» :
     ZMod.add n414 (ZMod.one n414) (ZMod.one n414) ≠ ZMod.zero n414 :=
   ZMod.two_ne_zero_of_three_le n414 le414
 #print axioms «✱54.43_zmod_414»
 
-/-- In the ring of 415 elements, one plus one is not zero. -/
+/-- Modulo 415, one plus one is not zero. -/
 theorem «✱54.43_zmod_415» :
     ZMod.add n415 (ZMod.one n415) (ZMod.one n415) ≠ ZMod.zero n415 :=
   ZMod.two_ne_zero_of_three_le n415 le415
 #print axioms «✱54.43_zmod_415»
 
-/-- In the ring of 416 elements, one plus one is not zero. -/
+/-- Modulo 416, one plus one is not zero. -/
 theorem «✱54.43_zmod_416» :
     ZMod.add n416 (ZMod.one n416) (ZMod.one n416) ≠ ZMod.zero n416 :=
   ZMod.two_ne_zero_of_three_le n416 le416
 #print axioms «✱54.43_zmod_416»
 
-/-- In the ring of 417 elements, one plus one is not zero. -/
+/-- Modulo 417, one plus one is not zero. -/
 theorem «✱54.43_zmod_417» :
     ZMod.add n417 (ZMod.one n417) (ZMod.one n417) ≠ ZMod.zero n417 :=
   ZMod.two_ne_zero_of_three_le n417 le417
 #print axioms «✱54.43_zmod_417»
 
-/-- In the ring of 418 elements, one plus one is not zero. -/
+/-- Modulo 418, one plus one is not zero. -/
 theorem «✱54.43_zmod_418» :
     ZMod.add n418 (ZMod.one n418) (ZMod.one n418) ≠ ZMod.zero n418 :=
   ZMod.two_ne_zero_of_three_le n418 le418
 #print axioms «✱54.43_zmod_418»
 
-/-- In the ring of 419 elements, one plus one is not zero. -/
+/-- Modulo 419, one plus one is not zero. -/
 theorem «✱54.43_zmod_419» :
     ZMod.add n419 (ZMod.one n419) (ZMod.one n419) ≠ ZMod.zero n419 :=
   ZMod.two_ne_zero_of_three_le n419 le419
 #print axioms «✱54.43_zmod_419»
 
-/-- In the ring of 420 elements, one plus one is not zero. -/
+/-- Modulo 420, one plus one is not zero. -/
 theorem «✱54.43_zmod_420» :
     ZMod.add n420 (ZMod.one n420) (ZMod.one n420) ≠ ZMod.zero n420 :=
   ZMod.two_ne_zero_of_three_le n420 le420
 #print axioms «✱54.43_zmod_420»
 
-/-- In the ring of 421 elements, one plus one is not zero. -/
+/-- Modulo 421, one plus one is not zero. -/
 theorem «✱54.43_zmod_421» :
     ZMod.add n421 (ZMod.one n421) (ZMod.one n421) ≠ ZMod.zero n421 :=
   ZMod.two_ne_zero_of_three_le n421 le421
 #print axioms «✱54.43_zmod_421»
 
-/-- In the ring of 422 elements, one plus one is not zero. -/
+/-- Modulo 422, one plus one is not zero. -/
 theorem «✱54.43_zmod_422» :
     ZMod.add n422 (ZMod.one n422) (ZMod.one n422) ≠ ZMod.zero n422 :=
   ZMod.two_ne_zero_of_three_le n422 le422
 #print axioms «✱54.43_zmod_422»
 
-/-- In the ring of 423 elements, one plus one is not zero. -/
+/-- Modulo 423, one plus one is not zero. -/
 theorem «✱54.43_zmod_423» :
     ZMod.add n423 (ZMod.one n423) (ZMod.one n423) ≠ ZMod.zero n423 :=
   ZMod.two_ne_zero_of_three_le n423 le423
 #print axioms «✱54.43_zmod_423»
 
-/-- In the ring of 424 elements, one plus one is not zero. -/
+/-- Modulo 424, one plus one is not zero. -/
 theorem «✱54.43_zmod_424» :
     ZMod.add n424 (ZMod.one n424) (ZMod.one n424) ≠ ZMod.zero n424 :=
   ZMod.two_ne_zero_of_three_le n424 le424
 #print axioms «✱54.43_zmod_424»
 
-/-- In the ring of 425 elements, one plus one is not zero. -/
+/-- Modulo 425, one plus one is not zero. -/
 theorem «✱54.43_zmod_425» :
     ZMod.add n425 (ZMod.one n425) (ZMod.one n425) ≠ ZMod.zero n425 :=
   ZMod.two_ne_zero_of_three_le n425 le425
 #print axioms «✱54.43_zmod_425»
 
-/-- In the ring of 426 elements, one plus one is not zero. -/
+/-- Modulo 426, one plus one is not zero. -/
 theorem «✱54.43_zmod_426» :
     ZMod.add n426 (ZMod.one n426) (ZMod.one n426) ≠ ZMod.zero n426 :=
   ZMod.two_ne_zero_of_three_le n426 le426
 #print axioms «✱54.43_zmod_426»
 
-/-- In the ring of 427 elements, one plus one is not zero. -/
+/-- Modulo 427, one plus one is not zero. -/
 theorem «✱54.43_zmod_427» :
     ZMod.add n427 (ZMod.one n427) (ZMod.one n427) ≠ ZMod.zero n427 :=
   ZMod.two_ne_zero_of_three_le n427 le427
 #print axioms «✱54.43_zmod_427»
 
-/-- In the ring of 428 elements, one plus one is not zero. -/
+/-- Modulo 428, one plus one is not zero. -/
 theorem «✱54.43_zmod_428» :
     ZMod.add n428 (ZMod.one n428) (ZMod.one n428) ≠ ZMod.zero n428 :=
   ZMod.two_ne_zero_of_three_le n428 le428
 #print axioms «✱54.43_zmod_428»
 
-/-- In the ring of 429 elements, one plus one is not zero. -/
+/-- Modulo 429, one plus one is not zero. -/
 theorem «✱54.43_zmod_429» :
     ZMod.add n429 (ZMod.one n429) (ZMod.one n429) ≠ ZMod.zero n429 :=
   ZMod.two_ne_zero_of_three_le n429 le429
 #print axioms «✱54.43_zmod_429»
 
-/-- In the ring of 430 elements, one plus one is not zero. -/
+/-- Modulo 430, one plus one is not zero. -/
 theorem «✱54.43_zmod_430» :
     ZMod.add n430 (ZMod.one n430) (ZMod.one n430) ≠ ZMod.zero n430 :=
   ZMod.two_ne_zero_of_three_le n430 le430
 #print axioms «✱54.43_zmod_430»
 
-/-- In the ring of 431 elements, one plus one is not zero. -/
+/-- Modulo 431, one plus one is not zero. -/
 theorem «✱54.43_zmod_431» :
     ZMod.add n431 (ZMod.one n431) (ZMod.one n431) ≠ ZMod.zero n431 :=
   ZMod.two_ne_zero_of_three_le n431 le431
 #print axioms «✱54.43_zmod_431»
 
-/-- In the ring of 432 elements, one plus one is not zero. -/
+/-- Modulo 432, one plus one is not zero. -/
 theorem «✱54.43_zmod_432» :
     ZMod.add n432 (ZMod.one n432) (ZMod.one n432) ≠ ZMod.zero n432 :=
   ZMod.two_ne_zero_of_three_le n432 le432
 #print axioms «✱54.43_zmod_432»
 
-/-- In the ring of 433 elements, one plus one is not zero. -/
+/-- Modulo 433, one plus one is not zero. -/
 theorem «✱54.43_zmod_433» :
     ZMod.add n433 (ZMod.one n433) (ZMod.one n433) ≠ ZMod.zero n433 :=
   ZMod.two_ne_zero_of_three_le n433 le433
 #print axioms «✱54.43_zmod_433»
 
-/-- In the ring of 434 elements, one plus one is not zero. -/
+/-- Modulo 434, one plus one is not zero. -/
 theorem «✱54.43_zmod_434» :
     ZMod.add n434 (ZMod.one n434) (ZMod.one n434) ≠ ZMod.zero n434 :=
   ZMod.two_ne_zero_of_three_le n434 le434
 #print axioms «✱54.43_zmod_434»
 
-/-- In the ring of 435 elements, one plus one is not zero. -/
+/-- Modulo 435, one plus one is not zero. -/
 theorem «✱54.43_zmod_435» :
     ZMod.add n435 (ZMod.one n435) (ZMod.one n435) ≠ ZMod.zero n435 :=
   ZMod.two_ne_zero_of_three_le n435 le435
 #print axioms «✱54.43_zmod_435»
 
-/-- In the ring of 436 elements, one plus one is not zero. -/
+/-- Modulo 436, one plus one is not zero. -/
 theorem «✱54.43_zmod_436» :
     ZMod.add n436 (ZMod.one n436) (ZMod.one n436) ≠ ZMod.zero n436 :=
   ZMod.two_ne_zero_of_three_le n436 le436
 #print axioms «✱54.43_zmod_436»
 
-/-- In the ring of 437 elements, one plus one is not zero. -/
+/-- Modulo 437, one plus one is not zero. -/
 theorem «✱54.43_zmod_437» :
     ZMod.add n437 (ZMod.one n437) (ZMod.one n437) ≠ ZMod.zero n437 :=
   ZMod.two_ne_zero_of_three_le n437 le437
 #print axioms «✱54.43_zmod_437»
 
-/-- In the ring of 438 elements, one plus one is not zero. -/
+/-- Modulo 438, one plus one is not zero. -/
 theorem «✱54.43_zmod_438» :
     ZMod.add n438 (ZMod.one n438) (ZMod.one n438) ≠ ZMod.zero n438 :=
   ZMod.two_ne_zero_of_three_le n438 le438
 #print axioms «✱54.43_zmod_438»
 
-/-- In the ring of 439 elements, one plus one is not zero. -/
+/-- Modulo 439, one plus one is not zero. -/
 theorem «✱54.43_zmod_439» :
     ZMod.add n439 (ZMod.one n439) (ZMod.one n439) ≠ ZMod.zero n439 :=
   ZMod.two_ne_zero_of_three_le n439 le439
 #print axioms «✱54.43_zmod_439»
 
-/-- In the ring of 440 elements, one plus one is not zero. -/
+/-- Modulo 440, one plus one is not zero. -/
 theorem «✱54.43_zmod_440» :
     ZMod.add n440 (ZMod.one n440) (ZMod.one n440) ≠ ZMod.zero n440 :=
   ZMod.two_ne_zero_of_three_le n440 le440
 #print axioms «✱54.43_zmod_440»
 
-/-- In the ring of 441 elements, one plus one is not zero. -/
+/-- Modulo 441, one plus one is not zero. -/
 theorem «✱54.43_zmod_441» :
     ZMod.add n441 (ZMod.one n441) (ZMod.one n441) ≠ ZMod.zero n441 :=
   ZMod.two_ne_zero_of_three_le n441 le441
 #print axioms «✱54.43_zmod_441»
 
-/-- In the ring of 442 elements, one plus one is not zero. -/
+/-- Modulo 442, one plus one is not zero. -/
 theorem «✱54.43_zmod_442» :
     ZMod.add n442 (ZMod.one n442) (ZMod.one n442) ≠ ZMod.zero n442 :=
   ZMod.two_ne_zero_of_three_le n442 le442
 #print axioms «✱54.43_zmod_442»
 
-/-- In the ring of 443 elements, one plus one is not zero. -/
+/-- Modulo 443, one plus one is not zero. -/
 theorem «✱54.43_zmod_443» :
     ZMod.add n443 (ZMod.one n443) (ZMod.one n443) ≠ ZMod.zero n443 :=
   ZMod.two_ne_zero_of_three_le n443 le443
 #print axioms «✱54.43_zmod_443»
 
-/-- In the ring of 444 elements, one plus one is not zero. -/
+/-- Modulo 444, one plus one is not zero. -/
 theorem «✱54.43_zmod_444» :
     ZMod.add n444 (ZMod.one n444) (ZMod.one n444) ≠ ZMod.zero n444 :=
   ZMod.two_ne_zero_of_three_le n444 le444
 #print axioms «✱54.43_zmod_444»
 
-/-- In the ring of 445 elements, one plus one is not zero. -/
+/-- Modulo 445, one plus one is not zero. -/
 theorem «✱54.43_zmod_445» :
     ZMod.add n445 (ZMod.one n445) (ZMod.one n445) ≠ ZMod.zero n445 :=
   ZMod.two_ne_zero_of_three_le n445 le445
 #print axioms «✱54.43_zmod_445»
 
-/-- In the ring of 446 elements, one plus one is not zero. -/
+/-- Modulo 446, one plus one is not zero. -/
 theorem «✱54.43_zmod_446» :
     ZMod.add n446 (ZMod.one n446) (ZMod.one n446) ≠ ZMod.zero n446 :=
   ZMod.two_ne_zero_of_three_le n446 le446
 #print axioms «✱54.43_zmod_446»
 
-/-- In the ring of 447 elements, one plus one is not zero. -/
+/-- Modulo 447, one plus one is not zero. -/
 theorem «✱54.43_zmod_447» :
     ZMod.add n447 (ZMod.one n447) (ZMod.one n447) ≠ ZMod.zero n447 :=
   ZMod.two_ne_zero_of_three_le n447 le447
 #print axioms «✱54.43_zmod_447»
 
-/-- In the ring of 448 elements, one plus one is not zero. -/
+/-- Modulo 448, one plus one is not zero. -/
 theorem «✱54.43_zmod_448» :
     ZMod.add n448 (ZMod.one n448) (ZMod.one n448) ≠ ZMod.zero n448 :=
   ZMod.two_ne_zero_of_three_le n448 le448
 #print axioms «✱54.43_zmod_448»
 
-/-- In the ring of 449 elements, one plus one is not zero. -/
+/-- Modulo 449, one plus one is not zero. -/
 theorem «✱54.43_zmod_449» :
     ZMod.add n449 (ZMod.one n449) (ZMod.one n449) ≠ ZMod.zero n449 :=
   ZMod.two_ne_zero_of_three_le n449 le449
 #print axioms «✱54.43_zmod_449»
 
-/-- In the ring of 450 elements, one plus one is not zero. -/
+/-- Modulo 450, one plus one is not zero. -/
 theorem «✱54.43_zmod_450» :
     ZMod.add n450 (ZMod.one n450) (ZMod.one n450) ≠ ZMod.zero n450 :=
   ZMod.two_ne_zero_of_three_le n450 le450
 #print axioms «✱54.43_zmod_450»
 
-/-- In the ring of 451 elements, one plus one is not zero. -/
+/-- Modulo 451, one plus one is not zero. -/
 theorem «✱54.43_zmod_451» :
     ZMod.add n451 (ZMod.one n451) (ZMod.one n451) ≠ ZMod.zero n451 :=
   ZMod.two_ne_zero_of_three_le n451 le451
 #print axioms «✱54.43_zmod_451»
 
-/-- In the ring of 452 elements, one plus one is not zero. -/
+/-- Modulo 452, one plus one is not zero. -/
 theorem «✱54.43_zmod_452» :
     ZMod.add n452 (ZMod.one n452) (ZMod.one n452) ≠ ZMod.zero n452 :=
   ZMod.two_ne_zero_of_three_le n452 le452
 #print axioms «✱54.43_zmod_452»
 
-/-- In the ring of 453 elements, one plus one is not zero. -/
+/-- Modulo 453, one plus one is not zero. -/
 theorem «✱54.43_zmod_453» :
     ZMod.add n453 (ZMod.one n453) (ZMod.one n453) ≠ ZMod.zero n453 :=
   ZMod.two_ne_zero_of_three_le n453 le453
 #print axioms «✱54.43_zmod_453»
 
-/-- In the ring of 454 elements, one plus one is not zero. -/
+/-- Modulo 454, one plus one is not zero. -/
 theorem «✱54.43_zmod_454» :
     ZMod.add n454 (ZMod.one n454) (ZMod.one n454) ≠ ZMod.zero n454 :=
   ZMod.two_ne_zero_of_three_le n454 le454
 #print axioms «✱54.43_zmod_454»
 
-/-- In the ring of 455 elements, one plus one is not zero. -/
+/-- Modulo 455, one plus one is not zero. -/
 theorem «✱54.43_zmod_455» :
     ZMod.add n455 (ZMod.one n455) (ZMod.one n455) ≠ ZMod.zero n455 :=
   ZMod.two_ne_zero_of_three_le n455 le455
 #print axioms «✱54.43_zmod_455»
 
-/-- In the ring of 456 elements, one plus one is not zero. -/
+/-- Modulo 456, one plus one is not zero. -/
 theorem «✱54.43_zmod_456» :
     ZMod.add n456 (ZMod.one n456) (ZMod.one n456) ≠ ZMod.zero n456 :=
   ZMod.two_ne_zero_of_three_le n456 le456
 #print axioms «✱54.43_zmod_456»
 
-/-- In the ring of 457 elements, one plus one is not zero. -/
+/-- Modulo 457, one plus one is not zero. -/
 theorem «✱54.43_zmod_457» :
     ZMod.add n457 (ZMod.one n457) (ZMod.one n457) ≠ ZMod.zero n457 :=
   ZMod.two_ne_zero_of_three_le n457 le457
 #print axioms «✱54.43_zmod_457»
 
-/-- In the ring of 458 elements, one plus one is not zero. -/
+/-- Modulo 458, one plus one is not zero. -/
 theorem «✱54.43_zmod_458» :
     ZMod.add n458 (ZMod.one n458) (ZMod.one n458) ≠ ZMod.zero n458 :=
   ZMod.two_ne_zero_of_three_le n458 le458
 #print axioms «✱54.43_zmod_458»
 
-/-- In the ring of 459 elements, one plus one is not zero. -/
+/-- Modulo 459, one plus one is not zero. -/
 theorem «✱54.43_zmod_459» :
     ZMod.add n459 (ZMod.one n459) (ZMod.one n459) ≠ ZMod.zero n459 :=
   ZMod.two_ne_zero_of_three_le n459 le459
 #print axioms «✱54.43_zmod_459»
 
-/-- In the ring of 460 elements, one plus one is not zero. -/
+/-- Modulo 460, one plus one is not zero. -/
 theorem «✱54.43_zmod_460» :
     ZMod.add n460 (ZMod.one n460) (ZMod.one n460) ≠ ZMod.zero n460 :=
   ZMod.two_ne_zero_of_three_le n460 le460
 #print axioms «✱54.43_zmod_460»
 
-/-- In the ring of 461 elements, one plus one is not zero. -/
+/-- Modulo 461, one plus one is not zero. -/
 theorem «✱54.43_zmod_461» :
     ZMod.add n461 (ZMod.one n461) (ZMod.one n461) ≠ ZMod.zero n461 :=
   ZMod.two_ne_zero_of_three_le n461 le461
 #print axioms «✱54.43_zmod_461»
 
-/-- In the ring of 462 elements, one plus one is not zero. -/
+/-- Modulo 462, one plus one is not zero. -/
 theorem «✱54.43_zmod_462» :
     ZMod.add n462 (ZMod.one n462) (ZMod.one n462) ≠ ZMod.zero n462 :=
   ZMod.two_ne_zero_of_three_le n462 le462
 #print axioms «✱54.43_zmod_462»
 
-/-- In the ring of 463 elements, one plus one is not zero. -/
+/-- Modulo 463, one plus one is not zero. -/
 theorem «✱54.43_zmod_463» :
     ZMod.add n463 (ZMod.one n463) (ZMod.one n463) ≠ ZMod.zero n463 :=
   ZMod.two_ne_zero_of_three_le n463 le463
 #print axioms «✱54.43_zmod_463»
 
-/-- In the ring of 464 elements, one plus one is not zero. -/
+/-- Modulo 464, one plus one is not zero. -/
 theorem «✱54.43_zmod_464» :
     ZMod.add n464 (ZMod.one n464) (ZMod.one n464) ≠ ZMod.zero n464 :=
   ZMod.two_ne_zero_of_three_le n464 le464
 #print axioms «✱54.43_zmod_464»
 
-/-- In the ring of 465 elements, one plus one is not zero. -/
+/-- Modulo 465, one plus one is not zero. -/
 theorem «✱54.43_zmod_465» :
     ZMod.add n465 (ZMod.one n465) (ZMod.one n465) ≠ ZMod.zero n465 :=
   ZMod.two_ne_zero_of_three_le n465 le465
 #print axioms «✱54.43_zmod_465»
 
-/-- In the ring of 466 elements, one plus one is not zero. -/
+/-- Modulo 466, one plus one is not zero. -/
 theorem «✱54.43_zmod_466» :
     ZMod.add n466 (ZMod.one n466) (ZMod.one n466) ≠ ZMod.zero n466 :=
   ZMod.two_ne_zero_of_three_le n466 le466
 #print axioms «✱54.43_zmod_466»
 
-/-- In the ring of 467 elements, one plus one is not zero. -/
+/-- Modulo 467, one plus one is not zero. -/
 theorem «✱54.43_zmod_467» :
     ZMod.add n467 (ZMod.one n467) (ZMod.one n467) ≠ ZMod.zero n467 :=
   ZMod.two_ne_zero_of_three_le n467 le467
 #print axioms «✱54.43_zmod_467»
 
-/-- In the ring of 468 elements, one plus one is not zero. -/
+/-- Modulo 468, one plus one is not zero. -/
 theorem «✱54.43_zmod_468» :
     ZMod.add n468 (ZMod.one n468) (ZMod.one n468) ≠ ZMod.zero n468 :=
   ZMod.two_ne_zero_of_three_le n468 le468
 #print axioms «✱54.43_zmod_468»
 
-/-- In the ring of 469 elements, one plus one is not zero. -/
+/-- Modulo 469, one plus one is not zero. -/
 theorem «✱54.43_zmod_469» :
     ZMod.add n469 (ZMod.one n469) (ZMod.one n469) ≠ ZMod.zero n469 :=
   ZMod.two_ne_zero_of_three_le n469 le469
 #print axioms «✱54.43_zmod_469»
 
-/-- In the ring of 470 elements, one plus one is not zero. -/
+/-- Modulo 470, one plus one is not zero. -/
 theorem «✱54.43_zmod_470» :
     ZMod.add n470 (ZMod.one n470) (ZMod.one n470) ≠ ZMod.zero n470 :=
   ZMod.two_ne_zero_of_three_le n470 le470
 #print axioms «✱54.43_zmod_470»
 
-/-- In the ring of 471 elements, one plus one is not zero. -/
+/-- Modulo 471, one plus one is not zero. -/
 theorem «✱54.43_zmod_471» :
     ZMod.add n471 (ZMod.one n471) (ZMod.one n471) ≠ ZMod.zero n471 :=
   ZMod.two_ne_zero_of_three_le n471 le471
 #print axioms «✱54.43_zmod_471»
 
-/-- In the ring of 472 elements, one plus one is not zero. -/
+/-- Modulo 472, one plus one is not zero. -/
 theorem «✱54.43_zmod_472» :
     ZMod.add n472 (ZMod.one n472) (ZMod.one n472) ≠ ZMod.zero n472 :=
   ZMod.two_ne_zero_of_three_le n472 le472
 #print axioms «✱54.43_zmod_472»
 
-/-- In the ring of 473 elements, one plus one is not zero. -/
+/-- Modulo 473, one plus one is not zero. -/
 theorem «✱54.43_zmod_473» :
     ZMod.add n473 (ZMod.one n473) (ZMod.one n473) ≠ ZMod.zero n473 :=
   ZMod.two_ne_zero_of_three_le n473 le473
 #print axioms «✱54.43_zmod_473»
 
-/-- In the ring of 474 elements, one plus one is not zero. -/
+/-- Modulo 474, one plus one is not zero. -/
 theorem «✱54.43_zmod_474» :
     ZMod.add n474 (ZMod.one n474) (ZMod.one n474) ≠ ZMod.zero n474 :=
   ZMod.two_ne_zero_of_three_le n474 le474
 #print axioms «✱54.43_zmod_474»
 
-/-- In the ring of 475 elements, one plus one is not zero. -/
+/-- Modulo 475, one plus one is not zero. -/
 theorem «✱54.43_zmod_475» :
     ZMod.add n475 (ZMod.one n475) (ZMod.one n475) ≠ ZMod.zero n475 :=
   ZMod.two_ne_zero_of_three_le n475 le475
 #print axioms «✱54.43_zmod_475»
 
-/-- In the ring of 476 elements, one plus one is not zero. -/
+/-- Modulo 476, one plus one is not zero. -/
 theorem «✱54.43_zmod_476» :
     ZMod.add n476 (ZMod.one n476) (ZMod.one n476) ≠ ZMod.zero n476 :=
   ZMod.two_ne_zero_of_three_le n476 le476
 #print axioms «✱54.43_zmod_476»
 
-/-- In the ring of 477 elements, one plus one is not zero. -/
+/-- Modulo 477, one plus one is not zero. -/
 theorem «✱54.43_zmod_477» :
     ZMod.add n477 (ZMod.one n477) (ZMod.one n477) ≠ ZMod.zero n477 :=
   ZMod.two_ne_zero_of_three_le n477 le477
 #print axioms «✱54.43_zmod_477»
 
-/-- In the ring of 478 elements, one plus one is not zero. -/
+/-- Modulo 478, one plus one is not zero. -/
 theorem «✱54.43_zmod_478» :
     ZMod.add n478 (ZMod.one n478) (ZMod.one n478) ≠ ZMod.zero n478 :=
   ZMod.two_ne_zero_of_three_le n478 le478
 #print axioms «✱54.43_zmod_478»
 
-/-- In the ring of 479 elements, one plus one is not zero. -/
+/-- Modulo 479, one plus one is not zero. -/
 theorem «✱54.43_zmod_479» :
     ZMod.add n479 (ZMod.one n479) (ZMod.one n479) ≠ ZMod.zero n479 :=
   ZMod.two_ne_zero_of_three_le n479 le479
 #print axioms «✱54.43_zmod_479»
 
-/-- In the ring of 480 elements, one plus one is not zero. -/
+/-- Modulo 480, one plus one is not zero. -/
 theorem «✱54.43_zmod_480» :
     ZMod.add n480 (ZMod.one n480) (ZMod.one n480) ≠ ZMod.zero n480 :=
   ZMod.two_ne_zero_of_three_le n480 le480
 #print axioms «✱54.43_zmod_480»
 
-/-- In the ring of 481 elements, one plus one is not zero. -/
+/-- Modulo 481, one plus one is not zero. -/
 theorem «✱54.43_zmod_481» :
     ZMod.add n481 (ZMod.one n481) (ZMod.one n481) ≠ ZMod.zero n481 :=
   ZMod.two_ne_zero_of_three_le n481 le481
 #print axioms «✱54.43_zmod_481»
 
-/-- In the ring of 482 elements, one plus one is not zero. -/
+/-- Modulo 482, one plus one is not zero. -/
 theorem «✱54.43_zmod_482» :
     ZMod.add n482 (ZMod.one n482) (ZMod.one n482) ≠ ZMod.zero n482 :=
   ZMod.two_ne_zero_of_three_le n482 le482
 #print axioms «✱54.43_zmod_482»
 
-/-- In the ring of 483 elements, one plus one is not zero. -/
+/-- Modulo 483, one plus one is not zero. -/
 theorem «✱54.43_zmod_483» :
     ZMod.add n483 (ZMod.one n483) (ZMod.one n483) ≠ ZMod.zero n483 :=
   ZMod.two_ne_zero_of_three_le n483 le483
 #print axioms «✱54.43_zmod_483»
 
-/-- In the ring of 484 elements, one plus one is not zero. -/
+/-- Modulo 484, one plus one is not zero. -/
 theorem «✱54.43_zmod_484» :
     ZMod.add n484 (ZMod.one n484) (ZMod.one n484) ≠ ZMod.zero n484 :=
   ZMod.two_ne_zero_of_three_le n484 le484
 #print axioms «✱54.43_zmod_484»
 
-/-- In the ring of 485 elements, one plus one is not zero. -/
+/-- Modulo 485, one plus one is not zero. -/
 theorem «✱54.43_zmod_485» :
     ZMod.add n485 (ZMod.one n485) (ZMod.one n485) ≠ ZMod.zero n485 :=
   ZMod.two_ne_zero_of_three_le n485 le485
 #print axioms «✱54.43_zmod_485»
 
-/-- In the ring of 486 elements, one plus one is not zero. -/
+/-- Modulo 486, one plus one is not zero. -/
 theorem «✱54.43_zmod_486» :
     ZMod.add n486 (ZMod.one n486) (ZMod.one n486) ≠ ZMod.zero n486 :=
   ZMod.two_ne_zero_of_three_le n486 le486
 #print axioms «✱54.43_zmod_486»
 
-/-- In the ring of 487 elements, one plus one is not zero. -/
+/-- Modulo 487, one plus one is not zero. -/
 theorem «✱54.43_zmod_487» :
     ZMod.add n487 (ZMod.one n487) (ZMod.one n487) ≠ ZMod.zero n487 :=
   ZMod.two_ne_zero_of_three_le n487 le487
 #print axioms «✱54.43_zmod_487»
 
-/-- In the ring of 488 elements, one plus one is not zero. -/
+/-- Modulo 488, one plus one is not zero. -/
 theorem «✱54.43_zmod_488» :
     ZMod.add n488 (ZMod.one n488) (ZMod.one n488) ≠ ZMod.zero n488 :=
   ZMod.two_ne_zero_of_three_le n488 le488
 #print axioms «✱54.43_zmod_488»
 
-/-- In the ring of 489 elements, one plus one is not zero. -/
+/-- Modulo 489, one plus one is not zero. -/
 theorem «✱54.43_zmod_489» :
     ZMod.add n489 (ZMod.one n489) (ZMod.one n489) ≠ ZMod.zero n489 :=
   ZMod.two_ne_zero_of_three_le n489 le489
 #print axioms «✱54.43_zmod_489»
 
-/-- In the ring of 490 elements, one plus one is not zero. -/
+/-- Modulo 490, one plus one is not zero. -/
 theorem «✱54.43_zmod_490» :
     ZMod.add n490 (ZMod.one n490) (ZMod.one n490) ≠ ZMod.zero n490 :=
   ZMod.two_ne_zero_of_three_le n490 le490
 #print axioms «✱54.43_zmod_490»
 
-/-- In the ring of 491 elements, one plus one is not zero. -/
+/-- Modulo 491, one plus one is not zero. -/
 theorem «✱54.43_zmod_491» :
     ZMod.add n491 (ZMod.one n491) (ZMod.one n491) ≠ ZMod.zero n491 :=
   ZMod.two_ne_zero_of_three_le n491 le491
 #print axioms «✱54.43_zmod_491»
 
-/-- In the ring of 492 elements, one plus one is not zero. -/
+/-- Modulo 492, one plus one is not zero. -/
 theorem «✱54.43_zmod_492» :
     ZMod.add n492 (ZMod.one n492) (ZMod.one n492) ≠ ZMod.zero n492 :=
   ZMod.two_ne_zero_of_three_le n492 le492
 #print axioms «✱54.43_zmod_492»
 
-/-- In the ring of 493 elements, one plus one is not zero. -/
+/-- Modulo 493, one plus one is not zero. -/
 theorem «✱54.43_zmod_493» :
     ZMod.add n493 (ZMod.one n493) (ZMod.one n493) ≠ ZMod.zero n493 :=
   ZMod.two_ne_zero_of_three_le n493 le493
 #print axioms «✱54.43_zmod_493»
 
-/-- In the ring of 494 elements, one plus one is not zero. -/
+/-- Modulo 494, one plus one is not zero. -/
 theorem «✱54.43_zmod_494» :
     ZMod.add n494 (ZMod.one n494) (ZMod.one n494) ≠ ZMod.zero n494 :=
   ZMod.two_ne_zero_of_three_le n494 le494
 #print axioms «✱54.43_zmod_494»
 
-/-- In the ring of 495 elements, one plus one is not zero. -/
+/-- Modulo 495, one plus one is not zero. -/
 theorem «✱54.43_zmod_495» :
     ZMod.add n495 (ZMod.one n495) (ZMod.one n495) ≠ ZMod.zero n495 :=
   ZMod.two_ne_zero_of_three_le n495 le495
 #print axioms «✱54.43_zmod_495»
 
-/-- In the ring of 496 elements, one plus one is not zero. -/
+/-- Modulo 496, one plus one is not zero. -/
 theorem «✱54.43_zmod_496» :
     ZMod.add n496 (ZMod.one n496) (ZMod.one n496) ≠ ZMod.zero n496 :=
   ZMod.two_ne_zero_of_three_le n496 le496
 #print axioms «✱54.43_zmod_496»
 
-/-- In the ring of 497 elements, one plus one is not zero. -/
+/-- Modulo 497, one plus one is not zero. -/
 theorem «✱54.43_zmod_497» :
     ZMod.add n497 (ZMod.one n497) (ZMod.one n497) ≠ ZMod.zero n497 :=
   ZMod.two_ne_zero_of_three_le n497 le497
 #print axioms «✱54.43_zmod_497»
 
-/-- In the ring of 498 elements, one plus one is not zero. -/
+/-- Modulo 498, one plus one is not zero. -/
 theorem «✱54.43_zmod_498» :
     ZMod.add n498 (ZMod.one n498) (ZMod.one n498) ≠ ZMod.zero n498 :=
   ZMod.two_ne_zero_of_three_le n498 le498
 #print axioms «✱54.43_zmod_498»
 
-/-- In the ring of 499 elements, one plus one is not zero. -/
+/-- Modulo 499, one plus one is not zero. -/
 theorem «✱54.43_zmod_499» :
     ZMod.add n499 (ZMod.one n499) (ZMod.one n499) ≠ ZMod.zero n499 :=
   ZMod.two_ne_zero_of_three_le n499 le499
 #print axioms «✱54.43_zmod_499»
 
-/-- In the ring of 500 elements, one plus one is not zero. -/
+/-- Modulo 500, one plus one is not zero. -/
 theorem «✱54.43_zmod_500» :
     ZMod.add n500 (ZMod.one n500) (ZMod.one n500) ≠ ZMod.zero n500 :=
   ZMod.two_ne_zero_of_three_le n500 le500
@@ -6508,7 +6508,7 @@ theorem «✱54.43_zmod_500» :
 /-! ### The whole table -/
 
 /-- The table as a proposition: for every `n` from 3 to 500, one plus one is
-not zero in the ring of `n` elements. -/
+not zero modulo `n`. -/
 def Statement : Prop :=
     ZMod.add n3 (ZMod.one n3) (ZMod.one n3) ≠ ZMod.zero n3 ∧
     ZMod.add n4 (ZMod.one n4) (ZMod.one n4) ≠ ZMod.zero n4 ∧
